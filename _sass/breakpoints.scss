@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    #MEDIA QUERIES
+\*------------------------------------*/
+
+// =====
+// Screen bigger than
+// =====
+
+@mixin screen-bigger-than($width) {
+    @media screen and (min-width: $width + 1) {
+        @content;
+    }
+}
+
+// =====
+// Screen smaller than
+// =====
+
+@mixin screen-smaller-than($width) {
+    @media screen and (min-width: 1px) and (max-width: $width) {
+        @content;
+    }
+}
+
+// =====
+// Screen between
+// =====
+
+@mixin screen-between($min, $max) {
+    @media screen and (min-width: $min) and (max-width: $max - 1) {
+        @content;
+    }
+}

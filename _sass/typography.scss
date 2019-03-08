@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
+
+body{
+    color: $dark;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+h1,h2,h3,h4,h5{
+    padding: 0;
+    font-weight: normal;
+}
+
+a{
+    color: $link;
+
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.color{
+
+    &--primary{
+        color: $primary-colour;
+    }
+
+    &--secondary{
+        color: $secondary-colour;
+    }
+
+    &--light{
+        color: $grey-light;
+    }
+
+    &--dark{
+        color: $dark;
+    }
+}
+
+.font{
+
+    &--code{
+        // font-family: 'Source Code Pro', monospace;
+        font-family: 'Encode Sans Semi Expanded', sans-serif;
+    }
+}

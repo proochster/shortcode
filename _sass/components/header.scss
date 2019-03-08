@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+
+.header{
+    background-color: $light;
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+}

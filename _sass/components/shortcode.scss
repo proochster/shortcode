@@ -1,0 +1,90 @@
+/*------------------------------------*\
+    #SEARCH
+\*------------------------------------*/
+
+.sc{
+    color: $grey-light;
+    background-color: $secondary-colour;
+    display: flex;
+
+    &__section{
+        // margin: $base-unit 0;
+        width: 50%;
+        box-sizing: border-box;
+        // background-color: $light;
+
+        // + .sc__section{
+        //     background-color: $dark;
+        //     padding: $base-unit $base-unit $base-unit 0;
+        //     margin: 0;
+        // }
+    }
+
+    &__description{
+        margin: $base-unit 0 0; 
+        padding: 0 0 $base-unit $base-unit; 
+        // background-color: $light;
+        max-width: $large / 2;
+        float: right;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    &__title{
+        background-color: $secondary-highlight;
+        border-left: 10px solid $accent;
+        padding: 2px $base-unit $base-unit;
+        position: relative;
+        font-size: 28px;
+        margin: 0;
+
+        &:after{
+            content: '';
+            position: absolute;
+            left: 100%;
+            border-style: solid;
+            border-width: 25px 0 25px 15px;
+            border-color: transparent transparent transparent $secondary-highlight;
+            top: 0;
+        }
+    }
+
+    &__tags{
+        width: 100%;
+        display: block;
+        // text-align: right;
+        padding: 0 $base-unit/2 0 $base-unit*2;
+        box-sizing: border-box;
+    }
+    
+    &__tag{
+        background-color: $secondary-colour;
+        font-size: 12px;
+        padding: 0 6px;
+        position: relative;
+        top: -10px;
+    }
+    
+    &__text{
+        color: $grey-dark;
+        padding: 0 0 0 $base-unit*2;
+        margin: 0;
+        font-style: italic;
+    }
+    
+    &__example{
+        // background-color: $secondary-colour;
+        padding: 26px $base-unit*2 $base-unit*2;       
+        color: $light;
+        height: 100%;
+        overflow: overlay;
+        box-sizing: border-box;
+        font-size: 16px;
+        font-family: 'Encode Sans Semi Expanded', sans-serif;
+    }
+
+    &__code{
+        font-family: 'Encode Sans Semi Expanded', sans-serif;
+    }
+}

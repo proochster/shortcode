@@ -1,0 +1,9 @@
+{% assign current = page.url | downcase | split: '/' %}
+
+<nav class="nav">
+    <ul class="nav__list wrapper wrapper--no-padding">
+        <li class="nav__item"><a href="/html-cheatsheet" title="HTML lookup table" class="nav__link {% if current[1] == 'html' %}active{% endif %}"><i class="fab fa-html5 color--primary"></i> HTML</a></li>
+        <li class="nav__item"><a href="/css-cheatsheet" title="CSS lookup table" class="nav__link {% if current[1] == 'css' %}active{% endif %}"><i class="fab fa-css3-alt color--primary"></i> CSS</a></li>
+        <li class="nav__item"><a href="/javascript-cheatsheet" title="JavaScript lookup table" class="nav__link {% if current[1] == 'javascript' %}active{% endif %}"><i class="fab fa-js-square color--primary"></i> JAVASCRIPT</a></li>
+    </ul>
+</nav>

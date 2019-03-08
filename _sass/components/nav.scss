@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    #CODE NAVIGATION
+\*------------------------------------*/
+
+.nav{
+    border-bottom: 3px solid $secondary-colour;
+
+    &__list{
+        padding: 0 $base-unit;
+        list-style: none;
+    } 
+
+    &__item{
+        display: inline-block;
+    }
+
+    &__link{
+        padding: $base-unit;
+        color: $secondary-colour;
+        text-decoration: none;
+        display: block;
+
+        &.active{
+            background-color: $secondary-colour;
+            color: $light;
+        }
+    }
+}

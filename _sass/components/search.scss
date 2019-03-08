@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    #SEARCH
+\*------------------------------------*/
+
+.search{
+    background-color: $secondary-colour;
+
+    &__input{
+        padding: $base-unit;        
+        // font-family: 'Source Code Pro', monospace;
+        font-family: 'Open Sans', sans-serif;
+        border: 0;
+        border-radius: 5px;
+        width: 50%;
+        font-size: 20px;
+        box-sizing: border-box;
+    }
+}
