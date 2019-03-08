@@ -4,7 +4,7 @@ var app=new Vue({
             return {
             search: '',
             // shortcode: "",
-            codes: this.allRecords
+            codes: document.querySelectorAll('.sc')
         };
     },
     created(){
