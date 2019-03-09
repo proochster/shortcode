@@ -5,86 +5,119 @@
 .sc{
     color: $grey-light;
     background-color: $secondary-colour;
-    display: flex;
+    
+    @include screen-bigger-than($small){
+        display: flex;
+    }
 
     &__section{
         // margin: $base-unit 0;
-        width: 50%;
+        width: 100%;
         box-sizing: border-box;
         // background-color: $light;
 
-        // + .sc__section{
-        //     background-color: $dark;
-        //     padding: $base-unit $base-unit $base-unit 0;
-        //     margin: 0;
-        // }
+        @include screen-bigger-than($small){
+          width: 50%;  
+        }
     }
 
     &__description{
-        margin: $base-unit 0 0; 
-        padding: 0 0 $base-unit $base-unit; 
+        padding: $base-unit $base-unit 0 $base-unit; 
         // background-color: $light;
-        max-width: $large / 2;
-        float: right;
         display: block;
         width: 100%;
         box-sizing: border-box;
+        
+        @include screen-bigger-than($small){
+            margin: $base-unit 0 0; 
+            max-width: $large / 2;
+            padding: 0 0 $base-unit $base-unit; 
+            float: right;
+        }
     }
 
     &__title{
-        background-color: $secondary-highlight;
-        border-left: 10px solid $accent;
-        padding: 2px $base-unit $base-unit;
+        background-color: $style-1-primary;
+        background: linear-gradient(15deg,$style-1-primary,$style-1-secondary);
+        border-left: $base-unit solid $style-1-accent;
+        padding: $base-unit;
+        box-shadow: 0 1px 1px #000;
         position: relative;
         font-size: 28px;
         margin: 0;
+        border-radius: 2px;
 
-        &:after{
-            content: '';
-            position: absolute;
-            left: 100%;
-            border-style: solid;
-            border-width: 25px 0 25px 15px;
-            border-color: transparent transparent transparent $secondary-highlight;
-            top: 0;
+        @include screen-bigger-than($small){
+            &:after{
+                border-color: transparent transparent transparent $style-1-secondary;
+                border-style: solid;
+                border-width: 10px 0 10px 10px;
+                content: '';
+                position: absolute;
+                left: 100%;
+                top: 8px;
+            }
         }
     }
 
     &__tags{
         width: 100%;
         display: block;
-        // text-align: right;
-        padding: 0 $base-unit/2 0 $base-unit*2;
+        text-align: right;
+        padding: 0 $base-unit;
         box-sizing: border-box;
+        position: relative;
+        z-index: 1;
+        line-height: 0;
     }
     
     &__tag{
         background-color: $secondary-colour;
-        font-size: 12px;
-        padding: 0 6px;
-        position: relative;
-        top: -10px;
+        font-size: $base-unit;
+        padding: 1px $base-unit/2;
     }
     
     &__text{
         color: $grey-dark;
-        padding: 0 0 0 $base-unit*2;
+        padding: 0 $base-unit;
         margin: 0;
-        font-style: italic;
+        font-style: italic; 
+        
+        &:before{
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right,rgba(116,95,181,0.2),transparent 80%);
+        }
+        
+        @include screen-bigger-than($small){
+            padding: 0 0 0 $base-unit*2;
+        }
     }
     
     &__example{
         // background-color: $secondary-colour;
-        padding: 26px $base-unit*2 $base-unit*2;       
+        padding: $base-unit $base-unit*2;
         color: $light;
         height: 100%;
         overflow: overlay;
         box-sizing: border-box;
-        font-size: 16px;
+        font-size: 14px;
         font-family: 'Encode Sans Semi Expanded', sans-serif;
+        
+        @include screen-bigger-than($small){
+            padding: 20px $base-unit*2 $base-unit*2;
+            font-size: 16px;
+        }
     }
 
     &__code{
         font-family: 'Encode Sans Semi Expanded', sans-serif;
+        
+        code{
+            white-space: pre-wrap;
+        }
     }
 }

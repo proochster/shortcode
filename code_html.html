@@ -8,15 +8,17 @@ permalink: /html-cheatsheet
 <section class="sc" ref="shortcode">
     <div class="sc__section">
         <div class="sc__description">
-            <h3 class="sc__title">{{ code.title }}</h3>
-            {% unless code.tags == blank %}
-                <span class="sc__tags">
-                {% for tag in code.tags %}
-                    <span class="sc__tag">#{{ tag }}</span>
-                {% endfor %}
-                </span>
-            {% endunless  %}
-            <p class="sc__text">{{ code.description }}</p>
+                {% if code.tags.size > 0 %}
+                    <span class="sc__tags">
+                    {% for tag in code.tags %}
+                        <span class="sc__tag">#{{ tag }}</span>
+                    {% endfor %}
+                    </span>
+                {% endif %}
+            <h3 class="sc__title">{{ code.title }}</h3>            
+            {% if code.description.size > 0 %}
+                <p class="sc__text">{{ code.description | size }} {{ code.description }}</p>
+            {% endif %}
         </div>
     </div>
     <div class="sc__section">
