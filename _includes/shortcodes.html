@@ -1,0 +1,26 @@
+{% for code in site[page.category] %}
+<section class="sc" ref="shortcode">
+    <div class="sc__section">
+        {% if code.tags.size > 0 %}<span class="sc__tags">
+            {% for tag in code.tags %}<span class="sc__tag">#{{ tag }}</span>{% endfor %}
+        </span>{% endif %}
+        <div class="sc__description">
+            {{page.collection}}
+            <a id="{{ code.title }}" href="#{{ code.title }}" rel="tag" class="sc__anchor"><h3 class="sc__title">{{ code.title }}</h3></a>    
+            {% if code.description.size > 0 %}<p class="sc__text">{{ code.description }}</p>{% endif %}
+        </div>
+    </div>
+    <div class="sc__section">
+        <div class="sc__example">
+            <code class="sc__code">
+                {% case page.category %}
+                    {% when 'css' %}{% highlight css %}{{ code.content }}{% endhighlight %}
+                    {% when 'html' %}{% highlight html %}{{ code.content }}{% endhighlight %}
+                    {% when 'javascript' %}{% highlight javascript %}{{ code.content }}{% endhighlight %}
+                    {% when 'liquid' %}{% highlight liquid %}{{ code.content }}{% endhighlight %}  
+                {% endcase %}
+                {% if code.parse == true %}<h4 class="sc__text">Output: </h4>{{ code.content }}{% endif %}
+            </code>
+        </div>
+    </div>
+</section>{% endfor %}

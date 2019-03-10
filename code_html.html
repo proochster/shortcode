@@ -1,34 +1,7 @@
 ---
 layout: default
-title: HTML
+title: HTML cheatsheet
 permalink: /html-cheatsheet
+category: html
 ---
-
-{% for code in site.html %}
-<section class="sc" ref="shortcode">
-    <div class="sc__section">
-        <div class="sc__description">
-                {% if code.tags.size > 0 %}
-                    <span class="sc__tags">
-                    {% for tag in code.tags %}
-                        <span class="sc__tag">#{{ tag }}</span>
-                    {% endfor %}
-                    </span>
-                {% endif %}
-            <h3 class="sc__title">{{ code.title }}</h3>            
-            {% if code.description.size > 0 %}
-                <p class="sc__text">{{ code.description | size }} {{ code.description }}</p>
-            {% endif %}
-        </div>
-    </div>
-    <div class="sc__section">
-        <div class="sc__example">
-            <code class="sc__code">
-{% highlight html %}
-{{ code.content }}
-{% endhighlight %}
-            </code>
-        </div>
-    </div>
-</section>
-{% endfor %}
+{% include shortcodes.html %}
