@@ -1,5 +1,5 @@
 {% for code in site[page.collection] %}
-<section class="sc" ref="shortcode">
+<section class="sc" ref="shortcode" v-if="filteredCodes">
     <div class="sc__section">
         {% if code.tags.size > 0 %}<span class="sc__tags">
             {% for tag in code.tags %}<span class="sc__tag">#{{ tag }}</span>{% endfor %}

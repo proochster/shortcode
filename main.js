@@ -3,27 +3,28 @@ var app=new Vue({
     data: function(){
             return {
             search: '',
-            // shortcode: "",
             codes: document.querySelectorAll('.sc')
         };
     },
     created(){
-        console.log(this.allRecords);
+        console.log(this.filteredCodes);
     },
     computed:
     {
-        filteredCustomers:function()
+        filteredCodes:function()
         {
-        var self=this;
-           return this.codes.filter(function(sc){return sc.name.toLowerCase().indexOf(self.search.toLowerCase())>=0;});
-           //return this.codes;
+            var self=this;
+
+            // NodeList needs to be converted to an Array before being filtered
+            codesArray = Array.prototype.slice.call(this.codes);
+            
+            return codesArray.filter(function(sc){
+                return sc.querySelector(".sc__title").innerHTML.toLowerCase().indexOf(self.search.toLowerCase())>=0;
+            });
         },
         allRecords:function()
         {
             return codes = document.querySelectorAll('.sc');
-        },
-        allTitles:function()
-        {
         }
-    }
+    } 
 });
