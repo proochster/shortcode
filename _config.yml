@@ -37,7 +37,7 @@ plugins:
 highlighter: rouge
 
 sass:
-  # sass_dir: ./_scss
+  sass_dir: ./_styles
   style: compressed
 
 theme-colour: '#202943'
