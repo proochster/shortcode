@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: shortcode
+title: <shortcode>
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Cheatsheet list HTML, CSS, Javascript elements, attributes and selectors.  
@@ -46,6 +46,7 @@ collections:
   - html
   - css
   - javascript
+  - liquid
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

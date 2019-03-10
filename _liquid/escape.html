@@ -1,0 +1,8 @@
+---
+title: escape tags
+description: You can escape liquid tags from being processed by using this pattern.
+tags: liquid
+---
+
+{{" {{"}}" {{" {% "}} include file.html  "}} %}
+{{" {% comment "}} %} It returns {{" {% include file.html "}} %} as a string. {{" {% endcomment "}} %}
