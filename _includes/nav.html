@@ -1,13 +1,10 @@
 {% assign current = page.url | downcase | split: '/' %}
 <nav class="nav">
     <ul class="nav__list wrapper wrapper--no-padding">
-        <li class="nav__item"><a href="/html-cheatsheet" title="HTML lookup table" class="nav__link {% if current[1] == 'html' %}active{% endif %}"><i class="fab fa-html5 color--primary"></i> HTML ({{ site.html.size }})</a></li>
-        <li class="nav__item"><a href="/css-cheatsheet" title="CSS lookup table" class="nav__link {% if current[1] == 'css' %}active{% endif %}"><i class="fab fa-css3-alt color--primary"></i> CSS ({{ site.css.size }})</a></li>
-        <li class="nav__item"><a href="/javascript-cheatsheet" title="JavaScript lookup table" class="nav__link {% if current[1] == 'javascript' %}active{% endif %}"><i class="fab fa-js-square color--primary"></i> JAVASCRIPT ({{ site.javascript.size }})</a></li>
-        <li class="nav__item"><a href="/liquid-cheatsheet" title="Liquid lookup table" class="nav__link {% if current[1] == 'liquid' %}active{% endif %}"><i class="fas fa-flask color--primary"></i> LIQUID ({{ site.liquid.size }})</a></li>
+{% for item in site.collections %}{% unless item.label == "posts" %}
+        <li class="nav__item">
+            <a href="/{{ item.permalink }}" title="{{ item.label | upcase }} lookup table" class="nav__link{% if current[1] == item.permalink %} active{% endif %}"><i class="color--primary {{item.icon }}"></i> {{ item.label | upcase }} <small>({{ site[item.label] | size }})</small></a>
+        </li>
+{% endunless %}{% endfor %}
     </ul>
 </nav>
-
-{% for item in site.collections %}
-    {{ item.label }}
-{% endfor %}

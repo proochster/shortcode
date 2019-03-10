@@ -43,10 +43,22 @@ sass:
 theme-colour: '#202943'
 
 collections:
-  - html
-  - css
-  - javascript
-  - liquid
+  html:
+    output: false
+    permalink: html-cheatsheet
+    icon: fab fa-html5
+  css:
+    output: false
+    permalink: css-cheatsheet
+    icon: fab fa-css3-alt
+  javascript:
+    output: false
+    permalink: javascript-cheatsheet
+    icon: fab fa-js-square
+  liquid:
+    output: false
+    permalink: liquid-cheatsheet
+    icon: fas fa-flask
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
