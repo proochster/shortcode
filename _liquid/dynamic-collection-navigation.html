@@ -1,0 +1,15 @@
+---
+title: dynamic collection navigation
+description: Simple loop getting name, permalink and a number of posts for each collection.
+tags: liquid navigation collections snippet
+---
+<ul>
+{{" {% for item in site.collections "}} %}
+  <li>
+      <a href="/{{" {{ item.permalink "}} }}" title="{{"{{ item.label "}}}}">
+        {{"{{ item.label "}}}} ({{"{{ site[item.label] | size "}}}})
+      </a>
+  </li>
+{{" {% endfor "}} %}
+</ul>
+
