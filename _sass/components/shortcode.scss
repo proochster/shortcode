@@ -4,60 +4,77 @@
 
 .sc{
     color: $grey-light;
-    background-color: $secondary-colour;
+    padding: $base-unit;
     
     @include screen-bigger-than($small){
         display: flex;
     }
 
     &__section{
-        // margin: $base-unit 0;
         width: 100%;
         box-sizing: border-box;
-        // background-color: $light;
 
         @include screen-bigger-than($small){
           width: 50%;  
         }
     }
 
-    &__description{
-        padding: $base-unit $base-unit 0 $base-unit; 
-        // background-color: $light;
-        display: block;
-        width: 100%;
-        box-sizing: border-box;
-        
-        @include screen-bigger-than($small){
-            margin: $base-unit 0 0; 
-            max-width: $large / 2;
-            padding: 0 0 $base-unit $base-unit; 
-            float: right;
-        }
-    }
-
-    &__title{
+    &__description{        
         background-color: $style-1-primary;
         background: linear-gradient(15deg,$style-1-primary,$style-1-secondary);
         border-left: $base-unit solid $style-1-accent;
-        padding: $base-unit;
         box-shadow: 0 1px 1px #000;
-        position: relative;
-        font-size: 28px;
-        margin: 0;
         border-radius: 2px;
-
+        padding: $base-unit;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        
+        &:after{
+            border-color: $style-1-primary transparent transparent transparent;
+            border-style: solid;
+            top: $base-unit;
+            border-width: 10px 10px 0 10px;
+            content: '';
+            position: absolute;
+            top: 100%;
+        }
+        
         @include screen-bigger-than($small){
+            max-width: $large / 2 - $base-unit;
+            float: right;
+
             &:after{
                 border-color: transparent transparent transparent $style-1-secondary;
-                border-style: solid;
                 border-width: 10px 0 10px 10px;
-                content: '';
-                position: absolute;
                 left: 100%;
-                top: 8px;
+                top: $base-unit;
             }
         }
+    }
+
+    &__anchor{
+        color: $light;
+        text-decoration: none;
+        display: block;
+
+        &:hover{
+            text-decoration: underline;
+        }
+        
+        &:focus{
+            outline: 0;
+            background-color: $style-1-accent;
+            padding: $base-unit;
+            border-radius: 3px;
+        }
+    }
+
+    &__title{    
+        text-shadow: 0 -1px #000;
+        font-size: 28px;
+        margin: 0;
     }
 
     &__tags{
@@ -75,11 +92,11 @@
         background-color: $secondary-colour;
         font-size: $base-unit;
         padding: 1px $base-unit/2;
+        margin-left: $base-unit/2;
     }
     
     &__text{
         color: $grey-dark;
-        padding: 0 $base-unit;
         margin: 0;
         font-style: italic; 
         
@@ -89,17 +106,12 @@
             vertical-align: middle;
             width: 100%;
             height: 1px;
-            background: linear-gradient(to right,rgba(116,95,181,0.2),transparent 80%);
-        }
-        
-        @include screen-bigger-than($small){
-            padding: 0 0 0 $base-unit*2;
+            background: $style-1-secondary;
         }
     }
     
     &__example{
-        // background-color: $secondary-colour;
-        padding: $base-unit $base-unit*2;
+        padding: $base-unit*2 $base-unit*2 $base-unit;
         color: $light;
         height: 100%;
         overflow: overlay;
@@ -108,7 +120,7 @@
         font-family: 'Encode Sans Semi Expanded', sans-serif;
         
         @include screen-bigger-than($small){
-            padding: 20px $base-unit*2 $base-unit*2;
+            padding: $base-unit $base-unit*2;
             font-size: 16px;
         }
     }
@@ -118,6 +130,7 @@
         
         code{
             white-space: pre-wrap;
+            line-height: 1.6;
         }
     }
 }
