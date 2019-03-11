@@ -17,6 +17,7 @@
                     {% when 'html' %}{% highlight html %}{{ code.content }}{% endhighlight %}
                     {% when 'javascript' %}{% highlight javascript %}{{ code.content }}{% endhighlight %}
                     {% when 'liquid' %}{% highlight liquid %}{{ code.content }}{% endhighlight %}  
+                    {% when 'git' %}{% highlight shell %}{{ code.content }}{% endhighlight %}  
                 {% endcase %}
                 {% if code.parse == true %}<h4 class="sc__text">Output: </h4>{{ code.content }}{% endif %}
             </code>

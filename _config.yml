@@ -59,6 +59,10 @@ collections:
     output: false
     permalink: liquid-cheatsheet
     icon: fas fa-flask
+  git:
+    output: false
+    permalink: git-cheatsheet
+    icon: fab fa-github
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
