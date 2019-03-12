@@ -42,6 +42,7 @@ sass:
 
 theme-colour: '#202943'
 
+collections_dir: _collections
 collections:
   html:
     output: false

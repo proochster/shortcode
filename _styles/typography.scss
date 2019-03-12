@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 body{
-    color: $dark;
+    color: $light;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
 }
@@ -37,6 +37,10 @@ a{
 
     &--dark{
         color: $dark;
+    }
+
+    &--accent{
+        color: $style-1-accent;
     }
 }
 
