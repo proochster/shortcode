@@ -14,13 +14,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: <shortcode>
-email: your-email@example.com
+# email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Cheatsheet list HTML, CSS, Javascript elements, attributes and selectors.  
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: jekyllrb
-# github_username:  jekyll
+url: https://shortcode.dev/ # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: shortcode
+# github_username:  shortcode
 
 # Permalink style 
 # Options: https://jekyllrb.com/docs/permalinks/#builtinpermalinkstyles
