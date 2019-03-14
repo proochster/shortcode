@@ -18,7 +18,7 @@ Otherwise use `jekyll serve` or the short version `jekyll s`
 
 ...
 
-# Creating new collection
+# Creating new collections
 
 1. Add new collection in the `/_config.yml` file following this structure. `HTML` collection used in the example below.
     -   HTML:
