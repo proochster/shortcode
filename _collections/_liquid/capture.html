@@ -1,0 +1,12 @@
+---
+title: capture
+description: Captur is a very handy Liquid function for assigning structured data to a varialble.
+tags: liquid varialble
+---
+{{" {% capture myVar "}} %}
+    {{" {% for item in array "}} %}
+        {{"{{ item.title "}} }}
+    {{" {% endfor "}} %}
+{{" {% endcapture "}} %}
+
+{{" {{ myVar "}} }}

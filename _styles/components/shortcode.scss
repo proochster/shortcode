@@ -22,7 +22,7 @@
     &__description{        
         background-color: $style-1-primary;
         background: linear-gradient(15deg,$style-1-primary,$style-1-secondary);
-        border-left: $base-unit solid $style-1-accent;
+        border-left: $base-unit solid $primary-colour;
         box-shadow: 0 1px 1px #000;
         border-radius: 2px;
         padding: $base-unit;
@@ -65,16 +65,26 @@
         
         &:focus{
             outline: 0;
-            background-color: $style-1-accent;
-            padding: $base-unit;
-            border-radius: 3px;
+
+            &:after{
+                content: "#";
+                color: $primary-colour;
+                background-color: $light;
+                font-size: 21px;
+                padding: 2px 10px;
+                margin-left: 6px;
+                border-radius: 3px;
+            }
         }
     }
 
     &__title{    
-        text-shadow: 0 -1px #000;
+        color: $secondary-colour;
+        text-shadow: 0 1px $light;
         font-size: 28px;
         margin: 0;
+        display: inline-block;
+        cursor: copy;
     }
 
     &__tags{
@@ -96,9 +106,9 @@
     }
     
     &__text{
-        color: $grey-dark;
+        color: $secondary-colour;
         margin: 0;
-        font-style: italic; 
+        // font-style: italic; 
         
         &:before{
             content: '';

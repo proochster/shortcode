@@ -3,7 +3,8 @@ layout: homepage
 title: Homepage
 permalink: /
 ---
-<h1>Latest shortcodes from each cheatsheet</h1>
+{% capture collections %}{% for collection in site.collections %}{% unless collection.label == "posts" %}, {{ collection.label }}{% endunless %}{% endfor %}{% endcapture %}
+<h1 class="page-intro">A collection of useful snippets and code examples for {{ collections | remove_first: ", " }} and more.</h1>
 {% for collection in site.collections %}{% unless collection.label == "posts" %}
 <h2><i class="{{collection.icon}} color--accent"></i> {{ collection.label }}</h2>
 <ul>
