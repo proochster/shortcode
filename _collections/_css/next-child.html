@@ -1,0 +1,16 @@
+---
+title: next child >
+description: Select the next child of given type.
+tags: css selector
+parse: true
+---
+<style>
+    .first-element > .next-element{ border: 1px solid }
+</style>
+
+<span class="first-element">
+    <span class="next-element">Item</span> <!--  this gets selected  -->
+    <span class="next-element">Item <!--  and this -->
+        <span class="next-element">Item</span> <!--  this does not  -->
+    </span>
+</span>

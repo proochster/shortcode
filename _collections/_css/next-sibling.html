@@ -1,0 +1,13 @@
+---
+title: next sibling +
+description: Select only the next sibling of given type.
+tags: css selector
+parse: true
+---
+<style>
+    .first-element + .next-element{ border: 1px solid }
+</style>
+
+<span class="first-element">Item</span>
+<span class="next-element">Item</span> <!--  this gets selected  -->
+<span class="next-element">Item</span> <!--  this does not  -->
