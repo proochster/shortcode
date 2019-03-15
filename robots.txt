@@ -1,0 +1,4 @@
+User-agent: * 
+Disallow: /CNAME
+Disallow: /google2859ef64d60032ee.html
+Disallow: /Readme.md
