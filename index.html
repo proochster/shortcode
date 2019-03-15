@@ -5,13 +5,16 @@ permalink: /
 ---
 {% capture collections %}{% for collection in site.collections %}{% unless collection.label == "posts" %}, {{ collection.label }}{% endunless %}{% endfor %}{% endcapture %}
 <h1 class="page-intro">A collection of useful snippets and code examples for {{ collections | remove_first: ", " }} and more.</h1>
-{% for collection in site.collections %}{% unless collection.label == "posts" %}
-<h2><i class="{{collection.icon}} color--accent"></i> {{ collection.label }}</h2>
-<ul>
-    {% assign sorted = site[collection.label] | sort: 'date' %}
-    {% for code in sorted reversed limit:3 %}
-        <li><a href="{{collection.permalink}}#{{ code.title }}" title="{{ collection.label | capitalize }} snippet - {{ code.title }}">{{ code.title }}</a></li>
-    {% endfor %}
-</ul>
-<a href="{{ collection.permalink }}">All {{ collection.label | capitalize }} code snippets <i class="fas fa-arrow-circle-right"></i></a>
-{% endunless %}{% endfor %}
+<div class="sls">
+    {% for collection in site.collections %}{% unless collection.label == "posts" %}
+    <div class="sl">
+        <h2 class="sl__title"><i class="{{collection.icon}} color--accent"></i> {{ collection.label | upcase }} <small>latest:</small></h2>
+        <ul class="sl__list">{% assign sorted = site[collection.label] | sort: 'date' %}{% for code in sorted reversed limit:3 %}
+            <li class="sl__item">
+                <a class="sl__link" href="{{ collection.permalink }}#{{ code.title }}" title="{{ collection.label | capitalize }} snippet - {{ code.title }}">{{ code.title }}</a>
+            </li>{% endfor %}
+        </ul>
+        <a href="{{ collection.permalink }}" title="All {{ collection.label | capitalize }} code snippets">All {{ collection.label | capitalize }} code snippets <i class="fas fa-arrow-circle-right"></i></a>
+    </div>
+    {% endunless %}{% endfor %}
+</div>
