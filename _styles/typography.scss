@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 body{
-    color: $light;
+    color: $secondary-colour;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
 }
@@ -14,7 +14,7 @@ h1,h2,h3,h4,h5{
 }
 
 a{
-    color: $link;
+    color: $style-1-accent;
 
     &:hover{
         text-decoration: none;
@@ -22,32 +22,9 @@ a{
 }
 
 .page-intro{
-    font-size: 16px;
-    border-bottom: 1px solid $dark;
-    padding: 0 $base-unit*2 $base-unit*2;
-}
-
-.color{
-
-    &--primary{
-        color: $primary-colour;
-    }
-
-    &--secondary{
-        color: $secondary-colour;
-    }
-
-    &--light{
-        color: $grey-light;
-    }
-
-    &--dark{
-        color: $dark;
-    }
-
-    &--accent{
-        color: $style-1-accent;
-    }
+    // font-size: 16px;
+    // border-bottom: 1px solid $dark;
+    // padding: 0 $base-unit*2 $base-unit*2;
 }
 
 .font{

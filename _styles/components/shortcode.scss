@@ -23,7 +23,7 @@
         background-color: $style-1-primary;
         background: linear-gradient(15deg,$style-1-primary,$style-1-secondary);
         border-left: $base-unit solid $primary-colour;
-        box-shadow: 0 1px 1px #000;
+        box-shadow: 0 1px 1px $dark;
         border-radius: 2px;
         padding: $base-unit;
         // display: block;
@@ -32,7 +32,7 @@
         position: relative;
         
         &:after{
-            border-color: $style-1-primary transparent transparent transparent;
+            border-color: $secondary-colour transparent transparent transparent;
             border-style: solid;
             top: $base-unit;
             border-width: 10px 10px 0 10px;
@@ -142,5 +142,9 @@
             white-space: pre-wrap;
             line-height: 1.6;
         }
+    }
+
+    &--intro{
+        padding: $base-unit*4 $base-unit;
     }
 }

@@ -15,6 +15,12 @@ body{
     height: 100%;
 }
 
+.site{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 // .padding{
 //     padding: $base-unitx2;
 // }
@@ -32,7 +38,7 @@ body{
 }
 
 .content{
-    background-color: $secondary-colour;
+    // background: linear-gradient(15deg, $grey-dark, $light);
     flex-grow: 1;
     width: 100%;
     box-sizing: border-box;
