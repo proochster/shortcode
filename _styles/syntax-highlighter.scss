@@ -6,15 +6,16 @@
 .highlight, pre, .highlight code{ margin: 0; font-family: 'Encode Sans Semi Expanded', sans-serif;}
 code{
     .hll { background-color: #ffffcc }
-    .k, .kc, .kd, .kn, .kp, .kr, .nb, .sx, .bp, .na, .nv{ color: $style-1-accent; } // #42b596; 
+    .k, .kc, .kd, .kn, .kp, .kr, .nb, .sx, .bp, .nc, .nn, .fm{ color: $style-1-accent; font-weight: 600; } // #42b596; 
     .nx, .s{ color: #238ad6; }
-    .mb,.mf,.mh,.mi,.mo,.m,.il{ color:$grey-light; }
+    .mb,.mf,.mh,.mi,.mo,.m,.il{ color:$primary-colour; font-weight: 600; }
     .o{ color: $primary-colour; }
-    .sa,.sb,.sc,.dl,.sd,.s1,.s2,.sh{ color: #a9c6ff; }
+    .sa,.sb,.sc,.dl,.sd,.s1,.s2,.sh, .nd, .ow, .na, .nv{ color: $style-1-accent;}
     .c { color: #2f4ea2; font-style: italic } /* Comment */
     .err, .gr { border: 1px solid #FF0000 } /* Error */
     .ch, .cm, .cpf, .c1, .cs { color: #408080; font-style: italic } /* Comment.Hashbang */
-    .cp, .nt { color: #eb6300 } /* Comment.Preproc */
+    // .cp, .nt { color: #eb6300 } /* Comment.Preproc */
+    .cp, .nt { font-weight: 600; } /* Comment.Preproc */
     .gd { color: #A00000 } /* Generic.Deleted */
     .ge { font-style: italic } /* Generic.Emph */
     .gh, .gp { color: #000080; } /* Generic.Heading */
@@ -23,12 +24,12 @@ code{
     .gu { color: #800080;  } /* Generic.Subheading */
     .gt { color: #0044DD } /* Generic.Traceback */
     .kt { color: #B00040 } /* Keyword.Type */
-    .nc, .nf, .nn, .fm { color: #0000FF; } /* Name.Class */
+    // .nc, .nf, .nn, .fm { color: #0000FF; } /* Name.Class */
     .no { color: #880000 } /* Name.Constant */
-    .nd, .ow { color: #AA22FF } /* Name.Decorator */
+    // .nd, .ow { color: #AA22FF } /* Name.Decorator */
     .ni { color: #999;  } /* Name.Entity */
     .ne { color: #D2413A;  } /* Name.Exception */
-    .nl { color: #A0A000 } /* Name.Label */
+    // .nl { color: #A0A000 } /* Name.Label */
     .w { color: #bbb } /* Text.Whitespace */
     .se { color: #BB6622;} /* Literal.String.Escape */
     .si, .sr { color: #BB6688;  } /* Literal.String.Interpol */

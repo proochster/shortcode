@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 .sc{
-    color: $grey-light;
+    // color: $grey-light;
     padding: $base-unit;
     
     @include screen-bigger-than($small){
@@ -99,7 +99,7 @@
     }
     
     &__tag{
-        background-color: $secondary-colour;
+        background-color: $grey-light;
         font-size: $base-unit;
         padding: 1px $base-unit/2;
         margin-left: $base-unit/2;
@@ -122,7 +122,7 @@
     
     &__example{
         padding: $base-unit*2 $base-unit*2 $base-unit;
-        color: $light;
+        color: $secondary-colour;
         height: 100%;
         overflow: overlay;
         box-sizing: border-box;
