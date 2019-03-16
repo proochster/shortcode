@@ -29,7 +29,7 @@ permalink: /
             {% for collection in site.collections %}{% unless collection.label == "posts" %}
             <div class="sl">
                 <h2 class="sl__title"><i class="{{collection.icon}} color--accent"></i> {{ collection.label | upcase }}</h2>
-                <ul class="sl__list">{% assign sorted = site[collection.label] | sort: 'date' %}{% for code in sorted reversed limit:3 %}
+                <ul class="sl__list">{% assign sorted = site[collection.label] | sort: 'date' | reverse %}{% for code in sorted limit:3  %}
                     <li class="sl__item">
                         <a class="sl__link" href="{{ collection.permalink }}#{{ code.title }}" title="{{ collection.label | capitalize }} snippet - {{ code.title }}">{{ code.title }}</a>
                     </li>{% endfor %}
