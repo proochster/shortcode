@@ -1,0 +1,11 @@
+---
+title: truncate
+description: Trim string to the number of characters specified. By default the truncated string will end with ellipsis (...) however you can replace it by passing your ending as the second parameter.
+tags: liquid string
+date: 2019-03-17
+---
+
+{{"{{  "}}"Some string to be truncated" | truncate:9 }}
+    {{ "String to truncate" | truncate:9 }}
+{{"{{  "}}"Some string to be truncated" | truncate:9, "...trimmed" }}
+    {{ "String to truncate" | truncate:16, "...trimmed"  }}
