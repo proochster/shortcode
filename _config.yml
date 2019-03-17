@@ -17,7 +17,7 @@ title: shortcode.dev
 # email: your-email@example.com
 description:  Cheatsheet lists HTML, CSS, Javascript elements, attributes and selectors.  
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://shortcode.dev/ # the base hostname & protocol for your site, e.g. http://example.com
+url: https://shortcode.dev # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: shortcode
 # github_username:  shortcode
 
