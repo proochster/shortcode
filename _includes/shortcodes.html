@@ -19,7 +19,7 @@
                     {% when 'liquid' %}{% highlight liquid %}{{ code.content }}{% endhighlight %}  
                     {% when 'git' %}{% highlight shell %}{{ code.content }}{% endhighlight %}  
                 {% endcase %}
-                {% if code.parse == true %}<h4 class="sc__text">Output: </h4>{{ code.content }}{% endif %}
+                {% if code.parse == true %}<p class="sc__text">Output: </p>{{ code.content }}{% endif %}
             </code>
         </div>
     </div>

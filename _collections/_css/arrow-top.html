@@ -1,0 +1,20 @@
+---
+title: arrow top
+description: Pure css arrows using sudo elements. Arrow top.
+tags: css sudo
+parse: true
+date: 2019-03-17
+---
+<style>
+    .arrow-top{
+        display: block;
+    }
+    .arrow-top:after {
+        border-style: solid;
+        content: '';
+        position: absolute;
+        border-color: transparent transparent #eb6300 transparent;
+        border-width: 0 10px 10px 10px;
+    }
+</style>
+<span class="arrow-top"></span>

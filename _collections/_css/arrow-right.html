@@ -1,0 +1,20 @@
+---
+title: arrow right
+description: Pure css arrows using sudo elements. Arrow right.
+tags: css sudo
+parse: true
+date: 2019-03-17
+---
+<style>
+    .arrow-right{
+        display: block;
+    }
+    .arrow-right:after {
+        border-style: solid;
+        content: '';
+        position: absolute;
+        border-color: transparent transparent transparent #eb6300;
+        border-width: 10px 0 10px 10px;
+    }
+</style>
+<span class="arrow-right"></span>
