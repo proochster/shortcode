@@ -8,7 +8,7 @@
         %}{% capture description %}{{ page.title | upcase }}. {% for code in site[page.collection] %}, {{ code.title | capitalize }}{% endfor %}{% endcapture %}
         {%
         else 
-        %}{% capture description %}A collection of useful snippets and code examples for {{ collections }}. Elements, attributes and selectors'>{% endcapture %}{% 
+        %}{% capture description %}A collection of useful snippets and code examples for {{ collections }}. Elements, attributes and selectors{% endcapture %}{% 
         endif 
     %}<meta name="Description" content='{{ description | remove_first: ", " | truncate: 160 }}'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
