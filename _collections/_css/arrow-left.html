@@ -1,0 +1,20 @@
+---
+title: arrow left
+description: Pure css arrows using sudo elements. Arrow left.
+tags: css sudo
+parse: true
+date: 2019-03-17
+---
+<style>
+    .arrow-left{
+        display: block;
+    }
+    .arrow-left:after {
+        border-style: solid;
+        content: '';
+        position: absolute;
+        border-color: transparent #eb6300 transparent transparent;
+        border-width: 10px 10px 10px 0;
+    }
+</style>
+<span class="arrow-left"></span>

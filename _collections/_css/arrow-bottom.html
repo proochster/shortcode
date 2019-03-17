@@ -1,0 +1,20 @@
+---
+title: arrow bottom
+description: Pure css arrows using sudo elements. Arrow bottom.
+tags: css sudo
+parse: true
+date: 2019-03-17
+---
+<style>
+    .arrow-bottom{
+        display: block;
+    }
+    .arrow-bottom:after {
+        border-style: solid;
+        content: '';
+        position: absolute;
+        border-color: #eb6300 transparent transparent transparent;
+        border-width: 10px 10px 0 10px;
+    }
+</style>
+<span class="arrow-bottom"></span>
