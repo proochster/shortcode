@@ -1,0 +1,11 @@
+---
+title: picture
+description: Responsive image sources. Media attribute accepts standard media queries.
+tags: html tag responsive media
+date: 2019-03-18
+---
+<picture>
+    <source media="(min-width: 1024px)" srcset="desktop-image.jpg">
+    <source media="(min-width: 768px)" srcset="tablet-image.jpg">
+    <img src="default-image.jpg" alt="Default mobile image">
+</picture>
