@@ -5,7 +5,7 @@
             {% for tag in code.tags %}<span class="sc__tag">#{{ tag }}</span>{% endfor %}
         </span>{% endif %}
         <div class="sc__description">
-            <a id="{{ code.title }}" href="#{{ code.title }}" rel="tag" class="sc__anchor"><h3 class="sc__title">{{ code.title }}</h3></a>    
+            <a id="{{ code.title }}" href="#{{ code.title }}" rel="tag" class="sc__anchor"><h2 class="sc__title">{{ code.title }}</h2></a>    
             {% if code.description.size > 0 %}<p class="sc__text">{{ code.description }}</p>{% endif %}
         </div>
     </div>
