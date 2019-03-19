@@ -3,19 +3,19 @@
 \*------------------------------------*/
 
 .search{
-    // background-color: $secondary-colour;
+    background-color: $secondary-colour;
 
-    // &__input{
-    //     padding: $base-unit;
-    //     width: 100%;
-    //     font-family: 'Open Sans', sans-serif;
-    //     border: 0;
-    //     border-radius: 5px;
-    //     font-size: 20px;
-    //     box-sizing: border-box;
+    &__input{
+        padding: $base-unit;
+        width: 100%;
+        font-family: 'Open Sans', sans-serif;
+        border: 0;
+        border-radius: 5px;
+        font-size: 20px;
+        box-sizing: border-box;
         
-    //     @include screen-bigger-than($small){
-    //         width: 50%;
-    //     }
-    // }
+        @include screen-bigger-than($small){
+            width: 50%;
+        }
+    }
 }
