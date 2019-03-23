@@ -1,5 +1,5 @@
 {% for code in site[page.collection] %}
-<article class="sc" ref="shortcode">
+<article class="sc" data-display="flex" ref="shortcode">
     <div class="sc__section">
         {% if code.tags.size > 0 %}<span class="sc__tags">
             {% for tag in code.tags %}<span class="sc__tag">#{{ tag }}</span>{% endfor %}

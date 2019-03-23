@@ -31,3 +31,14 @@
         background-color: $light;
     }
 }
+
+#sc{
+
+    [data-display="false"]{
+        display: none;
+    }
+
+    [data-display="flex"]{
+        display: flex;
+    }
+}

@@ -5,6 +5,26 @@
 .search{
     background-color: $secondary-colour;
 
+    &__wrapper{
+
+        position: relative;
+
+        @include screen-bigger-than($small){
+            width: 50%;
+        }
+
+        &:after {
+            color: $primary-colour;
+            content: "\f002";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 20px;
+        }
+    }
+
     &__input{
         padding: $base-unit;
         width: 100%;
@@ -13,9 +33,5 @@
         border-radius: 5px;
         font-size: 20px;
         box-sizing: border-box;
-        
-        @include screen-bigger-than($small){
-            width: 50%;
-        }
     }
 }
