@@ -1,10 +1,29 @@
 (function(){
     var search = {
-        test: function(){
-            console.log('hello');
+        searchInput: document.querySelector('.search__input'),
+        shortCodes: document.querySelectorAll('.sc'),
+
+        searchAll: function(){
+
+            var self=this;
+
+            this.searchInput.onkeyup = function(){
+
+                var phrase = this.value;
+                // console.log(phrase);
+
+                self.shortCodes.forEach(function(code){
+
+                    if(code.querySelector('.sc__title').innerHTML.toLowerCase().indexOf(phrase.toLowerCase())>=0){
+                        code.add
+                    }
+                
+                });
+
+            };
         },
         init: function(){
-            this.test();
+            this.searchAll();
         }
     }
     return search.init();
