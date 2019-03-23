@@ -6,10 +6,6 @@
     // color: $grey-light;
     padding: $base-unit;
     
-    @include screen-bigger-than($small){
-        display: flex;
-    }
-
     &__section{
         width: 100%;
         box-sizing: border-box;

@@ -16,7 +16,7 @@
                     code.setAttribute('data-display','false');
 
                     if(code.querySelector('.sc__title').innerHTML.toLowerCase().indexOf(phrase.toLowerCase())>=0){
-                        code.setAttribute('data-display','flex');
+                        code.setAttribute('data-display','true');
                     }
                 
                 });

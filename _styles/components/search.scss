@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 .search{
-    background-color: $secondary-colour;
+    background-color: $style-1-accent;
 
     &__wrapper{
 
@@ -14,7 +14,7 @@
         }
 
         &:after {
-            color: $primary-colour;
+            color: $secondary-colour;
             content: "\f002";
             font-family: "Font Awesome 5 Free";
             font-weight: 900;

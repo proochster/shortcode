@@ -38,7 +38,11 @@
         display: none;
     }
 
-    [data-display="flex"]{
-        display: flex;
+    [data-display="true"]{
+        display: block;
+
+        @include screen-bigger-than($small){
+            display: flex;
+        }
     }
 }
