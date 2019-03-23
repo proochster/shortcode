@@ -31,3 +31,18 @@
         background-color: $light;
     }
 }
+
+#sc{
+
+    [data-display="false"]{
+        display: none;
+    }
+
+    [data-display="true"]{
+        display: block;
+
+        @include screen-bigger-than($small){
+            display: flex;
+        }
+    }
+}

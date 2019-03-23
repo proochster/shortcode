@@ -3,19 +3,35 @@
 \*------------------------------------*/
 
 .search{
-    // background-color: $secondary-colour;
+    background-color: $style-1-accent;
 
-    // &__input{
-    //     padding: $base-unit;
-    //     width: 100%;
-    //     font-family: 'Open Sans', sans-serif;
-    //     border: 0;
-    //     border-radius: 5px;
-    //     font-size: 20px;
-    //     box-sizing: border-box;
-        
-    //     @include screen-bigger-than($small){
-    //         width: 50%;
-    //     }
-    // }
+    &__wrapper{
+
+        position: relative;
+
+        @include screen-bigger-than($small){
+            width: 50%;
+        }
+
+        &:after {
+            color: $secondary-colour;
+            content: "\f002";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 20px;
+        }
+    }
+
+    &__input{
+        padding: $base-unit;
+        width: 100%;
+        font-family: 'Open Sans', sans-serif;
+        border: 0;
+        border-radius: 5px;
+        font-size: 20px;
+        box-sizing: border-box;
+    }
 }

@@ -1,30 +1,31 @@
-var app=new Vue({
-    el: "#sc",
-    data: function(){
-            return {
-            search: '',
-            codes: document.querySelectorAll('.sc')
-        };
-    },
-    created(){
-        console.log(this.filteredCodes);
-    },
-    computed:
-    {
-        filteredCodes:function()
-        {
+(function(){
+    var search = {
+        searchInput: document.querySelector('.search__input'),
+        shortCodes: document.querySelectorAll('.sc'),
+
+        searchAll: function(){
+
             var self=this;
 
-            // NodeList needs to be converted to an Array before being filtered
-            codesArray = Array.prototype.slice.call(this.codes);
-            
-            return codesArray.filter(function(sc){
-                return sc.querySelector(".sc__title").innerHTML.toLowerCase().indexOf(self.search.toLowerCase())>=0;
-            });
+            this.searchInput.onkeyup = function(){
+
+                var phrase = this.value;
+
+                self.shortCodes.forEach(function(code){
+
+                    code.setAttribute('data-display','false');
+
+                    if(code.querySelector('.sc__title').innerHTML.toLowerCase().indexOf(phrase.toLowerCase())>=0){
+                        code.setAttribute('data-display','true');
+                    }
+                
+                });
+
+            };
         },
-        allRecords:function()
-        {
-            return codes = document.querySelectorAll('.sc');
+        init: function(){
+            this.searchAll();
         }
-    } 
-});
+    }
+    return search.init();
+})();
