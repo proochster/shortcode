@@ -1,5 +1,5 @@
 (function(){
-    var search = {
+    var sc = {
         searchInput: document.querySelector('.search__input'),
         shortCodes: document.querySelectorAll('.sc'),
 
@@ -34,7 +34,7 @@
         }
     }
 
-    if( search.searchInput && search.shortCodes ){
-        return search.init();
+    if( sc.searchInput && sc.shortCodes ){
+        return sc.init();
     }
 })();
