@@ -24,8 +24,16 @@
         display: block;
 
         &.active{
-            background-color: $dark;
+            background-color: $style-1-accent;
             color: $light;
+        }
+    }
+
+    &__icon{
+        color: $primary-colour;
+
+        .active &{
+            color: white;
         }
     }
 }
