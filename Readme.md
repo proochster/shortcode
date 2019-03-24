@@ -2,7 +2,7 @@
 
 https://shortcode.dev
 
-# Adding a new short codes
+# Adding a new short code
 
 1. Create a new html file in the collection folder, i.e:
 
@@ -26,7 +26,7 @@ https://shortcode.dev
 
 3. When ready subimt a pull request to the `dev` branch (`https://github.com/proochster/shortcode/tree/dev`). 
 
-# Creating a new collections
+# Creating a new collection
 
 1. Add the new collection in `/_config.yml` file following this structure. `HTML` collection was used in the example below. For the collection icon checkout [Font Awesome](https://fontawesome.com/cheatsheet)
 
