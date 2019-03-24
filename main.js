@@ -3,29 +3,38 @@
         searchInput: document.querySelector('.search__input'),
         shortCodes: document.querySelectorAll('.sc'),
 
+        // Returns true if the input text value matches the content
+        hasPhrase: function(record, element){
+            var inputPhrase = this.searchInput.value.toLowerCase();
+            return record.querySelector(element).innerHTML.toLowerCase().indexOf(inputPhrase)>=0
+        },
+
+        // Search shortcode
         searchAll: function(){
 
             var self=this;
-
             this.searchInput.onkeyup = function(){
 
-                var phrase = this.value;
-
+                // Loop through the list of shortcodes
                 self.shortCodes.forEach(function(code){
 
+                    // Reset display of the shortcodes
                     code.setAttribute('data-display','false');
 
-                    if(code.querySelector('.sc__title').innerHTML.toLowerCase().indexOf(phrase.toLowerCase())>=0){
+                    // Look for the searched phrase in title and desccription
+                    if(self.hasPhrase(code,'.sc__title') || self.hasPhrase(code,'.sc__text')){
                         code.setAttribute('data-display','true');
                     }
-                
                 });
-
             };
         },
+
         init: function(){
             this.searchAll();
         }
     }
-    return search.init();
+
+    if( search.searchInput && search.shortCodes ){
+        return search.init();
+    }
 })();
