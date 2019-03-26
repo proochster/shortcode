@@ -5,8 +5,14 @@
 
         // Returns true if the input text value matches the content
         hasPhrase: function(record, element){
+
             var inputPhrase = this.searchInput.value.toLowerCase();
-            return record.querySelector(element).innerHTML.toLowerCase().indexOf(inputPhrase)>=0
+            var text = record.querySelector(element);
+            if(text){
+                return text.innerHTML.toLowerCase().indexOf(inputPhrase)>=0
+            } else {
+                return false
+            }
         },
 
         // Search shortcode
