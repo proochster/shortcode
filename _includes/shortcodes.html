@@ -17,7 +17,9 @@
                     {% when 'html' %}{% highlight html %}{{ code.content }}{% endhighlight %}
                     {% when 'javascript' %}{% highlight javascript %}{{ code.content }}{% endhighlight %}
                     {% when 'liquid' %}{% highlight liquid %}{{ code.content }}{% endhighlight %}  
-                    {% when 'git' %}{% highlight shell %}{{ code.content }}{% endhighlight %}  
+                    {% when 'git' %}{% highlight shell %}{{ code.content }}{% endhighlight %}   
+                    {% when 'vue' %}{% highlight javascript %}{{ code.content }}{% endhighlight %}  
+                    {% when 'node' %}{% highlight shell %}{{ code.content }}{% endhighlight %}  
                 {% endcase %}{% if code.parse == true %}<p class="sc__text">Output: </p>{{ code.content }}{% endif %}
             </code>
         </div>
