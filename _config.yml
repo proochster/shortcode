@@ -63,6 +63,10 @@ collections:
     output: false
     permalink: git-cheatsheet
     icon: fab fa-github
+  vue:
+    output: false
+    permalink: vue-cheatsheet
+    icon: fab fa-vuejs
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
