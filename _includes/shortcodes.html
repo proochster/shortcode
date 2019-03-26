@@ -1,4 +1,4 @@
-{% for code in site[page.collection] %}
+{% assign sortedcodes = site[page.collection] | sort:"title" %}{% for code in sortedcodes %}
 <article class="sc" data-display="true" ref="shortcode">
     <div class="sc__section">
         <div class="sc__description">
