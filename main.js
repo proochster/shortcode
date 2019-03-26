@@ -4,12 +4,11 @@
         shortCodes: document.querySelectorAll('.sc'),
 
         // Returns true if the input text value matches the content
-        hasPhrase: function(record, element){
+        hasPhrase: function(block, element, query){
 
-            var inputPhrase = this.searchInput.value.toLowerCase();
-            var text = record.querySelector(element);
+            var text = block.querySelector(element);
             if(text){
-                return text.innerHTML.toLowerCase().indexOf(inputPhrase)>=0
+                return text.innerHTML.toLowerCase().indexOf(query)>=0
             } else {
                 return false
             }
@@ -20,6 +19,9 @@
 
             var self=this;
             this.searchInput.onkeyup = function(){
+                
+                // Searched term value
+                var inputPhrase = self.searchInput.value.toLowerCase();
 
                 // Loop through the list of shortcodes
                 self.shortCodes.forEach(function(code){
@@ -28,7 +30,7 @@
                     code.setAttribute('data-display','false');
 
                     // Look for the searched phrase in title and desccription
-                    if(self.hasPhrase(code,'.sc__title') || self.hasPhrase(code,'.sc__text')){
+                    if(self.hasPhrase(code,'.sc__title',inputPhrase) || self.hasPhrase(code,'.sc__text',inputPhrase)){
                         code.setAttribute('data-display','true');
                     }
                 });
