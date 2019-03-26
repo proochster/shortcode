@@ -24,7 +24,7 @@ https://shortcode.dev
     shortcode
     ```
 
-3. When ready subimt a pull request to the `dev` branch (`https://github.com/proochster/shortcode/tree/dev`). 
+3. When ready submit a pull request to the `dev` branch (`https://github.com/proochster/shortcode/tree/dev`). 
 
 # Creating a new collection
 
