@@ -20,7 +20,7 @@
                     {% when 'git' %}{% highlight shell %}{{ code.content }}{% endhighlight %}   
                     {% when 'vue' %}{% highlight javascript %}{{ code.content }}{% endhighlight %}  
                     {% when 'node' %}{% highlight shell %}{{ code.content }}{% endhighlight %}
-                    {% when 'nano' %}{% highlight shell %}{{ code.content }}{% endhighlight %}
+                    {% when 'ssh' %}{% highlight shell %}{{ code.content }}{% endhighlight %}
                 {% endcase %}{% if code.parse == true %}<p class="sc__text">Output: </p>{{ code.content }}{% endif %}
             </code>
         </div>
