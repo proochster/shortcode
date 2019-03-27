@@ -71,6 +71,10 @@ collections:
     output: false
     permalink: node-cheatsheet
     icon: fab fa-node-js
+  nano:
+    output: false
+    permalink: nano-cheatsheet
+    icon: fas fa-edit
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
