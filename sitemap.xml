@@ -6,9 +6,15 @@
         <lastmod>{{ site.time | date: "%Y-%m-%dT%H:%M:%S+00:00" }}</lastmod>
         <priority>1.00</priority>
     </url>
-    {% for item in site.collections %}{% unless item.label == "posts" %}<url>
-        <loc>{{ site.url }}/{{ item.permalink }}</loc>
+    {% for collection in site.collections %}{% unless collection.label == "posts" %}<url>
+        <loc>{{ site.url }}/{{ collection.permalink }}</loc>
         <lastmod>{{ site.time | date: "%Y-%m-%dT%H:%M:%S+00:00" }}</lastmod>
         <priority>0.80</priority>
-    </url>{% endunless %}{% endfor %}
+    </url>{% for code in site[collection.label] %}
+    <url>
+        <loc>{{ site.url }}/{{ collection.permalink }}?code={{ code.title | url_encode }}</loc>
+        <lastmod>{{ code.date }}</lastmod>
+        <priority>0.64</priority>
+    </url>{% endfor %}
+    {% endunless %}{% endfor %}
 </urlset>
