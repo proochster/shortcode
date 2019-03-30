@@ -16,20 +16,20 @@
     }
 
     &__list{
-        padding: $base-unit/2 0;
+        padding: $half-unit 0;
         border-top: 1px solid $grey-light;
     }
 
     &__item{
-        padding: $base-unit/2 0;
         list-style: none;
     }
-
+    
     &__link{
         color: $dark;
         display: inline-block;
         border: 1px solid;
         border-radius: 3px;
-        padding: $base-unit/2 $base-unit;
+        padding: $half-unit $base-unit;
+        margin: $half-unit $half-unit $half-unit 0;
     }
 }
