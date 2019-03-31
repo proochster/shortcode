@@ -1,0 +1,23 @@
+---
+title: extend class
+description: Extend an existing ES6 class. super() refernces the parent class constructor.
+tags: javascript es6
+date: 2019-03-30
+---
+class ParentClass{    
+    constuctor(){
+        // Constructor code
+    }
+    foo(){
+        // Foo function code
+    }
+}
+
+// Extend ParentClass
+class ChildClass extends ParentClass{
+    constructor(){
+        // Super refernces the ParentClass constructor 
+        super()
+    }
+    // Add here methodes for the ChildClass
+} 
