@@ -6,6 +6,11 @@
         <lastmod>{{ site.time | date: "%Y-%m-%dT%H:%M:%S+00:00" }}</lastmod>
         <priority>1.00</priority>
     </url>
+    <url>
+        <loc>{{ site.url }}/sitemap</loc>
+        <lastmod>{{ site.time | date: "%Y-%m-%dT%H:%M:%S+00:00" }}</lastmod>
+        <priority>0.80</priority>
+    </url>
     {% for collection in site.collections %}{% unless collection.label == "posts" %}<url>
         <loc>{{ site.url }}/{{ collection.permalink }}</loc>
         <lastmod>{{ site.time | date: "%Y-%m-%dT%H:%M:%S+00:00" }}</lastmod>
