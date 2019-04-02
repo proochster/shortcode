@@ -1,0 +1,17 @@
+---
+title: es6 modules
+description: This ES6 feature allows you to easily import and export whole modules or parts of them between javascript files.
+tags: javascript es6 modules
+date: 2019-04-02
+---
+// file-one.js
+    export function sendInfo(){
+        // ...
+    }
+
+// file-two.js
+    // import whole module
+    import Comms from 'CommunicationModule'
+
+    // or imort individual methods using destructuring
+    import { sendInfo } from './js/file-one.js'
