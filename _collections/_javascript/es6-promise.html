@@ -1,0 +1,15 @@
+---
+title: promise
+description: The Promise object allows you to make an asynchronous call to another function. The 'resolve' function is called when the asynchronous call is successful otherwise it falls back to 'reject' funcion.
+tags: javascript es6
+date: 2019-04-03
+---
+var calculateValue = new Promise(function(resolve, reject) {
+    // Do calculation
+});
+  
+calculateValue.then(function(val) {
+    // Do something with the promissed value
+});
+  
+console.log(calculateValue);
