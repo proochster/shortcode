@@ -71,9 +71,9 @@ collections:
     output: false
     permalink: node-cheatsheet
     icon: fab fa-node-js
-  ssh:
+  cli:
     output: false
-    permalink: ssh-cheatsheet
+    permalink: cli-cheatsheet
     icon: fas fa-terminal
 
 # Exclude from processing.
