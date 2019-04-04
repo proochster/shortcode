@@ -21,6 +21,7 @@
                     {% when 'vue' %}{% highlight javascript %}{{ code.content }}{% endhighlight %}  
                     {% when 'node' %}{% highlight shell %}{{ code.content }}{% endhighlight %}
                     {% when 'cli' %}{% highlight shell %}{{ code.content }}{% endhighlight %}
+                    {% when 'markdown' %}{% highlight markdown %}{{ code.content }}{% endhighlight %}
                 {% endcase %}{% if code.parse == true %}<p class="sc__text">Output: </p>{{ code.content }}{% endif %}
             </code>
         </div>

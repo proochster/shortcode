@@ -75,6 +75,10 @@ collections:
     output: false
     permalink: cli-cheatsheet
     icon: fas fa-terminal
+  markdown:
+    output: false
+    permalink: markdown-cheatsheet
+    icon: fab fa-markdown
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
