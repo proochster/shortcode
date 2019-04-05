@@ -48,6 +48,14 @@
             
             // Loop through the list of shortcodes
             this.shortCodes.forEach(function(code){
+
+                // Check if query matches exactly the code title
+                if(self.urlParams.get("code") === code.querySelector(".sc__title").innerHTML.toLowerCase()){
+
+                    // Update page title
+                    var title = document.title;
+                    document.title = self.urlParams.get("code") + " | " + title;
+                }
                 
                 // Reset display of the shortcodes
                 code.setAttribute('data-display','false');
