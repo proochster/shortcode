@@ -15,11 +15,5 @@
         <loc>{{ site.url }}/{{ collection.permalink }}</loc>
         <lastmod>{{ site.time | date: "%Y-%m-%dT%H:%M:%S+00:00" }}</lastmod>
         <priority>0.80</priority>
-    </url>{% for code in site[collection.label] %}
-    <url>
-        <loc>{{ site.url }}/{{ collection.permalink }}?code={{ code.title | url_encode }}</loc>
-        <lastmod>{{ code.date | date: "%Y-%m-%dT%H:%M:%S+00:00" }}</lastmod>
-        <priority>0.64</priority>
-    </url>{% endfor %}
-    {% endunless %}{% endfor %}
+    </url>{% endunless %}{% endfor %}
 </urlset>
