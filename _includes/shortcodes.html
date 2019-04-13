@@ -1,13 +1,13 @@
 {% assign sortedcodes = site[page.collection] | sort:"title" %}{% for code in sortedcodes %}
 <article class="sc" data-display="true" ref="shortcode">
-    <div class="sc__section">
-        <div class="sc__description">
-            <a id="{{ code.title }}" title="{{ code.title }}" href="/{{ page.permalink }}?code={{ code.title | url_encode }}" rel="tag" class="sc__anchor"><h2 class="sc__title">{{ code.title }}</h2></a>    
-            {% if code.description.size > 0 %}<p class="sc__text">{{ code.description }}</p>{% endif %}
-        </div>{% if code.tags.size > 0 %}
+    <div class="sc__section">{% if code.tags.size > 0 %}
         <span class="sc__tags">
             {% for tag in code.tags %}<span class="sc__tag">#{{ tag }}</span>{% endfor %}
         </span>{% endif %}
+        <div class="sc__description">
+            <a id="{{ code.title }}" title="{{ code.title }}" href="/{{ page.permalink }}?code={{ code.title | url_encode }}" rel="tag" class="sc__anchor"><h2 class="sc__title">{{ code.title }}</h2></a>    
+            {% if code.description.size > 0 %}<p class="sc__text">{{ code.description }}</p>{% endif %}
+        </div>
     </div>
     <div class="sc__section">
         <div class="sc__example">

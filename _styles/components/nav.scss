@@ -8,6 +8,7 @@
     background-color: $secondary-colour;
     width: 100%;
     display: block;
+    border-bottom: 3px solid $style-1-accent;
     
     &__scroll{
         overflow-x: scroll;
