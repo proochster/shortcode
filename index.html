@@ -4,7 +4,7 @@ title: Homepage
 permalink: /
 ---
 {% capture collections %}{% for collection in site.collections %}{% unless collection.label == "posts" %}, {{ collection.label }}{% endunless %}{% endfor %}{% endcapture %}
-<article class="sc sc--intro" data-display="true">
+<article class="sc" data-display="true">
     <div class="sc__section">
         <div class="sc__description">
             <h1 class="sc__title">A collection of useful snippets and code examples for <strong>{{ collections | remove_first: ", " }}</strong> and more.</h1>    
