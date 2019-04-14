@@ -13,12 +13,16 @@
         border-bottom: 1px solid $light;
 
         @include screen-bigger-than($small){
-          width: 50%;  
+          width: 30%;  
         }
 
         + .sc__section{
             background: $secondary-colour;
             border-bottom: 1px solid $dark;
+
+            @include screen-bigger-than($small){
+                width: 70%;  
+            }
         }
     }
 
