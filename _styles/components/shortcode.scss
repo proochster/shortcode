@@ -26,14 +26,8 @@
         }
     }
 
-    &__description{        
-        // background-color: $style-1-primary;
-        // background: linear-gradient(15deg,$style-1-primary,$style-1-secondary);
-        // border-left: $base-unit solid $primary-colour;
-        // box-shadow: 0 1px 1px $dark;
-        // border-radius: 2px;
-        padding: $base-unit;
-        // display: block;
+    &__description{
+        padding: $base-unit*2;
         width: 100%;
         box-sizing: border-box;
         position: relative;
@@ -130,7 +124,7 @@
     }
     
     &__example{
-        padding: $base-unit $base-unit*2 $base-unit*5;
+        padding: $base-unit*2;
         color: $grey-light;
         height: 100%;
         overflow: overlay;
