@@ -4,7 +4,7 @@
 //     overflow-x: scroll;
 // }
 .highlight, pre, .highlight code{ margin: 0; font-family: 'Encode Sans Semi Expanded', sans-serif;}
-code{
+
     .hll { background-color: #ffffcc }
     .k, .kc, .kd, .kn, .kp, .kr, .nb, .sx, .bp, .nc, .nn, .fm{ color: $style-1-accent;} // #42b596; 
     .nx, .s{ color: #238ad6; }
@@ -33,4 +33,3 @@ code{
     .se { color: #BB6622;} /* Literal.String.Escape */
     .si, .sr { color: #BB6688;  } /* Literal.String.Interpol */
     .ss, .vc, .vg, .vi, .vm { color: #19177C } /* Literal.String.Symbol */
-}
