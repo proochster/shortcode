@@ -3,6 +3,7 @@
         searchInput: document.querySelector('.search__input'),
         shortCodes: document.querySelectorAll('.sc'),
         searchCount: document.querySelector('.search__count'),
+        searchWrapper: document.querySelector('.search__wrapper'),
         urlParams: new URLSearchParams(location.search),
 
         // Returns true if the input text value matches the content
@@ -38,7 +39,7 @@
 
         searchLoop: function(){
                 
-            var self=this;
+            var self = this;
             
             // Reset search counter
             counter = 0;
@@ -65,7 +66,7 @@
                     code.setAttribute('data-display','true');
                     
                     // Count elements that match the searched term
-                    counter++;
+                    counter++;                    
                 }
             });
 
@@ -76,13 +77,37 @@
         // Search shortcode
         search: function(){
 
-            var self=this;
+            var self = this;
             var counter = self.shortCodes.length;
             self.searchCount.innerHTML = self.updateCount(counter);
-            
+          
             this.searchInput.onkeyup = function(){
                 
                 self.searchLoop();
+                self.updateSearchIcon();
+                self.clearSearch();
+            }
+        },
+
+        updateSearchIcon: function(){
+
+            if (this.searchInput.value) {
+                this.searchInput.nextElementSibling.classList.add('search__clear');
+            } else {
+                this.searchInput.nextElementSibling.classList.remove('search__clear');
+            }
+        },
+
+        clearSearch: function(){
+
+            var self = this;
+
+            if(this.searchWrapper.querySelector('.search__clear')){
+                this.searchWrapper.querySelector('.search__clear').onclick = function(){
+                    self.searchInput.value = '';
+                    self.searchLoop();
+                    self.updateSearchIcon();
+                };
             }
         },
 

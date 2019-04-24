@@ -3,8 +3,6 @@
 \*------------------------------------*/
 
 .sc{
-    // color: $grey-light;
-    // padding: $base-unit;
     
     &__section{
         width: 100%;
@@ -32,26 +30,9 @@
         box-sizing: border-box;
         position: relative;
         
-        // &:after{
-        //     border-color: $secondary-colour transparent transparent transparent;
-        //     border-style: solid;
-        //     top: $base-unit;
-        //     border-width: 10px 10px 0 10px;
-        //     content: '';
-        //     position: absolute;
-        //     top: 100%;
-        // }
-        
         @include screen-bigger-than($small){
             max-width: $large / 2 - $base-unit;
             float: right;
-
-            // &:after{
-            //     border-color: transparent transparent transparent $style-1-secondary;
-            //     border-width: 10px 0 10px 10px;
-            //     left: 100%;
-            //     top: $base-unit;
-            // }
         }
     }
 
@@ -89,15 +70,11 @@
 
     &__tags{
         width: 100%;
-        // display: block;
         text-align: right;
         padding: 0 $base-unit;
         box-sizing: border-box;
         position: absolute;
         top: -1px;
-        // z-index: 1;
-        // line-height: 0;
-        // clear: both;
     }
     
     &__tag{
@@ -106,21 +83,12 @@
         padding: 1px $half-unit;
         margin-left: $half-unit;
         border-radius: 0 0 3px 3px;
+        color: $secondary-colour;
     }
     
     &__text{
         color: $secondary-colour;
         margin: 0;
-        // font-style: italic; 
-        
-        // &:before{
-        //     content: '';
-        //     display: inline-block;
-        //     vertical-align: middle;
-        //     width: 100%;
-        //     height: 1px;
-        //     background: $style-1-secondary;
-        // }
     }
     
     &__example{
@@ -140,5 +108,10 @@
             white-space: pre-wrap;
             line-height: 1.6;
         }
+    }
+
+    &__output{
+        margin-top: $base-unit;
+        padding-bottom: $base-unit;
     }
 }

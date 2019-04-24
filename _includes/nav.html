@@ -3,7 +3,7 @@
     <div class="nav__scroll">
         <ul class="nav__list wrapper wrapper--no-padding">{% for item in site.collections %}{% unless item.label == "posts" %}
             <li class="nav__item">
-                <a href="/{{ item.permalink }}" title="{{ item.label | upcase }} lookup table" class="nav__link{% if current[1] == item.permalink %} active{% endif %}"><i class="nav__icon {{item.icon }}"></i> {{ item.label | upcase }} <small>({{ site[item.label] | size }})</small></a>
+                <a href="/{{ item.permalink }}#{{ item.permalink }}" id="{{ item.permalink }}" title="{{ item.label | upcase }} lookup table" class="nav__link{% if current[1] == item.permalink %} active{% endif %}"><i class="nav__icon {{item.icon }}"></i> {{ item.label | upcase }} <small>({{ site[item.label] | size }})</small></a>
             </li>{% endunless %}{% endfor %}
         </ul>
     </div>
