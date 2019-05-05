@@ -1,0 +1,17 @@
+---
+title: slugify
+description: Convert some text to a URL safe string. Use the following flags for different results - "pretty", "ascii", "latin".
+tags: liquid filter
+date: 2019-05-05
+---
+{{"{{ "}}"It works 100%, even with an 'ó' character!" | slugify }}
+{{ "It works 100%, even with an 'ó' character!" | slugify }}
+
+{{"{{ "}}"It works 100%, even with an 'ó' character!" | slugify: "pretty" }}
+{{ "It works 100%, even with an 'ó' character!" | slugify: "pretty" }}
+
+{{"{{ "}}"It works 100%, even with an 'ó' character!" | slugify: "ascii" }}
+{{ "It works 100%, even with an 'ó' character!" | slugify: "ascii" }}
+
+{{"{{ "}}"It works 100%, even with an 'ó' character!" | slugify: "latin" }}
+{{ "It works 100%, even with an 'ó' character!" | slugify: "latin" }}
