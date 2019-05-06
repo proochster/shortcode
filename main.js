@@ -32,6 +32,9 @@
                 // Populate search input
                 this.searchInput.value = this.urlParams.get("code");
 
+                this.updateSearchIcon();
+                this.clearSearch();
+
                 // Run the search loop
                 this.searchLoop();
             }
