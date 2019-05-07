@@ -87,6 +87,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - workbox-config.js
+  - package-lock.json
+  - package.json
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/
