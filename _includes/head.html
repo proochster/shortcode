@@ -35,32 +35,12 @@
     </script>
     <link rel="manifest" href="{{ site.url }}/manifest.json">
     <style type="text/css">{% capture include_to_scssify %}{% include bundle.scss %}{% endcapture %}{{ include_to_scssify | scssify }}</style>  
-    <!-- <link rel="apple-touch-icon" href="/assets/favicons/bookmark/icon-bookmark-192x192.png">
-    <link rel="apple-touch-icon" sizes="16x16" href="/assets/favicons/bookmark/icon-bookmark-16x16.png">
-    <link rel="apple-touch-icon" sizes="32x32" href="/assets/favicons/bookmark/icon-bookmark-32x32.png">
-    <link rel="apple-touch-icon" sizes="48x48" href="/assets/favicons/bookmark/icon-bookmark-48x48.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/bookmark/icon-bookmark-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/bookmark/icon-bookmark-72x72.png">
-    <link rel="apple-touch-icon" sizes="96x96" href="/assets/favicons/bookmark/icon-bookmark-96x96.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/bookmark/icon-bookmark-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/bookmark/icon-bookmark-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/bookmark/icon-bookmark-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/bookmark/icon-bookmark-152x152.png">
-    <link rel="apple-touch-icon" sizes="168x168" href="/assets/favicons/bookmark/icon-bookmark-168x168.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/bookmark/icon-bookmark-180x180.png">
-    <link rel="apple-touch-icon" sizes="512x512" href="/assets/favicons/bookmark/icon-bookmark-512x512.png">
-    <link rel="icon" type="image/png" href="/assets/favicons/bookmark/icon-bookmark-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/assets/favicons/bookmark/icon-bookmark-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="/assets/favicons/bookmark/icon-bookmark-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="/assets/favicons/bookmark/icon-bookmark-16x16.png" sizes="16x16"> -->
-    <!-- <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg?etag=/LsQl3+FvNewjQoq1AMSuw==" color="#d1020e "> -->
-    <!-- <meta name="msapplication-TileColor" content="#da532c ">
-    <meta name="msapplication-TileImage" content="/assets/img/favicons/mstile-144x144.png?etag=8V/DcpiXqp9og1TKygQwUQ=="> -->
     <meta name="theme-color" content="{{ site.theme-colour }}">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded:400,600" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="{{ site.url }}/favicon.png">
+    {% feed_meta %}
     <!-- development version, includes helpful console warnings -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
     <!-- production version, optimized for size and speed -->

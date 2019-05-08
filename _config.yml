@@ -31,7 +31,7 @@ host: shortcode
 markdown: kramdown
 # theme: minima
 plugins:
-  # - jekyll-feed
+  - jekyll-feed
 
 highlighter: rouge
 
