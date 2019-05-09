@@ -1,8 +1,4 @@
 _site
 .sass-cache
 .jekyll-metadata
-<<<<<<< HEAD
 node_modules/*
-=======
-node_modules/*
->>>>>>> b290d5249bb8446ddf583ff9865da37a5ef118aa
