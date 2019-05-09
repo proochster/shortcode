@@ -1,0 +1,16 @@
+{
+    "name": "Shortcode.dev",
+    "short_name": "Shortcode",
+    "theme_color": "#EB6300",
+    "background_color": "#111c3a",
+    "description": "Code cheatsheets",
+    "display": "standalone",
+    "start_url": "/",
+    "icons": [
+      {
+        "src": "favicon.png",
+        "sizes": "64x64",
+        "type": "image/png"
+      }
+    ]
+  }

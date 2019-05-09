@@ -65,3 +65,18 @@ Install project `bundle install`
 Use `bundle exec jekyll serve` when running for the first time or after _config.yml has been changed.
 
 Otherwise use `jekyll serve` or the short version `jekyll s`
+
+# Workbox CLI
+
+Command line interface tool for Progressive Web Apps
+https://developers.google.com/web/tools/workbox/modules/workbox-cli
+
+Initial workbox wizzard setup command. This will generate the workbox-config.js file.
+
+`workbox wizard`
+
+To build service worker run
+
+`workbox generateSW workbox-config.js`
+
+

@@ -1,0 +1,22 @@
+{
+  "name": "shortcode.dev",
+  "version": "1.0.0",
+  "description": "https://shortcode.dev",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proochster/shortcode.git"
+  },
+  "author": "proochster",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/proochster/shortcode/issues"
+  },
+  "homepage": "https://github.com/proochster/shortcode#readme",
+  "devDependencies": {
+    "workbox-cli": "^4.3.1"
+  }
+}
