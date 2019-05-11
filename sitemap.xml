@@ -3,22 +3,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
         <loc>{{ site.url }}</loc>
-        <lastmod>{{ site.time | date: "%Y-%m-%dT%H:%M:%S+00:00" }}</lastmod>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
         <loc>{{ site.url }}/sitemap</loc>
-        <lastmod>{{ site.time | date: "%Y-%m-%dT%H:%M:%S+00:00" }}</lastmod>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
         <priority>0.80</priority>
     </url>
     {% for collection in site.collections %}{% unless collection.label == "posts" %}<url>
         <loc>{{ site.url }}/{{ collection.permalink }}</loc>
-        <lastmod>{{ site.time | date: "%Y-%m-%dT%H:%M:%S+00:00" }}</lastmod>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
         <priority>0.80</priority>
     </url>{% for code in site[collection.label] %}
     <url>
         <loc>{{ site.url }}/{{ collection.permalink }}?code={{ code.title | url_encode }}</loc>
-        <lastmod>{{ code.date | date: "%Y-%m-%dT%H:%M:%S+00:00" }}</lastmod>
+        <lastmod>{{ code.date | date_to_xmlschema }}</lastmod>
         <priority>0.64</priority>
     </url>{% endfor %}
     {% endunless %}{% endfor %}
