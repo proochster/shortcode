@@ -41,7 +41,7 @@ sass:
 
 theme-colour: '#202943'
 
-collections_dir: _collections
+collections_dir: collections
 collections:
   html:
     output: false
@@ -90,7 +90,3 @@ exclude:
   - workbox-config.js
   - package-lock.json
   - package.json
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
