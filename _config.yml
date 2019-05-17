@@ -44,41 +44,89 @@ theme-colour: '#202943'
 collections_dir: collections
 collections:
   html:
-    output: false
-    permalink: html-cheatsheet
+    output: true
+    link: html-cheatsheet
     icon: fab fa-html5
   css:
-    output: false
-    permalink: css-cheatsheet
+    output: true
+    link: css-cheatsheet
     icon: fab fa-css3-alt
   javascript:
-    output: false
-    permalink: javascript-cheatsheet
+    output: true
+    link: javascript-cheatsheet
     icon: fab fa-js-square
   liquid:
-    output: false
-    permalink: liquid-cheatsheet
+    output: true
+    link: liquid-cheatsheet
     icon: fas fa-flask
   git:
-    output: false
-    permalink: git-cheatsheet
+    output: true
+    link: git-cheatsheet
     icon: fab fa-github
   vue:
-    output: false
-    permalink: vue-cheatsheet
+    output: true
+    link: vue-cheatsheet
     icon: fab fa-vuejs
   node:
-    output: false
-    permalink: node-cheatsheet
+    output: true
+    link: node-cheatsheet
     icon: fab fa-node-js
   cli:
-    output: false
-    permalink: cli-cheatsheet
+    output: true
+    layout: code
+    link: cli-cheatsheet
     icon: fas fa-terminal
   markdown:
-    output: false
-    permalink: markdown-cheatsheet
+    output: true
+    link: markdown-cheatsheet
     icon: fab fa-markdown
+
+defaults:
+  - scope:
+      type: html
+    values:
+      layout: shortcode
+      type: html
+  - scope:
+      type: css
+    values:
+      layout: shortcode
+      type: css
+  - scope:
+      type: javascript
+    values:
+      layout: shortcode
+      type: javascript
+  - scope:
+      type: liquid
+    values:
+      layout: shortcode
+      type: liquid
+  - scope:
+      type: git
+    values:
+      layout: shortcode
+      type: git
+  - scope:
+      type: vue
+    values:
+      layout: shortcode
+      type: vue
+  - scope:
+      type: node
+    values:
+      layout: shortcode
+      type: node
+  - scope:
+      type: cli
+    values:
+      layout: shortcode
+      type: cli
+  - scope:
+      type: markdown
+    values:
+      layout: shortcode
+      type: markdown
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

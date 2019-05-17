@@ -1,0 +1,28 @@
+<article class="sc" data-display="true" ref="shortcode">
+    <div class="sc__section">{% if page.tags.size > 0 %}
+        <span class="sc__tags">
+            {% for tag in page.tags %}<span class="sc__tag">#{{ tag }}</span>{% endfor %}
+        </span>{% endif %}
+        <div class="sc__description">
+            <a id="{{ page.title | slugify }}" title="{{ page.title }}" href="{{ page.url }}" rel="tag" class="sc__anchor"><h2 class="sc__title">{{ page.title }}</h2></a>    
+            {% if page.description.size > 0 %}<p class="sc__text">{{ page.description }}</p>{% endif %}
+        </div>
+    </div>
+    <div class="sc__section">
+        <div class="sc__example">
+            <code class="sc__code">
+                {% case page.collection %}
+                    {% when 'css' %}{% highlight css %}{{ page.content }}{% endhighlight %}
+                    {% when 'html' %}{% highlight html %}{{ page.content }}{% endhighlight %}
+                    {% when 'javascript' %}{% highlight javascript %}{{ page.content }}{% endhighlight %}
+                    {% when 'liquid' %}{% highlight liquid %}{{ page.content }}{% endhighlight %}  
+                    {% when 'git' %}{% highlight shell %}{{ page.content }}{% endhighlight %}   
+                    {% when 'vue' %}{% highlight vue %}{{ page.content }}{% endhighlight %}  
+                    {% when 'node' %}{% highlight shell %}{{ page.content }}{% endhighlight %}
+                    {% when 'cli' %}{% highlight shell %}{{ page.content }}{% endhighlight %}
+                    {% when 'markdown' %}{% highlight markdown %}{{ page.content }}{% endhighlight %}
+                {% endcase %}{% if page.parse == true %}<div class="sc__output"><span class="color--accent">Output:</span>{{ page.content | markdownify }}</div>{% endif %}
+            </code>
+        </div>
+    </div>
+</article>
