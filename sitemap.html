@@ -1,5 +1,5 @@
 ---
-layout: homepage
+layout: default
 title: Sitemap
 permalink: /sitemap
 ---
@@ -10,10 +10,10 @@ permalink: /sitemap
         <h2><i class="{{collection.icon}} color--accent"></i> {{ collection.label | upcase }}</h2>
         <ul class="inline-list">{% assign sorted = site[collection.label] | sort: 'date' | reverse %}{% for code in sorted %}
             <li class="inline-list__item">
-                <a class="sl__link" href="/{{ collection.permalink }}?code={{ code.title | url_encode }}" title="{{ collection.label | capitalize }} {{ code.title }} code example">{{ code.title }}</a>
+                <a class="sl__link" href="{{ code.url }}" title="{{ collection.label | capitalize }} {{ code.title }} code example">{{ code.title }}</a>
             </li>{% endfor %}
         </ul>
-        <a href="{{ collection.permalink }}" title="All {{ collection.label | capitalize }} code snippets" class="color--secondary">All {{ collection.label | capitalize }} code snippets</a>
+        <a href="{{ collection.link }}" title="All {{ collection.label | capitalize }} code snippets" class="color--secondary">All {{ collection.label | capitalize }} code snippets</a>
         {% endunless %}{% endfor %}
     </div>
 </div>

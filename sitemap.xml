@@ -11,13 +11,18 @@
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
         <priority>0.80</priority>
     </url>
+    <url>
+        <loc>{{ site.url }}/blog</loc>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <priority>0.80</priority>
+    </url>
     {% for collection in site.collections %}{% unless collection.label == "posts" %}<url>
-        <loc>{{ site.url }}/{{ collection.permalink }}</loc>
+        <loc>{{ site.url }}/{{ collection.link }}</loc>
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
         <priority>0.80</priority>
     </url>{% for code in site[collection.label] %}
     <url>
-        <loc>{{ site.url }}/{{ collection.permalink }}?code={{ code.title | url_encode }}</loc>
+        <loc>{{ site.url }}{{ code.url }}</loc>
         <lastmod>{{ code.date | date_to_xmlschema }}</lastmod>
         <priority>0.64</priority>
     </url>{% endfor %}
