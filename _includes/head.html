@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>{% 
+    <title>{% unless page.group %}{{ page.collection | capitalize }} cheatsheet > {% endunless %}{% if page.title %}{{ page.title | capitalize }} | {% endif %}{{ site.title }}</title>{% 
     capture collections %}{% for collection in site.collections %}{% unless collection.label == "posts" %}, {{ collection.label }}{% endunless %}{% endfor %}{% endcapture %}
     {% if include.description == true 
         %}{% capture description %}{{ page.title | upcase }}. {% for code in site[page.collection] %}, {{ code.title | capitalize }}{% endfor %}{% endcapture %}
