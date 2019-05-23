@@ -1,4 +1,4 @@
-{% assign sortedcodes = site[page.collection] | sort:"title" %}{% for code in sortedcodes %}
+{% assign sortedcodes = site[page.group] | sort:"title" %}{% for code in sortedcodes %}
 <article class="sc" data-display="true" ref="shortcode">
     <div class="sc__section">{% if code.tags.size > 0 %}
         <span class="sc__tags">
@@ -12,7 +12,7 @@
     <div class="sc__section">
         <div class="sc__example">
             <code class="sc__code">
-                {% case page.collection %}
+                {% case page.group %}
                     {% when 'css' %}{% highlight css %}{{ code.content }}{% endhighlight %}
                     {% when 'html' %}{% highlight html %}{{ code.content }}{% endhighlight %}
                     {% when 'javascript' %}{% highlight javascript %}{{ code.content }}{% endhighlight %}
