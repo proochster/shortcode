@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% if page.collection %}{{ page.collection | capitalize }} cheatsheet > {% endif %}{% if page.title %}{{ page.title | capitalize }} | {% endif %}{{ site.title }}</title>{% 
+    <title>{% if page.collection %}{{ page.collection | capitalize }} cheatsheet > {% endif %}{% if page.title %}{{ page.title | capitalize }}{% endif %}{% unless page.collection %} | {{ site.title }}{% endunless %}</title>{% 
     capture collections %}{% for collection in site.collections %}{% unless collection.label == "posts" %}, {{ collection.label }}{% endunless %}{% endfor %}{% endcapture %}
     {% if include.description == true 
-        %}{% capture description %}{{ page.title | upcase }}. {% for code in site[page.collection] %}, {{ code.title | capitalize }}{% endfor %}{% endcapture %}
+        %}{% capture description %}{{ page.title }}{% for code in site[page.group] %}, {{ code.title | capitalize }}{% endfor %}{% endcapture %}
         {%
         else 
         %}{% capture description %}{{ page.description }}{% endcapture %}{% 
