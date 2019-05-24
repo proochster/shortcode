@@ -4,7 +4,6 @@
         shortCodes: document.querySelectorAll('.sc'),
         searchCount: document.querySelector('.search__count'),
         searchWrapper: document.querySelector('.search__wrapper'),
-        urlParams: new URLSearchParams(location.search),
 
         // Returns true if the input text value matches the content
         hasPhrase: function(block, element, query){
@@ -25,21 +24,6 @@
             }
         },
 
-        querySelector: function(){
-
-            if(this.urlParams.has("code")){
-                
-                // Populate search input
-                this.searchInput.value = this.urlParams.get("code");
-
-                this.updateSearchIcon();
-                this.clearSearch();
-
-                // Run the search loop
-                this.searchLoop();
-            }
-        },
-
         searchLoop: function(){
                 
             var self = this;
@@ -52,14 +36,6 @@
             
             // Loop through the list of shortcodes
             this.shortCodes.forEach(function(code){
-
-                // Check if query matches exactly the code title
-                if(self.urlParams.get("code") === code.querySelector(".sc__title").innerHTML.toLowerCase()){
-
-                    // Update page title
-                    var title = document.title;
-                    document.title = self.urlParams.get("code") + " | " + title;
-                }
                 
                 // Reset display of the shortcodes
                 code.setAttribute('data-display','false');
@@ -116,7 +92,6 @@
 
         init: function(){
             this.search();
-            this.querySelector();
         }
     }
 
