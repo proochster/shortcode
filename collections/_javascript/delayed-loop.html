@@ -1,0 +1,12 @@
+---
+title: delayed iteration loop
+description: Using setTimeout function this loop example lets you delay the iteration. 
+tags: javascript loop
+date: 2019-05-30
+---
+(function iterate(i) {          
+    setTimeout(function () {   
+       console.log(i);                     
+       if (--i) iterate(i);      
+    }, 200)
+ })(10);
