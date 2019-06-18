@@ -80,6 +80,14 @@ collections:
     output: true
     link: markdown-cheatsheet
     icon: fab fa-markdown
+  laravel:
+    output: true
+    link: laravel-cheatsheet
+    icon: fab fa-laravel
+  artisan:
+    output: true
+    link: artisan-cheatsheet
+    icon: fas fa-terminal
 
 defaults:
   - scope:
@@ -127,6 +135,16 @@ defaults:
     values:
       layout: shortcode
       type: markdown
+  - scope:
+      type: laravel
+    values:
+      layout: shortcode
+      type: laravel
+  - scope:
+      type: artisan
+    values:
+      layout: shortcode
+      type: artisan
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
