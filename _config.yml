@@ -87,7 +87,11 @@ collections:
   artisan:
     output: true
     link: artisan-cheatsheet
-    icon: fas fa-terminal
+    icon: fab fa-laravel
+  blade:
+    output: true
+    link: blade-cheatsheet
+    icon: fab fa-laravel
 
 defaults:
   - scope:
@@ -145,6 +149,11 @@ defaults:
     values:
       layout: shortcode
       type: artisan
+  - scope:
+      type: blade
+    values:
+      layout: shortcode
+      type: blade
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
