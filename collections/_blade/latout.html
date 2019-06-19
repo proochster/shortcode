@@ -1,0 +1,25 @@
+---
+title: layout
+description: Simple example of extending layouts and using sections.
+tags: blade layout
+date: 2019-06-18
+---
+// home.blade.php
+
+@extends('default')
+
+@section('content')
+    <main>Welcome to my homepage.</main>
+@endsection
+
+
+// default.blade.php extended by home.blade.php
+
+<!DOCTYPE html>
+<head>
+    <title>Page title</title>
+</head>
+<body>
+    @yield('content')
+</body>
+</html>
