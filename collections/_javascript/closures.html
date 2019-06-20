@@ -1,0 +1,38 @@
+---
+title: closures
+description: Closures are functions using variables defined in the outer scopes.
+tags: javascript 
+date: 2019-06-20
+---
+// EXAMPLE 1
+// Outer scope variable closure
+// ----------------------
+var change = 4;
+
+function calculate(){
+    var base = 50;
+    return base + change; // change variable doesn't exsist in the calculate function scope. 
+}
+
+calculate(); // Returns 54
+
+
+// EXAMPLE 2
+// Inner function closure
+// ----------------------
+
+function outerFunction(outerVar){
+
+    function innerFunction(innerVar){
+        return outerVar + ' from ' + innerVar;
+    }
+
+    return innerFunction;
+}
+
+var saySomething = outerFunction('Hello'); // 'Hello' is being passed as the outerVar argument. 
+
+console.log(saySomething()); // Logs 'Hello from undefined' as we haven't set the innerVar yet.
+console.dir(saySomething); // console.dir() function allows you to preview the current state of the scope
+
+saySomething('closure'); // In the second run the argument will passed as the innerVar.
