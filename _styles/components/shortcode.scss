@@ -8,7 +8,7 @@
         width: 100%;
         box-sizing: border-box;
         position: relative;
-        border-bottom: 1px solid $light;
+        border-bottom: 10px solid $grey-dark;
 
         @include screen-bigger-than($small){
           width: 30%;  
@@ -16,7 +16,7 @@
 
         + .sc__section{
             background: $secondary-colour;
-            border-bottom: 1px solid $dark;
+            border-bottom-color: $secondary-highlight;
 
             @include screen-bigger-than($small){
                 width: 70%;  
