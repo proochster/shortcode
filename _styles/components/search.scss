@@ -9,7 +9,9 @@
 
     &__wrapper{
 
+        padding: 0 $base-unit $base-unit;
         position: relative;
+        box-sizing: border-box; 
 
         @include screen-bigger-than($small){
             width: 30%;
@@ -19,8 +21,8 @@
     &__icon{
 
         position: absolute;
-        bottom: 0;
-        right: 0;
+        bottom: $base-unit;
+        right: $base-unit;
         padding: $base-unit;
     
         &:after {
