@@ -8,7 +8,7 @@ permalink: /
 <article class="sc" data-display="true">
     <div class="sc__section">
         <div class="sc__description">
-            <h1 class="sc__title">A collection of useful snippets and code examples for <strong>{{ collections | remove_first: ", " }}</strong> and more.</h1>    
+            <h1 class="sc__title">A collection of useful snippets and code examples for {% for collection in site.collections %}{% unless collection.label == "posts" %}<a href="/{{ collection.link }}" title="{{ collection.label }} cheatsheet">{{ collection.label }}</a> {% endunless %}{% endfor %} and more.</h1>
             <p class="sc__text">Would you like to add your favourite snippets? Visit our <a href="https://github.com/proochster/shortcode/blob/master/Readme.md" title="Shortcode Git repository" class="color--secondary"><strong>Git repository.</strong></a></p>
         </div>
     </div>
