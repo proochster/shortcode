@@ -4,6 +4,8 @@
 
 .search{
     background-color: $style-1-accent;
+    position: relative;
+    overflow: hidden;
 
     &__wrapper{
 
@@ -39,10 +41,6 @@
         }
     }
 
-
-
-
-
     &__input{
         padding: $base-unit 48px $base-unit $base-unit;
         width: 100%;
@@ -61,5 +59,13 @@
             color: $secondary-colour;
 
         }
+    }
+
+    &__icon-bg{
+        position: absolute;
+        font-size: 500px;
+        left: $base-unitx2;
+        color: $style-1-accent-light;
+        top: -100%;
     }
 }
