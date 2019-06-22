@@ -3,16 +3,24 @@
 \*------------------------------------*/
 
 .sls{
-    display: flex;
-    flex-wrap: wrap;
+
+    @include screen-bigger-than($small){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+    }
 }
 
 .sl{
     
-    margin: $base-unit;
+    flex-basis: 18%;
+    margin: 1%;
 
     &__title{
-
+        position: sticky;
+        top: 0;
+        margin-bottom: 0;
+        background-color: $light;
     }
 
     &__list{
@@ -27,9 +35,9 @@
     &__link{
         color: $dark;
         display: inline-block;
-        border: 1px solid;
-        border-radius: 3px;
-        padding: $half-unit $base-unit;
+        // border: 1px solid;
+        // border-radius: 3px;
+        // padding: $half-unit $base-unit;
         margin: $half-unit $half-unit $half-unit 0;
     }
 }
