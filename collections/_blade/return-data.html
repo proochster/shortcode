@@ -1,0 +1,8 @@
+---
+title: return data
+description: Blade uses the {{ }} syntax in most cases but you can use {!! !!} to stop Blade from escaping the data.
+tags: blade
+date: 2019-06-23
+---
+{{"{{ $data "}}}} // escapes the data by default
+{{"{!! $data "}}!!} // no escaping 
