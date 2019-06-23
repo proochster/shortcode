@@ -1,0 +1,43 @@
+---
+title: pass data to view
+description: Examples of passing data to a view.
+tags: laravel
+date: 2019-06-23
+---
+Route::get('/', function(){
+    
+    $sections = [
+        'Intro',
+        'Information',
+        'Stats'
+    ]
+
+
+    // Option 1
+
+    return view('dashboard', [
+        'sections' => $sections // This variable is now available in the dashboard view
+        'data' => 'Some other data' // You can create multiple data holding variables
+    ]);
+
+
+    // Option 2
+    
+    return view('dashboard')->withSections($sections)->withData($data);
+
+    // withSection and withData are magic methods provided by Laravel as helpers
+
+
+    // Option 3
+    // This is a combination of the two examples above
+
+    return view('dashboard')->with([
+        'sections' => [
+            'Intro',
+            'Information',
+            'Stats'
+        ],
+        'data' => 'Some other data'
+    ]);
+
+});
