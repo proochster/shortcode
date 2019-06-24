@@ -8,7 +8,7 @@
         width: 100%;
         box-sizing: border-box;
         position: relative;
-        border-bottom: 10px solid $grey-dark;
+        border-bottom: 5px solid $grey-dark;
 
         @include screen-bigger-than($small){
           width: 30%;  
@@ -113,5 +113,16 @@
     &__output{
         margin-top: $base-unit;
         padding-bottom: $base-unit;
+    }
+
+    &__copy{
+        font-size: $base-unit;
+        bottom: $base-unitx2;
+        right: $base-unitx2;
+        position: absolute;
+        border: 1px solid;
+        border-radius: 3px;
+        padding: 3px 6px;
+        cursor: pointer;
     }
 }
