@@ -27,6 +27,7 @@
                     {% when 'blade' %}{% highlight php %}{{ code.content }}{% endhighlight %}
                 {% endcase %}{% if code.parse == true %}<div class="sc__output"><span class="color--accent">Output:</span>{{ code.content | markdownify }}</div>{% endif %}
             </code>
+            <span class="sc__copy"><i class="far fa-copy"></i> <span class="sc__copy-text">copy</span></span>
         </div>
     </div>
 </article>{% endfor %}

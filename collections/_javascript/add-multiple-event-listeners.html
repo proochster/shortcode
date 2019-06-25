@@ -1,0 +1,13 @@
+---
+title: add multiple event listeners
+description: Example of looping through an array of objects and adding click event listeners.
+tags: javascript event loop
+date: 2019-06-25
+---
+var itemsArray = document.querySelectorAll('.item'),
+
+itemsArray.forEach(function(item){
+    item.addEventListener('click', function(){
+        console.log(item);
+    });
+});

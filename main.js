@@ -4,6 +4,7 @@
         shortCodes: document.querySelectorAll('.sc'),
         searchCount: document.querySelector('.search__count'),
         searchWrapper: document.querySelector('.search__wrapper'),
+        copyButton: document.querySelectorAll('.sc__copy'),
 
         // Returns true if the input text value matches the content
         hasPhrase: function(block, element, query){
@@ -90,7 +91,39 @@
             }
         },
 
+        copyText: function(){
+            
+            // var self = this;
+            
+            this.copyButton.forEach(function(btn){
+                btn.addEventListener('click', function(){
+
+                    // console.log(btn.parentElement.querySelector('[data-lang]').innerText);
+
+                    let str = btn.parentElement.querySelector('[data-lang]').innerText;                    
+                    let el = document.createElement('textarea');
+                    let copyText = btn.querySelector('.sc__copy-text');
+
+                    el.value = str;
+                    document.body.appendChild(el);
+                    el.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(el);
+
+                    copyText.innerText = "copied";
+
+                    setTimeout(function () {                    
+                        copyText.innerText = "copy";
+                     }, 1000)
+
+                    // console.log("Copied: \n" + str);
+
+                });
+            });
+        },
+
         init: function(){
+            this.copyText();
             this.search();
         }
     }
