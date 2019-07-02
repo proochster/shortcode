@@ -1,0 +1,12 @@
+---
+title: set interval
+description: Allows to run a function in regular intervals. The second argument takes the interval time in miliseconds. The example checks for the existance of the class before stopping the loop.
+tags: javascript loop
+date: 2019-07-02
+---
+var checker = setInterval(function() {
+    if (document.querySelector('.sc')) {
+       console.log('Fount it!');
+       clearInterval(checker);
+    }
+ }, 100); 
