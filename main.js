@@ -92,13 +92,9 @@
         },
 
         copyText: function(){
-            
-            // var self = this;
-            
+                        
             this.copyButton.forEach(function(btn){
                 btn.addEventListener('click', function(){
-
-                    // console.log(btn.parentElement.querySelector('[data-lang]').innerText);
 
                     let str = btn.parentElement.querySelector('[data-lang]').innerText;                    
                     let el = document.createElement('textarea');
@@ -114,9 +110,7 @@
 
                     setTimeout(function () {                    
                         copyText.innerText = "copy";
-                     }, 1000)
-
-                    // console.log("Copied: \n" + str);
+                    }, 1000)
 
                 });
             });
