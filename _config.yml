@@ -43,6 +43,9 @@ theme-colour: '#202943'
 
 collections_dir: collections
 collections:
+  posts: 
+    output: true
+    link: blog
   html:
     output: true
     link: html-cheatsheet
@@ -94,6 +97,11 @@ collections:
     icon: fab fa-laravel
 
 defaults:
+  - scope:
+      type: posts
+    values:
+      layout: blog
+      type: posts
   - scope:
       type: html
     values:
