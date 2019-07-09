@@ -1,0 +1,17 @@
+<div class="search">
+    <div class="wrapper">
+        <input type="text" name="search" id="search" placeholder="Search short codes" class="search__input js-codes-search" list="shortcodes">
+        <datalist id="shortcodes">
+            <select name="" id="" class="options-list">
+
+                {% for collection in site.collections %}{% unless collection.label == "posts" %}
+                {% assign sorted = site[collection.label] | sort: 'date' | reverse %}{% for code in sorted %}
+                <option value="{{ code.title | capitalize }}" data-url="{{ code.url }}">{% for tag in code.tags %}#{{ tag }} {% endfor %}</option>
+                {% endfor %}
+                {% endunless %}{% endfor %}
+            
+            </select>
+        </datalist>
+        <span class="search__icon"></span>
+    </div>
+</div>

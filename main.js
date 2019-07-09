@@ -1,9 +1,11 @@
 (function(){
     var sc = {
-        searchInput: document.querySelector('.search__input'),
+        searchInput: document.querySelector('.js-search'),
+        codesSearchInput: document.querySelector('.js-codes-search'),
         shortCodes: document.querySelectorAll('.sc'),
         searchCount: document.querySelector('.search__count'),
         searchWrapper: document.querySelector('.search__wrapper'),
+        optionsList: document.querySelector('.options-list'),        
         copyButton: document.querySelectorAll('.sc__copy'),
 
         // Returns true if the input text value matches the content
@@ -116,13 +118,59 @@
             });
         },
 
-        init: function(){
-            this.copyText();
+        searchAll: function(){
+
+            var self = this;
+
+            this.codesSearchInput.onchange = function(e){
+                // e.preventDefault();
+                // e.options[e.selectedIndex].value;
+                // console.log(this.value + '. ' + sel);
+                // console.log(sel.options[sel.selectedIndex]);
+                // console.log("datalist" + e);
+
+                self.optionsList.onchange();
+
+                // console.log(this.nextElementSibling.querySelector('.options-list').options);
+
+                // var e = document.getElementById("ddlViewBy");
+                // var strUser = e.options[e.selectedIndex].value;
+            },
+            
+            this.optionsList.addEventListener('change', e => console.log(`Capturing: ${elem.tagName}`), true);
+
+            // this.optionsList.onchange = function(e){
+            //     console.log(e);
+                
+            //     // var index = this.selectedIndex;
+
+            //     // console.log(`From onchange trigger: ${index}`);
+            //     // console.dirxml(this);
+            // }
+        },
+
+        homeInit: function(){
+            this.searchAll();
+        },
+
+        searchInit: function(){
             this.search();
+        },
+
+        copyInit: function(){
+            this.copyText();
         }
     }
 
-    if( sc.searchInput && sc.shortCodes ){
-        return sc.init();
+    if( sc.codesSearchInput ){
+        return sc.homeInit();
+    }
+
+    if( sc.searchInput ){
+        return sc.searchInit();
+    }
+
+    if( sc.shortCodes ){
+        return sc.copyInit();
     }
 })();

@@ -1,9 +1,9 @@
 {% assign current = page.url | downcase | split: '/' %}
 <nav class="nav">
     <div class="nav__scroll">
-        <ul class="nav__list wrapper wrapper--no-padding">{% for item in site.collections %}{% unless item.label == "posts" %}
+        <ul class="nav__list wrapper wrapper--no-padding">{% for collection in site.collections %}{% unless collection.label == "posts" %}
             <li class="nav__item">
-                <a href="/{{ item.link }}#{{ item.link }}" id="{{ item.link }}" title="{{ item.label | upcase }} cheatsheet" class="nav__link{% if current[1] == item.link %} active{% endif %}"><i class="nav__icon {{item.icon }}"></i> {{ item.label | upcase }} <small>({{ site[item.label] | size }})</small></a>
+                <a href="/{{ collection.link }}#{{ collection.link }}" id="{{ collection.link }}" title="{{ collection.label | upcase }} cheatsheet" class="nav__link{% if current[1] == collection.link %} active{% endif %}"><i class="nav__icon {{collection.icon }}"></i> {{ collection.label | upcase }} <small>({{ site[collection.label] | size }})</small></a>
             </li>{% endunless %}{% endfor %}
         </ul>
     </div>
