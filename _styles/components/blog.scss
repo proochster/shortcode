@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    #BLOG
+\*------------------------------------*/
+
+.blog{
+
+    &__header{
+        background-color: $secondary-colour;
+    }
+
+    &__title{
+        color: $light;
+        font-size: 32px;
+    }
+}

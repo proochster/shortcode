@@ -46,6 +46,7 @@ collections:
   posts: 
     output: true
     link: blog
+    permalink: /:title
   html:
     output: true
     link: html-cheatsheet
@@ -100,7 +101,7 @@ defaults:
   - scope:
       type: posts
     values:
-      layout: blog
+      layout: blog-post
       type: posts
   - scope:
       type: html

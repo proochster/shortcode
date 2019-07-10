@@ -1,0 +1,19 @@
+---
+---
+{% include head.html %}
+{% include header.html %}
+<div class="blog">
+  <header class="blog__header">
+      <div class="wrapper wrapper--narrow">
+        <h1 class="blog__title">{{ page.title | capitalize }}</h1>
+        {% if page.tags.size > 0 %}
+        <span class="sc__tags">
+            {% for tag in page.tags %}<span class="sc__tag">#{{ tag }}</span>{% endfor %}
+        </span>{% endif %}
+      </div>
+  </header>
+  <div class="wrapper wrapper--narrow">
+    {{ content }}
+  </div>
+</div>
+{% include footer.html %}
