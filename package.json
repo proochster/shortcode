@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/proochster/shortcode#readme",
   "devDependencies": {
-    "workbox-cli": "^4.3.1"
+    "workbox-cli": "^4.3.1",
+    "lodash.template": "4.5.0",
+    "inquirer": "6.5.0"
   }
 }
