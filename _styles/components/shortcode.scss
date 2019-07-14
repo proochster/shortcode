@@ -16,6 +16,7 @@
 
         + .sc__section{
             background: $secondary-colour;
+            background-image: linear-gradient(to right, $secondary-colour, $secondary-highlight);
             border-bottom-color: $secondary-highlight;
 
             @include screen-bigger-than($small){

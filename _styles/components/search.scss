@@ -4,6 +4,7 @@
 
 .search{
     background-color: $style-1-accent;
+    background-image: linear-gradient(to right, $style-1-accent, $style-1-accent-light);
     position: relative;
     overflow: hidden;
 
