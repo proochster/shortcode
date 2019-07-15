@@ -24,7 +24,10 @@
                     {% when 'laravel' %}{% highlight php %}{{ page.content }}{% endhighlight %}
                     {% when 'artisan' %}{% highlight shell %}{{ page.content }}{% endhighlight %}
                     {% when 'blade' %}{% highlight php %}{{ page.content }}{% endhighlight %}
-                {% endcase %}{% if page.parse == true %}<div class="sc__output"><span class="color--accent">Output:</span>{{ page.content | markdownify }}</div>{% endif %}
+                {% endcase %}{% if page.parse == true %}<div class="sc__output">
+                    <span class="color--accent">Output:</span><br>
+                        {{ page.content | markdownify }}
+                </div>{% endif %}
             </code>
             <span class="sc__copy"><i class="far fa-copy"></i> <span class="sc__copy-text">copy</span></span>
         </div>
