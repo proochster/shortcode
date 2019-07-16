@@ -1,0 +1,19 @@
+---
+title: svg path
+description: Scalable vector graphics, path examples. The capital "L" uses absolute coordinates in the context of the viewBox whereas lowercase "l" uses relative values. For vertical and horizontal path movements use "v" and "h" respectively.  
+tags: html element svg
+date: 2019-07-16
+parse: true
+---
+<svg width="150" height="150" viewBox="0 0 100 100" style="border: 1px solid #CCC">
+    <path d="M 10 10 L 90 90" stroke="#EB6300" /> <!-- Absolute coordinates -->
+</svg>
+
+<svg width="150" height="150" viewBox="0 0 100 100" style="border: 1px solid #CCC">
+    <path d="M 10 10 l 90 90" stroke="#EB6300" /> <!-- Relative coordinates -->
+</svg>
+
+<svg width="150" height="150" viewBox="0 0 100 100" style="border: 1px solid #CCC">
+    <path d="M 10 10 h 10 v 10 h 10 v 10 h 10 v 10 h 10 v 10 h 10 v 10 h 10 v 10 h 10 v 10 h 10 v 10" stroke="#EB6300" fill="none" />
+    <!-- Horizontal and vertical path movements -->
+</svg>
