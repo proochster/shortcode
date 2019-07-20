@@ -117,19 +117,20 @@
         },
 
         copyInit: function(){
-            this.copyText();
+            if( sc.copyButton ){
+                this.copyText();
+            }
         },
 
-        init: function(){
-            this.search();
+        initSearch: function(){
+            if( sc.searchInput ){
+                this.search();
+            }
         }
-    }
-
-    if( sc.searchInput ){
-        return sc.searchInit();
-    }
+    };
     
-    if( sc.shortCodes ){
-        return sc.copyInit();
-    }
+    return (
+        sc.copyInit(),
+        sc.initSearch()
+    )
 })();
