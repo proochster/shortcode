@@ -116,13 +116,20 @@
             });
         },
 
-        init: function(){
+        copyInit: function(){
             this.copyText();
+        },
+
+        init: function(){
             this.search();
         }
     }
 
-    if( sc.searchInput && sc.shortCodes ){
-        return sc.init();
+    if( sc.searchInput ){
+        return sc.searchInit();
+    }
+    
+    if( sc.shortCodes ){
+        return sc.copyInit();
     }
 })();
