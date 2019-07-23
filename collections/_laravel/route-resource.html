@@ -1,0 +1,26 @@
+---
+title: route resource
+description: Using resource method will create a complete list of routes required for listing, creating, storing, editing and removing items.
+tags: laravel route
+date: 2019-06-18
+---
+Route::resource('items', 'ItemsController'); // this will generate all the routes listed below
+
+/*
+    
+    // DISPLAY
+        GET     /items                      ItemsController@index       Show all Items
+        GET     /items/{itemID}             ItemsController@show        Show a single Item with an id of {itemsID}
+
+    // CREATE
+        GET     /items/create               ItemsController@create      Show form to create a new Item
+        POST    /items                      ItemsController@store       Add new Item
+
+    // EDIT
+        GET     /items/{itemID}/edit        ItemsController@edit        Show form to edit an existing Item with an id of {itemID}
+        PATCH   /items/{itemID}             ItemsController@update      Updete an exiting Item with an id of {itemID}
+
+    // REMOVE
+        DELETE  /items/{itemID}             ItemsController@destroy     Delete project with an id of {itemID}
+
+*/
