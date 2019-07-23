@@ -1,7 +1,10 @@
 ---
 title: csrf token
-description: Cross-Site Request Forgery.
+description: Cross-Site Request Forgery token.
 tags: laravel blade
 date: 2019-07-18
 ---
 {{"{{ csrf_field() "}}}}
+
+// This returns
+<input type="hidden" name="_token" value="[CSRF_HASH_TOKEN]">
