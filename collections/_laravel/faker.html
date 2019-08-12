@@ -1,0 +1,15 @@
+---
+title: faker
+description: Faker function let's you generate dummy data for seeding the database. Read more at www.github.com/fzaninotto/Faker
+tags: laravel db
+date: 2019-08-12
+---
+$faker = Faker\Factory::create();
+
+$faker->name; // First and second name
+$faker->randomDigit; // Number
+$faker->word; // Single word
+$faker->unique()->word; // Single unique word
+$faker->text($maxNbChars = 300); // 300 character long text
+$faker->safeEmail; // Email address
+$faker->hexcolor; // Hex colour
