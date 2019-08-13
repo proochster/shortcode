@@ -24,7 +24,7 @@
         position: absolute;
         bottom: $base-unit;
         right: $base-unit;
-        padding: $base-unit;
+        padding: 4px $base-unit;
     
         &:after {
             color: $secondary-colour;
