@@ -16,9 +16,10 @@ h1,h2,h3,h4,h5{
 
 a{
     color: $style-1-accent;
+    text-decoration: none;
 
     &:hover{
-        text-decoration: none;
+        text-decoration: underline;
     }
 }
 
