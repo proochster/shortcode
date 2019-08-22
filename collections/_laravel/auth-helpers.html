@@ -1,0 +1,11 @@
+---
+title: auth helpers
+description: Auth helper functions.
+tags: laravel auth
+date: 2019-08-22
+---
+auth()->id()    // Returns null if the user is not logged in or a User id if they are.
+auth()->user()  // Returns a User instance.
+auth()->check() // Returns boolean: true for logged in.
+auth()->guest() // Returns boolean: true for a guest user.
+ 
