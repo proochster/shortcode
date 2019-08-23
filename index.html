@@ -29,15 +29,15 @@ permalink: /
         <div class="sls">
             {% for collection in site.collections %}{% unless collection.label == "posts" %}
             <div class="sl">
-                <a href="{{ collection.link }}" title="All {{ collection.label | capitalize }} code snippets">
+                <a href="{{ collection.link }}#{{ collection.link }}" title="All {{ collection.label | capitalize }} code snippets">
                     <h2 class="sl__title"><i class="{{collection.icon}} color--accent"></i> {{ collection.label | upcase }}</h2>
                 </a>
                 <ul class="sl__list font--code">{% assign sorted = site[collection.label] | sort: 'date' | reverse %}{% for code in sorted limit:5  %}
                     <li class="sl__item">
-                        <a class="sl__link" href="{{ code.url }}" title="{{ collection.label | capitalize }} {{ code.title }} code example">{{ code.title }} <span class="color--accent">></span></a>
+                        <a class="sl__link" href="{{ code.url }}#{{ collection.link }}" title="{{ collection.label | capitalize }} {{ code.title }} code example">{{ code.title }} <span class="color--accent">></span></a>
                     </li>{% endfor %}
                 </ul>
-                <a href="{{ collection.link }}" title="All {{ collection.label | capitalize }} code snippets">All {{ collection.label | capitalize }} code snippets</a>
+                <a href="{{ collection.link }}#{{ collection.link }}" title="All {{ collection.label | capitalize }} code snippets">All {{ collection.label | capitalize }} code snippets</a>
             </div>
             {% endunless %}{% endfor %}
         </div>

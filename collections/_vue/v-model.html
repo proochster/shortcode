@@ -1,0 +1,19 @@
+---
+title: v-model
+description: v-model binding is a directive designed to work with forms and input fields.
+tags: vue directive
+date: 2019-08-22
+---
+<div id="app">
+    <input type="text" v-model="hello">
+    <p>{{"{{ hello "}}}}</p>
+</div>
+
+<script>
+    new Vue({
+        el: 'app',
+        data: {
+            hello: 'Good day!'
+        }
+    })
+</script>
