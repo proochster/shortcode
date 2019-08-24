@@ -4,6 +4,15 @@ description: Directive "v-for" loops through an array and lets you output a new 
 tags: vue loop directive
 date: 2019-04-26
 ---
-<ul>
+<ul id="app">
     <li v-for="item in items">{{"{{ item "}}}}</li>
 </ul>
+
+<script>
+    new Vue({
+        el: 'app',
+        data: {
+            codes: ['Javascript', 'HTML', 'CSS', 'PHP']
+        }
+    })
+</script>
