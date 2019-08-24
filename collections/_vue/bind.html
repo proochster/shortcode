@@ -1,5 +1,5 @@
 ---
-title: bind data
+title: v-bind data
 description: Use "v-bind:" or a ":" shorthand for a two-way data binding with the selected attribute.
 tags: vue directive
 date: 2019-04-17
@@ -7,3 +7,15 @@ date: 2019-04-17
 <a v-bind:href="yourHref" v-bind:title="yourTitle" v-bind:class="yourClass">{{" {{ yourLink "}} }}</a>
 <!-- Using shorthand -->
 <a :href="yourHref" :title="yourTitle" :class="yourClass">{{" {{ yourLink "}} }}</a> 
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            yourHref: '/home',
+            yourTitle: 'Homepage',
+            yourClass: 'link',
+            yourLink: 'Back to home'
+        }
+    })
+</script>
