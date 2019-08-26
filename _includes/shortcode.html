@@ -11,23 +11,7 @@
     <div class="sc__section">
         <div class="sc__example">
             <code class="sc__code">
-                {% case page.collection %}
-                    {% when 'css' %}{% highlight css %}{{ page.content }}{% endhighlight %}
-                    {% when 'html' %}{% highlight html %}{{ page.content }}{% endhighlight %}
-                    {% when 'javascript' %}{% highlight javascript %}{{ page.content }}{% endhighlight %}
-                    {% when 'liquid' %}{% highlight liquid %}{{ page.content }}{% endhighlight %}  
-                    {% when 'git' %}{% highlight shell %}{{ page.content }}{% endhighlight %}   
-                    {% when 'vue' %}{% highlight vue %}{{ page.content }}{% endhighlight %}  
-                    {% when 'node' %}{% highlight shell %}{{ page.content }}{% endhighlight %}
-                    {% when 'cli' %}{% highlight shell %}{{ page.content }}{% endhighlight %}
-                    {% when 'markdown' %}{% highlight markdown %}{{ page.content }}{% endhighlight %}
-                    {% when 'laravel' %}{% highlight php %}{{ page.content }}{% endhighlight %}
-                    {% when 'artisan' %}{% highlight shell %}{{ page.content }}{% endhighlight %}
-                    {% when 'blade' %}{% highlight php %}{{ page.content }}{% endhighlight %}
-                {% endcase %}{% if page.parse == true %}<div class="sc__output">
-                    <span class="color--accent">Output:</span><br>
-                        {{ page.content | markdownify }}
-                </div>{% endif %}
+                {% include code-highlight.html type = page.collection content = page.content parse = page.parse %}
             </code>
             <span class="sc__copy"><i class="far fa-copy"></i> <span class="sc__copy-text">copy</span></span>
         </div>

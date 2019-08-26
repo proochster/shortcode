@@ -1,0 +1,20 @@
+{% assign code-type = include.type %}
+{% assign code-content = include.content %}
+{% assign code-parse = include.parse %}
+{% case code-type %}
+    {% when 'css' %}{% highlight css %}{{ code-content }}{% endhighlight %}
+    {% when 'html' %}{% highlight html %}{{ code-content }}{% endhighlight %}
+    {% when 'javascript' %}{% highlight javascript %}{{ code-content }}{% endhighlight %}
+    {% when 'liquid' %}{% highlight liquid %}{{ code-content }}{% endhighlight %}  
+    {% when 'git' %}{% highlight shell %}{{ code-content }}{% endhighlight %}   
+    {% when 'vue' %}{% highlight vue %}{{ code-content }}{% endhighlight %}  
+    {% when 'node' %}{% highlight shell %}{{ code-content }}{% endhighlight %}
+    {% when 'cli' %}{% highlight shell %}{{ code-content }}{% endhighlight %}
+    {% when 'markdown' %}{% highlight markdown %}{{ code-content }}{% endhighlight %}
+    {% when 'laravel' %}{% highlight php %}{{ code-content }}{% endhighlight %}
+    {% when 'artisan' %}{% highlight shell %}{{ code-content }}{% endhighlight %}
+    {% when 'blade' %}{% highlight php %}{{ code-content }}{% endhighlight %}
+{% endcase %}{% if code-parse == true %}<div class="sc__output">
+    <span class="color--accent">Output:</span><br>
+        {{ code-content | markdownify }}
+</div>{% endif %}
