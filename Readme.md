@@ -58,10 +58,10 @@ https://shortcode.dev
         _html
      ```
 
-4. Add another markdown highlight case in the `/_includes/shortcodes.html` and `/_includes/shortcode.html` files like so:
+4. Add another markdown highlight case in the `/_includes/code-highlight.html` like so:
 
     ``` liquid
-    {% when 'html' %}{% highlight html %}{{ code.content }}{% endhighlight %} 
+    {% when 'html' %}{% highlight html %}{{ code-content }}{% endhighlight %} 
     ```  
 
 5. When ready subimt a pull request to the `dev` branch (`https://github.com/proochster/shortcode/tree/dev`).  

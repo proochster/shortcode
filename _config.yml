@@ -73,7 +73,6 @@ collections:
     icon: fab fa-node-js
   cli:
     output: true
-    layout: code
     link: cli-cheatsheet
     icon: fas fa-terminal
   markdown:
@@ -97,62 +96,62 @@ defaults:
   - scope:
       type: html
     values:
-      layout: shortcode
+      layout: code
       type: html
   - scope:
       type: css
     values:
-      layout: shortcode
+      layout: code
       type: css
   - scope:
       type: javascript
     values:
-      layout: shortcode
+      layout: code
       type: javascript
   - scope:
       type: liquid
     values:
-      layout: shortcode
+      layout: code
       type: liquid
   - scope:
       type: git
     values:
-      layout: shortcode
+      layout: code
       type: git
   - scope:
       type: vue
     values:
-      layout: shortcode
+      layout: code
       type: vue
   - scope:
       type: node
     values:
-      layout: shortcode
+      layout: code
       type: node
   - scope:
       type: cli
     values:
-      layout: shortcode
+      layout: code
       type: cli
   - scope:
       type: markdown
     values:
-      layout: shortcode
+      layout: code
       type: markdown
   - scope:
       type: laravel
     values:
-      layout: shortcode
+      layout: code
       type: laravel
   - scope:
       type: artisan
     values:
-      layout: shortcode
+      layout: code
       type: artisan
   - scope:
       type: blade
     values:
-      layout: shortcode
+      layout: code
       type: blade
 
 # Exclude from processing.
