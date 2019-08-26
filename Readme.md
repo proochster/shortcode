@@ -8,7 +8,7 @@ https://shortcode.dev
 
      ```
      _collections
-        _html
+        _laravel
             new-short-code.html
      ```
 
@@ -21,36 +21,50 @@ https://shortcode.dev
     tags: html second-tag third-tag
     date: YYYY-MM-DD
     ---
-    shortcode
+    // Add the short code body here. 
     ```
 
-3. When ready submit a pull request to the `dev` branch (`https://github.com/proochster/shortcode/tree/dev`). 
+3. When ready, submit a pull request to the `dev` branch (`https://github.com/proochster/shortcode/tree/dev`). 
 
 # Creating a new collection
 
-1. Add the new collection in `/_config.yml` file following this structure. `HTML` collection was used in the example below. For the collection icon checkout [Font Awesome](https://fontawesome.com/cheatsheet)
+1. Add the new collection in `/_config.yml` file following this structure. `HTML` collection was used in the example below. For the collection icon checkout [Font Awesome](https://fontawesome.com/cheatsheet).
 
     ```
-    html:
-        output: false
-        permalink: html-cheatsheet
-        icon: fab fa-html5
+    collections:
+        html:
+            output: true
+            link: html-cheatsheet
+            icon: fab fa-html5
+        css:
+            ...
     ```
 
-2. Create new folder in the `/_collections/` directory:
+2. Under the defaults section in the _config.yml add the scope record following the example below.
+
+    ```
+    defaults:
+    - scope:
+        type: html
+        values:
+        layout: shortcode
+        type: html
+    ```
+
+3. Create new folder in the `/_collections/` directory:
 
      ```
      _collections
         _html
      ```
 
-3. Add another markdown highlight case in the `/_includes/shortcodes.html` file like so:
+4. Add another markdown highlight case in the `/_includes/shortcodes.html` and `/_includes/shortcode.html` files like so:
 
     ``` liquid
     {% when 'html' %}{% highlight html %}{{ code.content }}{% endhighlight %} 
     ```  
 
-4. When ready subimt a pull request to the `dev` branch (`https://github.com/proochster/shortcode/tree/dev`).  
+5. When ready subimt a pull request to the `dev` branch (`https://github.com/proochster/shortcode/tree/dev`).  
 
 # Jekyll
 
