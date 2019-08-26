@@ -1,0 +1,24 @@
+---
+title: v-on:click
+description: Vue on click directive listens for a click event on a given element. You can reference a method to fire on each click. Use v-on:click or a shorthand @click, they work exactly the same way.
+tags: vue on event
+date: 2019-08-26
+---
+<input v-model="newRecord" type="text">
+<button v-on:click="addRecord">Add record</button>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            newRecord: '',
+            records: []
+        },
+        methods: {
+            addRecord(){
+                this.records.push(this.newRecord);
+                this.newRecord = "";
+            }
+        }
+    })
+</script>
