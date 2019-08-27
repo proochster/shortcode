@@ -1,0 +1,18 @@
+---
+title: v-show
+description: Show this element as long as the value is true.
+tags: vue directive
+date: 2019-08-27
+---
+<div id="app">
+    <button v-show="guest">Login</button>
+</div>
+
+<script>
+    new Vue({
+        el: 'app',
+        data: {
+            guest: true
+        }
+    })
+</script>
