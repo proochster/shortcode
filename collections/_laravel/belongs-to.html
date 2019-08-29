@@ -1,0 +1,16 @@
+---
+title: belongsTo 
+description: Belongs to sets a single-to-single relationship between two Models. Use it for fetching a prarent Model asociated with your class. Pass a Model class you want to reference as an argument.
+tags: laravel model
+date: 2019-08-29
+---
+// Set the relationship in a Model file
+
+class SubItem extends Model {
+    public function item() {
+        return $this->belongsTo(Item::class); // SubItem belongs to an Item
+    }
+}
+
+// Then, in a Controller, you can fetch the Item your Model belongs to.  
+App\SubItem::first()->item;
