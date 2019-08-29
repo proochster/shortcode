@@ -1,0 +1,23 @@
+---
+title: toggle class
+description: Example of toggling CSS class using v-bind, v-on:click and inline conditional statement.
+tags: vue class
+date: 2019-08-22
+---
+<div id="app">
+    <button v-bind:class="{ 'toggled' : toggleState }" v-on:click="toggle">Toggle</button>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            toggleState: false
+        },
+        methods: {
+            toggle(){
+                this.toggleState = true;
+            }
+        }
+    })
+</script>
