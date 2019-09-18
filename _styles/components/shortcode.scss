@@ -113,7 +113,8 @@
 
     &__output{
         margin-top: $base-unit;
-        padding-bottom: $base-unit;
+        padding: $base-unit 0;
+        border-top: 1px dashed;
     }
 
     &__copy{
