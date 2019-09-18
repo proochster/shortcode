@@ -1,7 +1,23 @@
 ---
 title: box sizing - border box
-description: Border and padding gets included inside of the element.
+description: Using border-box style on your element will include border and padding within the width and height.
 tags: css
 date: 2019-03-20
+parse: true
 ---
-box-sizing: border-box;
+<style> 
+    .with-border-box{
+        box-sizing: border-box;
+    }
+
+    .element-styles{
+        padding: 20px;
+        border: 5px solid #4dc3a4;
+        width: 100px;
+        height: 100px;
+        display: block;
+    }
+</style>
+
+<span class="element-styles">Without Border-box</span>
+<span class="element-styles with-border-box">With Border-box</span>
