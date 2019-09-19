@@ -1,11 +1,11 @@
 ---
 title: self invoking function
-description: Self invoking function lets you execute code without cluttering the global object.
+description: Self invoking function lets you immediately execute code. Another benefit of it is scoping, so your not risking cluttering the global object. It's a good practice to check for the window object and other dependencies by passing them as arguments.
 tags: javascript
-date: 2019-03-30
+date: 2019-09-18
 ---
 (function(){
 
     // Place your code here
     
-})(window) // Ensure that the window object is available bofore exacuting the code
+})(window) // Ensure that the window object is available bofore exacuting the code.
