@@ -1,0 +1,21 @@
+---
+title: foreign key 
+description: Set a foreign key in the data base table. Makes a reference between tables using an id and a foreign key.
+tags: laravel db migration
+date: 2019-09-21
+---
+// Migration example
+public function up(){
+    Schema::create('subitems', function (Blueprint $table) {
+        // Create all table fields
+        $table->increments('id');
+        $table->unsignedInteger('item_id');
+        $table->string('text');
+        $table->timestamps();
+        
+        // Set the foreign key
+        $table->foreign('item_id')->references('id')->on('items');
+        // Append the function below if you want to automatically remove all Subitems related to the Item
+        // onDelete('cascade')
+    });
+}
