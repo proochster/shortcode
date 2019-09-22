@@ -1,0 +1,8 @@
+---
+title: unique record
+description: Unique function protects database from holding multiple records with the same value.
+tags: laravel migration db
+date: 2019-09-22
+---
+// Inside of a migration
+$table->string('category')->unique(); // Only one category of each type will be crated.
