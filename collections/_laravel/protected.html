@@ -1,0 +1,17 @@
+---
+title: protected fields
+description: Protected method allows to set fillable or guarded fields in the model.
+tags: laravel model
+date: 2019-09-25
+---
+class Item extends Model {
+    protected $fillable = [
+        'title', 'content' // Only changes to these fields ARE allowed.
+    ];
+}
+
+class OtherItem extends Model {
+    protected $guarded = [
+        'id', 'date' // Changes to these fields ARE NOT allowed.
+    ];
+}
