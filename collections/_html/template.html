@@ -1,0 +1,54 @@
+---
+title: template
+description: Template tag let's you create a HTML partial. By default it doesn't get rendered into the page. Instead, you can use Javascript to manipulate it and inject dynamic conctent.
+tags: html tag
+date: 2019-09-26
+parse: true
+---
+<style>
+    .arial{ font-family: Arial }
+    .arial-black{ font-family: Arial Black }
+    .comic-sans{ font-family: Comic Sans MS }
+    .impact{ font-family: Impact }
+    .lucida-sans{ font-family: Lucida Sans Unicode }
+
+    .font{ margin-bottom: 24px; }  
+    .font__title{
+        padding: 6px 12px;
+        text-transform: capitalize;
+    }
+</style>
+
+<!-- Simple template that serves as a base for our dynamic component -->
+<template id="font-template">
+    <div class="font">
+        <div class="font__title">Title</div>
+    </div>
+</template>
+ 
+<div class="container">
+    <div id="font-gallery"><!-- Component will be injected here using Javascript --></div>
+</div>
+
+<script>
+    // Get template element
+    const fragment = document.getElementById('font-template');
+    // This array contains the data we will loop through
+    const fonts = [
+        { family: 'arial' },
+        { family: 'arial-black' },
+        { family: 'comic-sans' },
+        { family: 'impact' },
+        { family: 'lucida-sans' }
+    ];
+
+    fonts.forEach(font => {
+        // Create an instance of the template content
+        const instance = document.importNode(fragment.content, true);
+        // Add relevant content to the template
+        instance.querySelector('.font').classList.add(font.family);
+        instance.querySelector('.font__title').innerHTML = font.family + " font family";
+        // Append the instance to the DOM
+        document.getElementById('font-gallery').appendChild(instance);
+    });
+</script>
