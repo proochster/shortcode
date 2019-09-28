@@ -1,0 +1,22 @@
+---
+title: animation percentage keyframes
+description: Animation example using percentage based keyframes. Each percentage value represents a point in the animation length
+tags: css animation
+parse: true
+date: 2019-09-28
+---
+<style>
+    @keyframes outline-color {
+        0%   {outline-color: red;}
+        25%  {outline-color: yellow;}
+        50%  {outline-color: blue;}
+        100% {outline-color: green;}
+    }
+    .link-2:target {
+        outline: 3px solid transparent;
+        animation-name: outline-color;
+        animation-duration: 4s;
+    }
+</style>
+<a class="link-2" href="#animate-outline" id="animate-outline" name="animate-outline">Clik here to try it out!</a>
+
