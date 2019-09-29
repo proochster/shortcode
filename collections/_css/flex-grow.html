@@ -1,0 +1,27 @@
+---
+title: flex grow
+description: Flex grow lets you set the relative size of the items. The higher the number used in the flex-grow attribute the larger the item will grow in relation to other elements.
+tags: css flex
+parse: true
+date: 2019-09-29
+---
+<style>
+    .flex-grow{
+        display: flex;
+    }
+    .flex-grow-1{
+        flex-grow: 1;
+    }
+    .flex-grow-2{
+        flex-grow: 2;
+    }
+    .flex-grow span{
+        border: 1px solid #4dc3a4;
+        padding: 6px;
+    }
+</style>
+<span class="flex-grow">
+    <span class="flex-grow-1">Grow 1</span>
+    <span class="flex-grow-2">Grow 2</span>
+    <span class="flex-grow-1">Grow 1</span>
+</span>
