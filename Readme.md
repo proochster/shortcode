@@ -64,7 +64,7 @@ https://shortcode.dev
     {% when 'html' %}{% highlight html %}{{ code-content }}{% endhighlight %} 
     ```  
 
-5. When ready subimt a pull request to the `dev` branch (`https://github.com/proochster/shortcode/tree/dev`).  
+5. When ready submit a pull request to the `dev` branch (`https://github.com/proochster/shortcode/tree/dev`).  
 
 # Jekyll
 
@@ -85,7 +85,7 @@ Otherwise use `jekyll serve` or the short version `jekyll s`
 Command line interface tool for Progressive Web Apps
 https://developers.google.com/web/tools/workbox/modules/workbox-cli
 
-Initial workbox wizzard setup command. This will generate the workbox-config.js file.
+Initial workbox wizard setup command. This will generate the workbox-config.js file.
 
 `workbox wizard`
 
