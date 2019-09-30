@@ -1,0 +1,33 @@
+---
+title: object literal programming pattern
+description: Object literal pattern, also known as modular pattern, is a way of organizing your javascript code. The biggest advantages of this approach is modularity, encapsulation and a clear, readable structure.
+tags: javascript object
+date: 2019-09-30
+---
+// Declare an object
+var Component = {
+
+    // Set required variables here
+    element : document.querySelector('.component'),
+
+    // Add your methods
+    componentMethod : function(){
+        // Do something
+    },
+
+    // Initialization method
+    init : function(){
+        // Set the requirements that need to be met to execute the method
+        if( Component.element ){
+            this.componentMethod();
+        }
+    }
+
+};
+
+// Finally initialize object
+return (
+    Component.init()
+)
+
+
