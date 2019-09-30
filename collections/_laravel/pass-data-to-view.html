@@ -18,7 +18,7 @@ Route::get('/', function(){
     // OPTION 2 - Using "with" magic methods.
     return view('dashboard')->withSections($sections)->withData($data);
 
-    // OPTION 3 - Combinig the two approaches above.
+    // OPTION 3 - Combining the two approaches above.
     return view('dashboard')->with([
         'sections' => ['Intro','Information','Stats'],
         'data' => 'Some other data'

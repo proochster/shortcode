@@ -7,11 +7,11 @@ date: 2019-09-15
 // In the Controller constructor
 ...
     public function __constructor(){
-        $this->middleware('auth') // Apply login authorisation to all functions
+        $this->middleware('auth') // Apply login authorization to all functions
         // or
-        $this->middleware('auth')->only(['store', 'update']) // Apply login authorisation only to the given functions
+        $this->middleware('auth')->only(['store', 'update']) // Apply login authorization only to the given functions
         // or
-        $this->middleware('auth')->except(['show']) // Apply login authorisation to all except the given functions
+        $this->middleware('auth')->except(['show']) // Apply login authorization to all except the given functions
     }
 ...
 
