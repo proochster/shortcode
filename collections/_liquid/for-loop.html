@@ -1,0 +1,13 @@
+---
+title: for loop
+description: Example of a simple Liquid for loop returning a list of pages.
+tags: liquid navigation collections snippet
+date: 2019-09-30
+---
+<ul>
+{{"{% for page in site.pages "}}%}
+  <li>
+      <a title="{{"{{ page.title "}}}}" href="{{"{{ page.url "}}}}">{{"{{ page.title "}}}} </a>
+  </li>
+{{"{% endfor "}}%}
+</ul>
