@@ -1,0 +1,30 @@
+---
+title: flex order
+description: Flex order lets you change the sequence of the page elements. The order attribute takes an integer to set the hierarchy.
+tags: css flex
+parse: true
+date: 2019-10-03
+---
+<style>
+    .flex-order{
+        display: flex;
+    }
+    .flex-order-1{
+        order: 1;
+    }
+    .flex-order-2{
+        order: 2;
+    }
+    .flex-order-3{
+        order: 3;
+    }
+    .flex-order span{
+        border: 1px solid #4dc3a4;
+        padding: 6px;
+    }
+</style>
+<span class="flex-order">
+    <span class="flex-order-3">Element 1</span>
+    <span class="flex-order-2">Element 2</span>
+    <span class="flex-order-1">Element 3</span>
+</span>
