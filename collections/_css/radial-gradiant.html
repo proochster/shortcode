@@ -1,0 +1,18 @@
+---
+title: radial background gradient
+description: Set radial gradient background of the element. The first attribute is to define the shape of the gradient. If not set it will default to an ellipse filling in the background space of the element. The following values are for setting colors of the gradient starting from the inside. You can set multiple colors if you like. The final value defines the size of the effect. Its default value is 100% and it spans from edge to edge of the element.
+tags: css background
+parse: true
+date: 2019-10-07
+---
+<style>
+    .radial-background{
+        background-color: #009cde;
+        background-image: radial-gradient(circle, #009cde, #926fd6, #003087 115%);
+        padding: 48px 24px;
+        color: #FFF;
+        text-align: center;
+    }
+</style>
+
+<div class="radial-background">Element with a radial background.</div>
