@@ -11,11 +11,6 @@
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
         <priority>0.80</priority>
     </url>
-    <url>
-        <loc>{{ site.url }}/blog</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <priority>0.80</priority>
-    </url>
     {% for collection in site.collections %}{% unless collection.label == "posts" %}<url>
         <loc>{{ site.url }}/{{ collection.link }}</loc>
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
