@@ -1,0 +1,30 @@
+---
+title: navigation timing
+description: Navigation timing is part of the Performance API that lets you benchmark web applications. It allows to measure various points of page load, including the time it takes for the server to respond. In the attached example we are capturing total page load time, DOM start, DOM interactive, content loaded, DOM complete, and total page render time. These are just a few examples form the API. For the full explanation visit https://www.w3.org/TR/navigation-timing/
+tags: javascript performance
+date: 2019-10-09
+---
+(function(){        
+    timings = window.performance.timing;
+    //  Get the time passed between two events in seconds
+    function performance(start,end){
+        return (end - start) / 1000 + "s";
+    }    
+    // New object to store calculated and human-readable results
+    latency = {}
+    // CALCULATE THE RESULTS HERE:
+        // Total Page Load Time
+        latency.totalPageLoadTime = performance(timings.navigationStart, timings.loadEventEnd);
+        // DOM Start
+        latency.domStart = performance(timings.navigationStart, timings.responseEnd);
+        // DOM Interactive
+        latency.domInteractive = performance(timings.navigationStart, timings.domInteractive);
+        // DOM Content Loaded
+        latency.domContentLoaded = performance(timings.navigationStart, timings.domContentLoadedEventEnd);
+        // DOM Complete
+        latency.domComplete = performance(timings.navigationStart, timings.domComplete);
+        // Page Render Time
+        latency.pageRenderTime = performance(timings.domLoading, timings.domComplete);
+    // Draw results table in the console
+    console.table(latency);
+})();
