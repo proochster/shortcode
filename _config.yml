@@ -25,6 +25,8 @@ url: https://shortcode.dev # the base hostname & protocol for your site, e.g. ht
 # Options: https://jekyllrb.com/docs/permalinks/#builtinpermalinkstyles
 # permalink: none
 
+# incremental: true
+
 host: shortcode
 
 # Build settings
