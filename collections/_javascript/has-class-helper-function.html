@@ -1,0 +1,9 @@
+---
+title: has class helper function
+description: Use this helper function to check if the element has a given class. It uses a regular expression to match the queried class name. First attribute of the helper function takes the element name. Pass the name of the class you want to check as the second attribute.
+tags: javascript helper function class
+date: 2019-10-12
+---
+function hasClass(element, class) {
+    return !!element.className.match(new RegExp("(\\s|^)" + class + "(\\s|$)"));
+}
