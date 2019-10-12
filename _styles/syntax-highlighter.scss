@@ -5,16 +5,16 @@
 // }
 .highlight, pre, .highlight code{ margin: 0; font-family: monospace;}
 
-    .hll { background-color: #ffffcc }
-    .k, .kc, .kd, .kn, .kp, .kr, .nb, .sx, .bp, .nc, .nn, .fm{ color: #B68;} // #42b596; 
-    .nx, .s, .o, .mb, .mf, .mh, .mi, .mo, .m, .il{ color: #238ad6; }
+    .hll { background-color: #ffc }
+    .k, .kc, .kd, .kn, .kp, .kr, .nb, .sx, .bp, .nc, .nn, .fm{ color: #e8a;} // #42b596; 
+    .nx, .s, .o, .mb, .mf, .mh, .mi, .mo, .m, .il, .cp, .nt { color: #5bf; }
     // .mb,.mf,.mh,.mi,.mo,.m,.il{ color:#238ad6;}
     // .o{ color: #238ad6; }
-    .sa,.sb,.sc,.dl,.sd,.s1,.s2,.sh, .nd, .ow, .na, .nv, .gh, .gp, .gu, .gt { color: $style-1-accent;  } 
+    .sa,.sb,.sc,.dl,.sd,.s1,.s2,.sh, .nd, .ow, .na, .nv, .gh, .gp, .gu, .gt { color: #6ec;  } 
     .c { color: #2f4ea2; font-style: italic } /* Comment */
     // .err, .gr { border: 1px solid #FF0000 } /* Error */
     .ch, .cm, .cpf, .c1, .cs { color: #408080; font-style: italic } /* Comment.Hashbang */
-    .cp, .nt { color: #78b4e0; } /* Comment.Preproc */
+    // .cp, .nt { color: #78b4e0; } /* Comment.Preproc */
     .gd { color: #A00000 } /* Generic.Deleted */
     .ge { font-style: italic } /* Generic.Emph */
     // .gh, .gp { color: $style-1-accent; } /* Generic.Heading */
