@@ -1,0 +1,20 @@
+<ol vocab="https://schema.org/" typeof="BreadcrumbList" class="inline-list wrapper bg--light">
+    <li property="itemListElement" typeof="ListItem" class="inline-list__item">
+        <a property="item" typeof="WebPage" href="{{ site.url }}" title="{{ site.title }}" class="inline-list__link">
+            <span property="name">Home</span>
+        </a>
+        <meta property="position" content="1">
+    </li>
+    ›
+    <li property="itemListElement" typeof="ListItem" class="inline-list__item">
+        <a property="item" typeof="WebPage" href="/{{ page.collection }}-cheatsheet#{{ page.title | slugify }}" title="All {{ page.collection | capitalize  }} codes" class="inline-list__link">
+            <span property="name">{{ page.collection | capitalize  }}</span>
+        </a>        
+        <meta property="position" content="2">
+    </li>
+    ›
+    <li property="itemListElement" typeof="ListItem" class="inline-list__item">
+        <span property="name">{{ page.title | capitalize  }}</span>
+        <meta property="position" content="3">
+    </li>
+</ol>
