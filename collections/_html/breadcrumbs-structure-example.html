@@ -1,0 +1,24 @@
+---
+title: breadcrumb list
+description: An example of a breadcrumbs list following Structured Data schema.
+tags: html breadcrumbs
+date: 2019-10-15
+---
+<ol vocab="https://schema.org/" typeof="BreadcrumbList">
+    <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage" href="https://shortcode.dev/">
+            <span property="name">Home</span>
+        </a>›
+        <meta property="position" content="1">
+    </li>
+    <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage" href="https://shortcode.dev/html-cheatsheet">
+            <span property="name">HTML</span>
+        </a>›
+        <meta property="position" content="2">
+    </li>
+    <li property="itemListElement" typeof="ListItem">
+        <span property="name">Code example</span>
+        <meta property="position" content="3">
+    </li>
+</ol>
