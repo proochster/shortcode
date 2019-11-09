@@ -1,0 +1,13 @@
+---
+title: limit for loop
+description: You can use limit attribute to restrict the numbers of returned results by the for loop.
+tags: liquid for loop
+date: 2019-11-09
+---
+<ul>
+{{"{% for page in site.pages limit:5 "}}%}
+  <li>
+      <a title="{{"{{ page.title "}}}}" href="{{"{{ page.url "}}}}">{{"{{ page.title "}}}} </a>
+  </li>
+{{"{% endfor "}}%}
+</ul>
