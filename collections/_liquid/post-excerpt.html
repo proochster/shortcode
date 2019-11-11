@@ -1,0 +1,11 @@
+---
+title: post excerpt
+description: Returns the . 
+tags: liquid posts
+date: 2019-11-09
+---
+{{"{% for post in site.posts "}}%}
+<p>
+    {{"{{ post.excerpt "}}}}
+</p>
+{{"{% endfor "}}%}
