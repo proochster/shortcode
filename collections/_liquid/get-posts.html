@@ -1,0 +1,13 @@
+---
+title: get posts
+description: Get a collection of all posts and display the title and the url in a list format. 
+tags: liquid posts
+date: 2019-11-12
+---
+<ul>
+    {{"{% for post in site.posts "}}%}
+    <li>
+        <a href="{{"{{ post.url "}}}}">{{"{{ post.title "}}}}</a>
+    </li>
+    {{"{% endfor "}}%}
+</ul>
