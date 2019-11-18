@@ -1,0 +1,15 @@
+---
+title: document location
+description: Document location gives you an access to an object containing useful information about the current URL and methods for updating and redirecting. Use the dot notation to access object properties and methods.
+tags: javascript document
+date: 2019-11-18
+---
+document.location // returns a full list of methods and properties
+document.location.hash // returns a string marked with the # sign 
+document.location.hostname // returns the base domain name
+document.location.href // returns a full url including query string and hash
+document.location.pathname // returns the the page or a subfolder
+document.location.search // returns a string marked with the ? sign 
+
+document.location.reload() // forces page reload
+document.location.assign('new-url') // redirects to a new url and saves it to the browsing history
