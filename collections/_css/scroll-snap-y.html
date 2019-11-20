@@ -1,0 +1,27 @@
+---
+title: scroll snap y
+description: Scroll snap y lets you set vertical snapping behaviour of the scrolling element. Choose from mandatory or proximity options for different effects. Make sure you are happy with the browser support for this property before using.
+tags: css scroll
+parse: true
+date: 2019-11-20
+---
+<style>
+    .scroll-snap-y{
+        overflow-y: auto;
+        scroll-snap-type:y mandatory; /* mandatory/proximity */
+        max-height: 320px;
+        max-width: 320px;
+    }
+
+    .scroll-snap-y img{
+        scroll-snap-align: center; /* center/start/end */
+    }
+</style>
+<div class="scroll-snap-y">
+    <img src="https://picsum.photos/id/480/300/300" alt="image 1">
+    <img src="https://picsum.photos/id/480/300/300" alt="image 2">
+    <img src="https://picsum.photos/id/480/300/300" alt="image 3">
+    <img src="https://picsum.photos/id/480/300/300" alt="image 4">
+    <img src="https://picsum.photos/id/480/300/300" alt="image 5">
+</div>
+
