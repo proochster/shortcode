@@ -1,0 +1,16 @@
+---
+title: export module
+description: Each file in your Node application represents a module and it has its own scope. Therefore to access data or functionality from another file/module you need to make them public within your application. To do that use Export method on the Module object. 
+tags: node module
+date: 2019-11-20
+---
+var settings = {
+    colour: "green",
+    active: true,
+    number: 43
+};
+
+module.exports.data = settings; // This exports an object containing the settings object
+
+// When exporting a single function or an object you can simplify the export to the following.
+// module.exports = settings;
