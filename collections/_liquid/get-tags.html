@@ -1,0 +1,9 @@
+---
+title: get tags
+description: A simple script to get all tags from the front matter of a post/page.
+tags: liquid tags
+date: 2019-11-24
+---
+{{"{% if page.tags.size > 0 "}}%}
+    {{"{% for tag in page.tags "}}%}<span>#{{"{{ tag "}}}}</span>{{"{% endfor "}}%}
+{{"{% endif "}}%}
