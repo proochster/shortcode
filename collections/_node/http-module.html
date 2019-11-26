@@ -1,0 +1,22 @@
+---
+title: HTTP
+description: Node comes with a full support for setting up a HTTP server. With a few lines of code you can build a simple web server.
+tags: node module http
+date: 2019-11-26
+---
+// Load HTTP module
+const http = require('http');
+
+// Create an instance of a server
+const server = http.createServer((req, res) => {
+    // Set a route
+    if (req.url === '/') {
+        // Send back the response back
+        res.write("Node HTTP module in action");
+        res.end();
+    }
+});
+
+// Start the server on a port 3000
+server.listen(3000);
+console.log('Server listening on port 3000');
