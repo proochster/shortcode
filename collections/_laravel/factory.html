@@ -1,7 +1,10 @@
 ---
 title: factory
-description: Run Factory class in tinker to quickly generate database records.
+description: Run Factory class in tinker to quickly generate database records. You can create multiple records in one go by passing a number of records to create as the second factory argument.
 tags: laravel db factory
 date: 2019-09-20
 ---
-factory('App\Item')-create()
+factory('App\Item')->create()
+
+// Create multiple records in one request
+factory('App\Item', 10)->create()
