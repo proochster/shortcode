@@ -1,0 +1,17 @@
+---
+title: EventEmitter
+description: EventEmitter is a Node native class containing a set of methods to operate on the events. 
+tags: node module events
+date: 2019-11-28
+---
+const EventEmitter = require('events');
+const emitter = new EventEmitter();
+
+// Set an event listener
+emitter.on('userSubscribed', function(eventArg){
+    console.log("User subscribed at ", eventArg.date);
+    // Do something when user subscribes
+});
+
+// Raise an event and pass data as the second argument
+emitter.emit('userSubscribed', {date: Date.now()})
