@@ -1,0 +1,11 @@
+---
+title: route helper
+description: Use route helper to return a full url to a named route. You can pass parameters in the second argument for the dynamic parts of the url.
+tags: laravel helper
+date: 2019-12-01
+---
+route('home')
+// With a single parameter
+route('shop', $product->slug)
+// Or an array of parameters
+route('shop', ['product' => $product->slug, 'title' => $product->name])
