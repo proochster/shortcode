@@ -1,0 +1,33 @@
+---
+title: scroll snap x
+description: Scroll snap x lets you set horisontal snapping behaviour of the scrolling element. Choose from mandatory or proximity options for different effects. Make sure you are happy with the browser support for this property before using.
+tags: css scroll
+parse: true
+date: 2019-12-02
+---
+<style>
+    .scroll-snap-x{
+        overflow-x: auto;
+        scroll-snap-type:x mandatory; /* mandatory|proximity */
+        max-height: 320px;
+        max-width: 320px;
+    }
+
+    .scroll-snap-x__wrapper{
+        display: flex;
+    }
+
+    .scroll-snap-x img{
+        scroll-snap-align: center; /* center|start|end */
+    }
+</style>
+
+<div class="scroll-snap-x">
+    <div class="scroll-snap-x__wrapper">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 1">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 2">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 3">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 4">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 5">
+    </div>
+</div>
