@@ -1,0 +1,12 @@
+---
+title: splice
+description: Splice method lets you add and remove items from an array. I takes a minimum of two arguments, first one marks the index of the array item, second, is a number of items to be removes, set to 0 if no items are to be deleted. The following arguments are the new items to be added to the array. When taking out items from the array, splice will automatically return them.
+tags: javascript array
+date: 2019-12-04
+---
+var colors = ["red","green","blue"];
+// Select item with index 1 and remove 1 item. Returns removed color ["green"]
+colors.splice(1, 1);
+
+// Add more colors to the array
+colors.splice(1, 0, "purple", "yellow"); // colors["red", "purple", "yellow", "blue"]
