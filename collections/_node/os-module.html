@@ -1,0 +1,22 @@
+---
+title: os module
+description: OS module is a native Node module giving you access to operating system information like memory, architecture, uptime and many more. 
+tags: node module
+date: 2019-12-07
+---
+const os = require('os'); // Node native module
+
+function logOsData(){
+
+    console.log(`Architecture: ${ os.arch() }`);
+    console.log(`Total memory: ${ os.totalmem() }`);
+    console.log(`Free memory: ${ os.freemem()} `);
+    console.log(`Platform: ${ os.platform()} `);
+    console.log(`Type: ${ os.type()} `);
+    console.log(`Uptime: ${ os.uptime()} `);
+
+    // Uncomment the line below to log full OS object in the console.
+    // console.log(os); 
+}
+
+logOsData();
