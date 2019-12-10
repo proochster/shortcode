@@ -1,0 +1,9 @@
+---
+title: parse path
+description: Parse a method belonging to the Path native Node module. A parsed path returns an object containing directory, module base name, extension and the file name.
+tags: node module path
+date: 2019-12-10
+---
+const path = require('path');
+var pathData = path.parse(__filename);
+console.log(pathData);
