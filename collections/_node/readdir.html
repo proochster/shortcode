@@ -1,0 +1,13 @@
+---
+title: readdir
+description: Read directory (readdir) is a method belonging to the Node native file system module (fs). reddir is an asynchronous method and it used a javascript promise to return an error or an array with a list of filenames located in the given directory.
+tags: node module
+date: 2019-12-11
+---
+const fs = require('fs');
+
+fs.readdir('./', function(err, files){
+    console.log("--- FS INFO");
+    if (err) console.log("Error: ", err);
+    else console.log("Root: ", files);
+});
