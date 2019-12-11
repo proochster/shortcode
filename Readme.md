@@ -58,13 +58,25 @@ https://shortcode.dev
         _html
      ```
 
-4. Add another markdown highlight case in the `/_includes/code-highlight.html` like so:
+4. Create a landing page for the new collection in the root directory i.e. `code_somecollection.html` and follow this front matter structure:
+
+    ```
+    ---
+    layout: codes
+    title: Some collection cheatsheet
+    permalink: somecollection-cheatsheet
+    group: wordpress
+    ---
+    ```
+
+5. Add another markdown highlight case in the `/_includes/code-highlight.html` like so:
 
     ``` liquid
     {% when 'html' %}{% highlight html %}{{ code-content }}{% endhighlight %} 
     ```  
 
-5. When ready submit a pull request to the `dev` branch (`https://github.com/proochster/shortcode/tree/dev`).  
+
+6. When ready submit a pull request to the `dev` branch (`https://github.com/proochster/shortcode/tree/dev`).  
 
 # Jekyll
 
