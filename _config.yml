@@ -93,6 +93,14 @@ collections:
     output: true
     link: blade-cheatsheet
     icon: fab fa-laravel
+  wordpress:
+    output: true
+    link: wordpress-cheatsheet
+    icon: fab fa-wordpress-simple
+  php:
+    output: true
+    link: php-cheatsheet
+    icon: fab fa-php
 
 defaults:
   - scope:
@@ -155,6 +163,16 @@ defaults:
     values:
       layout: code
       type: blade
+  - scope:
+      type: wordpress
+    values:
+      layout: code
+      type: wordpress
+  - scope:
+      type: php
+    values:
+      layout: code
+      type: php
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
