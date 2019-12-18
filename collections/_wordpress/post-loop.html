@@ -1,0 +1,12 @@
+---
+title: posts loop
+description: WordPress loop iterates through the_post object allowing you to get the post data.
+tags: wordpress php
+date: 2019-12-18
+---
+<?php while ( have_posts() ) : the_post(); ?>
+
+        <?php the_content(); ?>
+
+<?php endwhile;
+wp_reset_query();?>
