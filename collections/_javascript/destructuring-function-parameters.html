@@ -1,0 +1,15 @@
+---
+title: destructuring function parameters 
+description: . 
+tags: javascript destructuring es6
+date: 2019-12-11
+---
+class Shape {
+    createShape(options = {}) {
+        const { x = 0, y = 0, w = 100, h = 100, c = '#FFF'} = options;
+        console.log(x,y,w,h,c);
+    }
+}
+
+const shape = new Shape();
+shape.createShape({});
