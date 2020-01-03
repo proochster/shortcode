@@ -1,0 +1,16 @@
+---
+title: lazy loading
+description: This HTML attribute can be added to image or iframe tags and provides native browser support for lazy loading resources. You can set it to one of these modes lazy|eager|auto. Check browser support before using.
+parse: true
+tags: html attribute performance
+date: 2019-12-12
+---
+<!-- On the image tag -->
+<img src="./assets/icon-144x144.png" loading="lazy" alt="Some image"/>
+
+<!-- In the picture element with source sets -->
+<picture>
+    <source media="(min-width: 1024px)" srcset="./assets/icon-512x512.png">
+    <source srcset="./assets/icon-144x144.png 1x, ./assets/icon-512x512.png 2x">
+    <img src="./assets/icon-64x64.png" loading="lazy">
+</picture>
