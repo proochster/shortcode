@@ -25,9 +25,9 @@ var Component = {
 
 };
 
-// Finally initialize object
-return (
-    Component.init()
-)
+// Finally check for elements and initialize the object
+if ( Component.element ){
+    Component.init();
+}
 
 
