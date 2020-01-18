@@ -55,3 +55,49 @@
         display: inline-block;
     }
 }
+
+.btn{
+    padding: $base-unit $base-unitx2;
+    background-color: $grey-light;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #FFF;
+
+    &:hover{
+        text-decoration: none;
+    }
+    
+    &--primary{
+        background-color: $style-1-accent;
+
+        &:hover{
+            background-color: $style-1-accent-light;
+        }
+    }
+}
+
+.arrow{
+    
+    &--left{
+        position: relative;
+        padding-left: $base-unit * 3;
+
+        &:before{
+            margin-top: -6px;
+            left: 1.125em;
+            border: 3px solid #ffffff;
+            border-radius: 2px;
+            border-right: 0;
+            border-top: 0;
+            content: " ";
+            display: block;
+            height: 10px;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            transform: rotate(45deg);
+            transform-origin: center;
+            width: 10px;
+        }
+    }
+}

@@ -5,8 +5,12 @@
 .search{
     background-color: $style-1-accent;
     background-image: linear-gradient(to right, $style-1-accent, $style-1-accent-light);
-    position: relative;
+    // position: relative;
     overflow: hidden;
+
+    position: sticky;
+    top: -82px;
+    z-index: 1;
 
     &__wrapper{
 
