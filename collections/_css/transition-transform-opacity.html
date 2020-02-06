@@ -1,0 +1,20 @@
+---
+title: transition transform opacity example
+description: Example of using transition, transform and opacity to animate elements in. 
+tags: css transition
+date: 2020-02-06
+---
+<style>
+    .animate{
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+        transition:
+            transform .4s cubic-bezier(0.25, 0.1, 0.25, 1) 0ms,
+            opacity .4s cubic-bezier(0.25, 0.1, 0.25, 1) 0ms;
+    }
+    .is-active{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+</style>
