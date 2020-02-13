@@ -1,0 +1,23 @@
+---
+title: load custom font
+description: This example loads a custom font file. Preload tag ensures the request fetching the resource is raised as soon as possible to improve user experience. In addition, font-display and unicode-range attributes are used to optimise performance.  
+tags: css flex
+date: 2020-02-13
+---
+<!-- Use preload tag in the header to prioritise font request -->
+<link rel="preload" href="path/to/the/Font-File.woff2" as="font">
+
+<style>
+    @font-face {
+        font-family: "Font";
+        font-style: normal;
+        font-weight: 400;
+        src:    url(fonts/Font-File.eot);
+        src:    local('Font'), /* Get the local font file if available */
+                url(fonts/Font-File.woff2) format("woff2"), /* Preloaded in the header */
+                url(fonts/Font-File.woff) format("woff"),
+                url(fonts/Font-File.eot#iefix) format("eot");
+        font-display: optional;     /* Prevent reflows */
+        unicode-range: U+000-5FF;   /* Load Latin glyphs only */
+    }
+</style>
