@@ -126,4 +126,8 @@
         padding: 3px 6px;
         cursor: pointer;
     }
+
+    &--single{
+        min-height: 50vh;
+    }
 }
