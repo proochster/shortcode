@@ -1,0 +1,12 @@
+---
+title: enqueue dashicons
+description: Enqueue WordPress dashicons to frontend. By default dashicons are only available in the admin area. Add the following code to the functions.php file to use WordPress icons anywhere in your website.
+tags: wordpress
+date: 2020-03-14
+---
+function enqueue_dashicons() {
+   
+   wp_enqueue_style( 'dashicons' );
+
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_dashicons' );
