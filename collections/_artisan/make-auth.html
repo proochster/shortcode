@@ -1,0 +1,13 @@
+---
+title: make auth
+description: Depending on Laravel version installed you can add auth functionality to your app using the following commands. Make sure you have a database configured and connected for this step as it will be needed to create a user table.  
+tags: artisan php make auth
+date: 2020-03-28
+---
+// Laravel version < 6
+php artisan make:auth
+
+// Laravel verions >= 6
+composer require laravel/ui
+php artisan ui vue --auth
+php artisan migrate
