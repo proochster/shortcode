@@ -7,9 +7,10 @@ date: 2019-08-12
 $faker = Faker\Factory::create();
 
 $faker->name; // First and second name
-$faker->randomDigit; // Number
-$faker->word; // Single word
-$faker->unique()->word; // Single unique word
+$faker->randomDigit; // A random number
+$faker->word; // A single word
+$faker->sentence; // A sentence
+$faker->unique()->word; // A single unique word
 $faker->text($maxNbChars = 300); // 300 character long text
-$faker->safeEmail; // Email address
+$faker->safeEmail; // An email address
 $faker->hexcolor; // Hex color
