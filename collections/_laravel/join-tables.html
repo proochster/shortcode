@@ -1,0 +1,10 @@
+---
+title: join tables
+description: Example of joining to collections using join function helper. First argument determines a table to join, the two following arguments select columns to make the join at.
+tags: laravel
+date: 2020-03-30
+---
+return DB::table('users')
+->join('messages', 'messages.from', 'users.id') // Select table to join and keys to make a join at
+->select('from', 'name', 'text', 'messages.created_at' )
+->get();
