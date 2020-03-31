@@ -1,0 +1,7 @@
+---
+title: set cookie for a year
+description: Set a cookie with one year expiry date. 
+tags: javascript cookie
+date: 2020-03-31
+---
+document.cookie = `cookie_name=${cookie_value}; expires=${new Date(new Date().getTime()+1000*60*60*24*365).toGMTString()}; path=/`;
