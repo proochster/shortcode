@@ -1,0 +1,14 @@
+---
+title: clear cache route
+description: In some cases you might need to clear Laravel's cache without using console. You can set up the following route and run Artisan cache clear command as a call-back function instead. In addition, follow it up with Artisan config cache command to rebuild application cache again. Then, visit the new route in your browser to trigger the Artisan commands.
+tags: laravel route cache
+date: 2020-04-01
+---
+Route::get('/clear-cache', function() {
+
+    $clearCache = Artisan::call('cache:clear');
+    echo "Cache cleared. \r\n";
+
+    $setCache = Artisan::call('config:cache');
+    echo "Cache configured. \r\n";
+});
