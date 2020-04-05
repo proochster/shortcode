@@ -108,71 +108,85 @@ defaults:
     values:
       layout: code
       type: html
+      affiliate-book: //ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=kproochus-20&language=en_US&marketplace=amazon&region=US&placement=1118008189&asins=1118008189&linkId=e241ad08edc904b0f77f2f9707bcfb07&show_border=true&link_opens_in_new_window=true
   - scope:
       type: css
     values:
       layout: code
       type: css
+      affiliate-book: //ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=kproochus-20&language=en_US&marketplace=amazon&region=US&placement=1118008189&asins=1118008189&linkId=e241ad08edc904b0f77f2f9707bcfb07&show_border=true&link_opens_in_new_window=true
   - scope:
       type: javascript
     values:
       layout: code
       type: javascript
+      affiliate-book: //ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=kproochus-20&language=en_US&marketplace=amazon&region=US&placement=1118531647&asins=1118531647&linkId=447fb32021a8d0f924b788f7ba9cd385&show_border=true&link_opens_in_new_window=true
   - scope:
       type: liquid
     values:
       layout: code
       type: liquid
+      affiliate-banner: true
   - scope:
       type: git
     values:
       layout: code
       type: git
+      affiliate-book: //ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=kproochus-20&language=en_US&marketplace=amazon&region=US&placement=1484200772&asins=1484200772&linkId=12dfaa0cc3865c4ad2d1c564b7900586&show_border=true&link_opens_in_new_window=true
   - scope:
       type: vue
     values:
       layout: code
       type: vue
+      affiliate-book: //ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=kproochus-20&language=en_US&marketplace=amazon&region=US&placement=1617294624&asins=1617294624&linkId=b7b5b853e254dc802e1feba16f281bba&show_border=true&link_opens_in_new_window=true
   - scope:
       type: node
     values:
       layout: code
       type: node
+      affiliate-book: //ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=kproochus-20&language=en_US&marketplace=amazon&region=US&placement=1617294748&asins=1617294748&linkId=816d17ac539cc6296a0e4285e5ac17a5&show_border=true&link_opens_in_new_window=true
   - scope:
       type: cli
     values:
       layout: code
       type: cli
+      affiliate-banner: true
   - scope:
       type: markdown
     values:
       layout: code
       type: markdown
+      affiliate-book: //ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=kproochus-20&language=en_US&marketplace=amazon&region=US&placement=1138359335&asins=1138359335&linkId=22aa3ab20df4ceeb2adaf069ee39026d&show_border=true&link_opens_in_new_window=true
   - scope:
       type: laravel
     values:
       layout: code
       type: laravel
+      affiliate-book: //ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=kproochus-20&language=en_US&marketplace=amazon&region=US&placement=1492041211&asins=1492041211&linkId=dd7fd2e8cfdf34d1c29203507b39d905&show_border=true&link_opens_in_new_window=true
   - scope:
       type: artisan
     values:
       layout: code
       type: artisan
+      affiliate-book: //ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=kproochus-20&language=en_US&marketplace=amazon&region=US&placement=1492041211&asins=1492041211&linkId=dd7fd2e8cfdf34d1c29203507b39d905&show_border=true&link_opens_in_new_window=true
   - scope:
       type: blade
     values:
       layout: code
       type: blade
+      affiliate-banner: //ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=kproochus-20&language=en_US&marketplace=amazon&region=US&placement=1492041211&asins=1492041211&linkId=dd7fd2e8cfdf34d1c29203507b39d905&show_border=true&link_opens_in_new_window=true
   - scope:
       type: wordpress
     values:
       layout: code
       type: wordpress
+      affiliate-book: //ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=kproochus-20&language=en_US&marketplace=amazon&region=US&placement=B082SYXLDF&asins=B082SYXLDF&linkId=8a6fed70dbd51fdae187abad807a8e04&show_border=true&link_opens_in_new_window=true
   - scope:
       type: php
     values:
       layout: code
       type: php
+      affiliate-book: //ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=kproochus-20&language=en_US&marketplace=amazon&region=US&placement=1119149223&asins=1119149223&linkId=2891acc70e30f2084701c7e21960a837&show_border=true&link_opens_in_new_window=true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

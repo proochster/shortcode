@@ -1,8 +1,29 @@
 
-<div class="wrapper bg--light padding--double">
-    <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=GB&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=kprooch-21&language=en_GB&marketplace=amazon&region=GB&placement=1484200772&asins=1484200772&linkId=49bd7f39828d856aa15aef4b5cfdf1aa&show_border=false&link_opens_in_new_window=true"></iframe>
+{% if page.affiliate-banner %}
+<div class="wrapper wrapper--center bg--light padding--double">
+    <script type="text/javascript">
+        amzn_assoc_ad_type = "banner";
+        amzn_assoc_marketplace = "amazon";
+        amzn_assoc_region = "US";
+        amzn_assoc_placement = "assoc_banner_placement_default";
+        amzn_assoc_banner_type = "ez";
+        amzn_assoc_p = "48";
+        amzn_assoc_width = "728";
+        amzn_assoc_height = "90";
+        amzn_assoc_tracking_id = "kproochus-20";
+        amzn_assoc_linkid = "145ba8146730e67e3a5913383741fa27";
+    </script>
+    <script src="//z-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1"></script>
 </div>
-<div class="wrapper bg--light padding--double">
+{% endif %}
+
+{% if page.affiliate-book %}
+<div class="wrapper wrapper--center bg--light padding--double">
+    <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="{{ page.affiliate-book }}"></iframe>
+</div>
+{% endif %}
+
+<div class="wrapper wrapper--center bg--light padding--double">
     <a href="/{{ page.collection }}-cheatsheet#{{ page.title | slugify }}" title="All {{ page.collection | capitalize  }} codes" class="btn btn--primary arrow--left">
         Full {{ page.collection | capitalize }} cheatsheet
     </a>
