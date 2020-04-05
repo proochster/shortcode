@@ -79,7 +79,7 @@
     }
     
     &__tag{
-        background-color: $light;
+        background-color: $grey-dark;
         font-size: $base-unit;
         padding: 1px $half-unit;
         margin-left: $half-unit;
@@ -127,7 +127,9 @@
         cursor: pointer;
     }
 
-    // &--single{
-    //     min-height: 50vh;
-    // }
+    &--main{
+        @include screen-bigger-than($small){
+            width: calc(100% - 140px);
+        }
+    }
 }
