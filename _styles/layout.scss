@@ -19,6 +19,14 @@ body{
     padding: $base-unit;
     margin: 0 auto;
     position: relative;
+
+    &--center{
+        text-align: center;
+
+        img{ 
+            margin: auto;
+        }
+    }
 }
 
 .content{
