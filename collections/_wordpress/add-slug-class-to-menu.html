@@ -1,0 +1,15 @@
+---
+title: add slug class to menu item
+description: Use this filter to add a slug-based css class to each menu item. 
+tags: wordpress php menu
+date: 2020-04-08
+---
+function add_menu_item_slug_class($classes, $item, $args) {
+
+	$item_class = sanitize_title($item->title); // Convert title to a slug
+	$classes[] = "menu-item-" . $item_class;
+
+	return $classes;
+
+}
+add_filter('nav_menu_css_class', 'add_menu_item_slug_class', 1, 3);
