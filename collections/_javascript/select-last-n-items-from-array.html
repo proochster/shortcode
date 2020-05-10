@@ -1,0 +1,10 @@
+---
+title: last n items
+description: Select last n items from array
+tags: javascript array
+date: 2020-05-10
+---
+// Number of items to select
+numberOfItems = 100;
+// Create a new array with last N items
+let selectedArray = originalArray.slice( Math.max( originalArray.length - numberOfItems, 1 ) );
