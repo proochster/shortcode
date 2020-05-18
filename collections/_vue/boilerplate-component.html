@@ -1,0 +1,83 @@
+---
+title: boilerplate vue component
+description: An example of a VueJS component code structure.
+tags: vue
+date: 2020-05-18
+---
+<!-- Component template -->
+<!-- ------------------ -->
+<template>
+    <div class="component">
+
+        <!-- Iterate through all items and display in the list -->
+        <ul class="">
+            <li v-for="item in items" :key="item.id">{{ item.title }}</li>
+        </ul>
+
+        <!-- Reference a child component with property and a click event calling a function -->
+        <div class="childComponent">
+            <Child-Component :childProperty="title" @clicked="doSometnig" class=""></Child-Component>
+        </div>
+        
+        <!-- Display this title if the array of items is empty -->
+        <h3 v-if="!items.length">Time to add new items!</h3>
+
+    </div>
+</template>
+
+<!-- Define logic and data -->
+<!-- --------------------- -->
+
+<script>
+// To use Child-Component you need to import it first
+import Child-Component from './Child-Component';
+
+export default {
+
+    // If properties are being passed to this component form the parent you need to declare them here
+    props: {
+        propOne: {
+            type: String, // String / Array / Number / Boolean
+            required: true, // true / false
+            default: ''
+        }
+    },
+
+    // Declare all data for this component here
+    data() {
+        return {
+            title: '',              // String
+            count: 0,               // Number
+            items: [],              // Array: []
+            componentState: true    // Boolean: true / false
+        }
+    },
+
+    // When the component if fully loaded run methods declared below
+    mounted() {
+        console.log(this.items);
+
+        // Fetch data from an API using axios
+        axios.get(`/api/items/`)
+            .then(response => {
+                this.items = response.data;
+            })
+            .catch(function (error) {
+                console.log(error);            
+            });
+    },
+
+    // Add methods
+    methods: {
+        doSometnig(){
+            console.log(this.title);
+        }
+    },
+
+    // Register loaded components
+    components: {
+        Child-Component // , Second-Component...
+    }
+}
+
+</script>
