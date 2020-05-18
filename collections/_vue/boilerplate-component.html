@@ -11,7 +11,7 @@ date: 2020-05-18
 
         <!-- Iterate through all items and display in the list -->
         <ul class="">
-            <li v-for="item in items" :key="item.id">{{ item.title }}</li>
+            <li v-for="item in items" :key="item.id">{{"{{ item.title "}}}}</li>
         </ul>
 
         <!-- Reference a child component with property and a click event calling a function -->
@@ -34,7 +34,7 @@ import Child-Component from './Child-Component';
 
 export default {
 
-    // If properties are being passed to this component form the parent you need to declare them here
+    // If properties are being passed to this component from the parent you need to declare them here
     props: {
         propOne: {
             type: String, // String / Array / Number / Boolean
