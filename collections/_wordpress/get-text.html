@@ -1,0 +1,17 @@
+---
+title: get text
+description: The following methods allow for getting and displaying translated text in your theme.
+tags: wordpress php
+date: 2020-06-12
+---
+// Get text
+__( 'Your text', 'text_domain' );
+
+// Get text with a specified context
+_x( 'Your text', 'Form label', 'text_domain' );
+
+// Echo out text
+_e( 'Your text', 'text_domain' );
+
+// Use translated text inside of sprintf method
+echo sprintf('This is %s in a paragraph', __( 'your text', 'text_domain' )); 
