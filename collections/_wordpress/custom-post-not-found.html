@@ -1,0 +1,7 @@
+---
+title: custom post not found
+description: When registering a new custom post type you can encounter a bug where a single custom post returns a 404 page even when a valid page template exists. To fix it add the following snippet to the functions.php file. Make sure to remove it once the bug is fixed as you do not want it to run with each page load.
+tags: wordpress php
+date: 2020-07-03
+---
+flush_rewrite_rules( false );
