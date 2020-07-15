@@ -1,0 +1,19 @@
+---
+title: set global variable
+description: Set a global variable as part of the functions.php file.
+tags: wordpress php
+date: 2020-07-15
+---
+// Add this function in function.php file
+
+function set_some_global_variable() {
+    global $some_variable;
+    $some_variable = 1;
+}
+add_action( 'after_setup_theme', 'set_some_global_variable' );
+
+// Than, it can be used in other parts of the theme
+
+global $some_variable;
+
+echo $some_variable;
