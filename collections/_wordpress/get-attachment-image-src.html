@@ -1,0 +1,17 @@
+---
+title: woocommerce gallery images data array
+description: Get gallery images data array - src [0] - width [1] - height [2] - and if resized [3]. 
+tags: wordpress php woocommerce image
+date: 2020-10-17
+---
+global $product;
+$product_image_ids = $product->get_gallery_attachment_ids();
+
+foreach( $product_image_ids as $product_image_id ) { 
+	$prod_image = wp_get_attachment_metadata($product_image_id);
+
+	print_r(wp_get_attachment_image_src($product_image_id, 'thumbnail'));				
+	print_r(wp_get_attachment_image_src($product_image_id, 'medium'));				
+	print_r(wp_get_attachment_image_src($product_image_id, 'medium_large'));
+
+} ?>
