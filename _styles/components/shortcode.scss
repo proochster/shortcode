@@ -126,10 +126,4 @@
         padding: 3px 6px;
         cursor: pointer;
     }
-
-    &--main{
-        @include screen-bigger-than($small){
-            width: calc(100% - 140px);
-        }
-    }
 }
