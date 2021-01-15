@@ -1,0 +1,15 @@
+---
+title: parse url
+description: Lets you parse a URL and retrieve parts like scheme, hostname, port, path, query, fragment, username, and password.
+tags: php
+date: 2021-01-15
+---
+$url_to_parse = "https://shortcode.dev/php-cheatsheet?var=hello#php-cheatsheet";
+$parsed = parse_url($url_to_parse);
+
+echo $parsed['scheme'];     // https
+echo $parsed['hostname'];   // shortcode.dev
+echo $parsed['port'];       // ie. 8080
+echo $parsed['path'];       // /php-cheatsheet
+echo $parsed['query'];      // var=hello
+echo $parsed['fragment'];   // php-cheatsheet
