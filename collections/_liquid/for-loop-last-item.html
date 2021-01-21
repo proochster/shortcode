@@ -1,0 +1,13 @@
+---
+title: for loop last item
+description: Use forloop.last to select the last item in the for loop.
+tags: liquid for loop last
+date: 2021-01-21
+---
+<ul>
+{{"{% for page in site.pages "}}%}
+  <li>
+      <a title="{{"{{ page.title "}}}}" href="{{"{{ page.url "}}}}">{{"{{ page.title "}}}}{{"{% if forloop.last == true "}}%} - last item{{"{% endif "}}%}</a>
+  </li>
+{{"{% endfor "}}%}
+</ul>
