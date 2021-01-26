@@ -1,0 +1,10 @@
+---
+title: auto play video
+description: Use this code to autoplay embedded video. Modern browsers will only autoplay muted videos. The 'playsinline' property is required for Safari iOS if you don't want it to play in the fullscreen overlay.
+tags: html tag video
+date: 2021-01-26
+---
+<video autoplay="autoplay" playsinline muted loop poster="/path/to/poster.jpg">
+    <source src="/path/to/video.mp4" type="video/mp4">
+    <source src="/path/to/video.webm" type="video/webm">
+</video>
