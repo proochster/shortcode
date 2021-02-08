@@ -1,0 +1,19 @@
+---
+title: font display
+description: This setting allows you to control the display behaviour of the font. Options - auto, block, swap, fallback, optional.
+tags: css font
+date: 2021-02-08
+---
+<style>
+    @font-face {
+
+        /* Declare font settings here, font-family, style, weight, and source */
+
+        /* Then you can choose from one of the following options */
+        font-display: auto;     /* Use default user agent settings */
+        font-display: block;    /* This can stop the font flickering but can affect performance */
+        font-display: swap;     /* A suggested solution. Good balance between performance and user experience */
+        font-display: fallback; /* Prioritises fallback font over the custom font */
+        font-display: optional; /* This will use the fallback font */
+    }
+</style>
