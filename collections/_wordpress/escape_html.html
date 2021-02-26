@@ -1,0 +1,11 @@
+---
+title: escape html
+description: esc_html is a method allowing you to escape html from a string passed as an attribute.
+tags: wordpress php
+date: 2021-02-26
+---
+$copy = "Text <span> with some html </span>."
+/* Returns 'Text with some html'.
+
+$escapeHtml = esc_html($copy);
+/* Returns: 'Text <span> with some html </span>'.
