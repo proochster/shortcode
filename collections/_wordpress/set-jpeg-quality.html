@@ -1,0 +1,10 @@
+---
+title: set jpeg quality
+description: This filter lets you change compression level when saving and uploading jpeg files. By default compression level is set to 90.
+tags: wordpress php
+date: 2021-07-04
+---
+function change_jpeg_quality() {
+    return 95; 
+}
+add_filter( 'jpeg_quality', 'change_jpeg_quality');
