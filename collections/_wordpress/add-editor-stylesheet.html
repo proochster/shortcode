@@ -1,0 +1,10 @@
+---
+title: add editor style
+description: Add this method to the function.php file. It will append a stylesheet file in the admin area of WordPress so you can add your custom CSS in the editor. Don't forget to update path to the file. 
+tags: wordpress php
+date: 2021-07-12
+---
+function add_editor_stylesheet() {
+   add_editor_style( 'path/to/css/file.css' );
+}
+add_action( 'admin_init', 'add_editor_stylesheet' );
