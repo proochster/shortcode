@@ -1,0 +1,11 @@
+---
+title: add body class
+description: Append css class to body using filter. 
+tags: wordpress php
+date: 2021-07-27
+---
+function add_your_body_class($classes) {
+    $classes[] = 'new-class';
+    return $classes;
+}
+add_filter('body_class', 'add_your_body_class');
