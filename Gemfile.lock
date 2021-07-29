@@ -63,6 +63,7 @@ GEM
     tzinfo-data (1.2020.4)
       tzinfo (>= 1.0.0)
     wdm (0.1.1)
+    webrick (1.7.0)
 
 PLATFORMS
   ruby
@@ -74,6 +75,7 @@ DEPENDENCIES
   kramdown-parser-gfm
   tzinfo-data
   wdm (~> 0.1.0)
+  webrick (~> 1.7)
 
 BUNDLED WITH
-   2.1.4
+   2.2.24

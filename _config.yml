@@ -97,6 +97,10 @@ collections:
     output: true
     link: wordpress-cheatsheet
     icon: fab fa-wordpress-simple
+  wp-cli:
+    output: true
+    link: wp-cli-cheatsheet
+    icon: fab fa-wordpress-simple
   php:
     output: true
     link: php-cheatsheet
@@ -167,7 +171,12 @@ defaults:
       type: wordpress
     values:
       layout: code
-      type: wordpress
+      type: wordpress  
+  - scope:
+      type: wp-cli
+    values:
+      layout: code
+      type: wp-cli
   - scope:
       type: php
     values:
