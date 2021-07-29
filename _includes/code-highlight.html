@@ -15,6 +15,7 @@
     {% when 'artisan' %}{% highlight shell %}{{ code-content }}{% endhighlight %}
     {% when 'blade' %}{% highlight php %}{{ code-content }}{% endhighlight %}
     {% when 'wordpress' %}{% highlight php %}{{ code-content }}{% endhighlight %}
+    {% when 'wp-cli' %}{% highlight shell %}{{ code-content }}{% endhighlight %}
     {% when 'php' %}{% highlight php %}{{ code-content }}{% endhighlight %}
 {% endcase %}{% if code-parse == true %}<div class="sc__output">
     <span class="color--accent">Output:</span><br>
