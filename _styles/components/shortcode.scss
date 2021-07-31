@@ -2,22 +2,27 @@
     #SHORTCODE
 \*------------------------------------*/
 
-.sc{
+.scode{
+    background-color: $light-transparent;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
     
     &__section{
+        background-color: $light-transparent;
         width: 100%;
         box-sizing: border-box;
         position: relative;
-        border-bottom: 5px solid $grey-dark;
+        // border-bottom: 5px solid $grey-dark;
 
         @include screen-bigger-than($small){
           width: 30%;  
         }
 
-        + .sc__section{
-            background: $secondary-colour;
-            background-image: linear-gradient(to right, $secondary-colour, $secondary-highlight);
-            border-bottom-color: $secondary-highlight;
+        + .scode__section{
+            background: none;
+            // background-image: linear-gradient(to right, $secondary-colour, $secondary-highlight);
+            // border-bottom-color: $secondary-highlight;
 
             @include screen-bigger-than($small){
                 width: 70%;  
@@ -62,11 +67,11 @@
     }
 
     &__title{    
-        color: $secondary-colour;
-        text-shadow: 0 1px $light;
         font-size: 28px;
-        margin: 0;
         display: inline-block;
+        margin: 0 0 1rem;
+        color: $secondary-light;
+        // text-shadow: 0 1px $light;
     }
 
     &__tags{
@@ -79,7 +84,7 @@
     }
     
     &__tag{
-        background-color: $grey-dark;
+        background-color: $secondary;
         font-size: $base-unit;
         padding: 1px $half-unit;
         margin-left: $half-unit;
@@ -88,7 +93,7 @@
     }
     
     &__text{
-        color: $secondary-colour;
+        // color: $secondary-colour;
         margin: 0;
     }
     

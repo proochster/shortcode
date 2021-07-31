@@ -3,20 +3,24 @@
 \*------------------------------------*/
 
 .search{
-    background-color: $style-1-accent;
-    background-image: linear-gradient(to right, $style-1-accent, $style-1-accent-light);
+    // background-color: $style-1-accent;
+    // background-image: linear-gradient(to right, $style-1-accent, $style-1-accent-light);
     // position: relative;
     overflow: hidden;
-
     position: sticky;
-    top: -82px;
+    top: -75px;
     z-index: 1;
+    margin-bottom: 1rem;
+
+    @include screen-bigger-than($small){
+        top: -100px;
+    }
 
     &__wrapper{
 
-        padding: 0 $base-unit $base-unit;
         position: relative;
-        box-sizing: border-box; 
+        // padding: 0 $base-unit $base-unit;
+        // box-sizing: border-box; 
 
         @include screen-bigger-than($small){
             width: 30%;
@@ -26,8 +30,8 @@
     &__icon{
 
         position: absolute;
-        bottom: $base-unit;
-        right: $base-unit;
+        bottom: 3px;
+        right: 3px;
         padding: 6px $base-unit;
     
         &:after {
@@ -56,16 +60,20 @@
         border-radius: 5px;
         font-size: 16px;
         box-sizing: border-box;
+
+        &:focus-visible{
+            outline: none;
+        }
     }
 
     &__count{
         padding: 0 0 $base-unit 0;
         display: block;
 
-        a{
-            color: $secondary-colour;
+        // a{
+        //     color: $secondary-colour;
 
-        }
+        // }
     }
 
     &__icon-bg{

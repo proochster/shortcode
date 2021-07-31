@@ -1,10 +1,10 @@
 (function(){
     var sc = {
         searchInput: document.querySelector('.search__input'),
-        shortCodes: document.querySelectorAll('.sc'),
+        shortCodes: document.querySelectorAll('.scode'),
         searchCount: document.querySelector('.search__count'),
         searchWrapper: document.querySelector('.search__wrapper'),
-        copyButton: document.querySelectorAll('.sc__copy'),
+        copyButton: document.querySelectorAll('.scode__copy'),
 
         // Returns true if the input text value matches the content
         hasPhrase: function(block, element, query){
@@ -42,7 +42,7 @@
                 code.setAttribute('data-display','false');
                 
                 // Look for the searched phrase in title and desccription
-                if(self.hasPhrase(code,'.sc__title',inputPhrase) || self.hasPhrase(code,'.sc__text',inputPhrase)){
+                if(self.hasPhrase(code,'.scode__title',inputPhrase) || self.hasPhrase(code,'.scode__text',inputPhrase)){
                     code.setAttribute('data-display','true');
                     
                     // Count elements that match the searched term
@@ -98,7 +98,7 @@
 
                     let str = btn.parentElement.querySelector('[data-lang]').innerText;                    
                     let el = document.createElement('textarea');
-                    let copyText = btn.querySelector('.sc__copy-text');
+                    let copyText = btn.querySelector('.scode__copy-text');
 
                     el.value = str;
                     document.body.appendChild(el);

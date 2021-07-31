@@ -92,6 +92,12 @@ Use `bundle exec jekyll serve` when running for the first time or after _config.
 
 Otherwise use `jekyll serve` or the short version `jekyll s`
 
+Only compile the latest changes:
+
+```
+bundle exec jekyll serve --incremental
+```
+
 # Workbox CLI
 
 Command line interface tool for Progressive Web Apps

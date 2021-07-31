@@ -10,10 +10,13 @@
         else 
         %}{% capture description %}{{ page.description }}{% endcapture %}{% 
         endif 
-    %}<meta name="Description" content='{{ description | truncate: 160 }}'>
+    %}<meta name="description" content='{{ description | truncate: 160 }}'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="canonical" href="{{site.url}}{{page.url}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136073428-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -39,10 +42,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="{{ site.url }}/favicon.png">
     {% feed_meta %}
-    <!-- development version, includes helpful console warnings -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
-    <!-- production version, optimized for size and speed -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
 </head>
 <body>
 <div class="site" id="sc">

@@ -5,32 +5,32 @@
 .color{
 
     &--primary{
-        color: $primary-colour;
+        color: $primary;
     }
 
     &--secondary{
-        color: $secondary-colour;
+        color: $secondary;
     }
 
     &--light{
-        color: $grey-light;
+        color: $light;
     }
 
     &--dark{
-        color: $dark;
+        color: $primary-dark;
     }
 
     &--accent{
-        color: $style-1-accent;
+        color: $accent;
     }
 }
 
-.bg{
+// .bg{
 
-    &--light{
-        background-color: $light;
-    }
-}
+//     &--light{
+//         background-color: $light;
+//     }
+// }
 
 #sc{
 
@@ -68,10 +68,11 @@
     }
     
     &--primary{
-        background-color: $style-1-accent;
+        background-color: $secondary-dark;
 
         &:hover{
-            background-color: $style-1-accent-light;
+            background-color: $secondary;
+            color: $primary-dark;
         }
     }
 }
@@ -99,5 +100,13 @@
             transform-origin: center;
             width: 10px;
         }
+    }
+}
+
+.padding{
+    padding: $base-unit;
+    
+    &--double{
+        padding: $base-unitx2;        
     }
 }

@@ -3,6 +3,14 @@
 \*------------------------------------*/
 
 footer{
-    background-color: $dark;
-    color: $grey-light;
+    
+    @include screen-bigger-than( $small ){
+        display: flex;
+        align-items: center;
+
+        p{
+            flex-grow: 1;
+            text-align: right;
+        }
+    }
 }
