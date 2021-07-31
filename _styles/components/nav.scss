@@ -3,12 +3,9 @@
 \*------------------------------------*/
 
 .nav{
-    // border-bottom: 3px solid $secondary-colour;
-    // box-shadow: 0px 4px 10px -4px $style-1-secondary;
-    background-color: $secondary-colour;
     width: 100%;
     display: block;
-    border-bottom: 3px solid $style-1-accent;
+    border-top: 1px solid $primary;
     
     &__scroll{
         overflow-x: scroll;
@@ -19,7 +16,7 @@
     }
 
     &__list{
-        padding: 0;
+        padding: $base-unit 0;
         display: table;
         
         @include screen-bigger-than($small){
@@ -36,20 +33,78 @@
     }
 
     &__link{
-        padding: $base-unit;
-        color: $light;
+        padding: $half-unit $base-unit;
+        color: $secondary;
+        font-size: 1rem;
         text-decoration: none;
         display: block;
         white-space: nowrap;
+        font-weight: bold;
+        position: relative;
+        margin: 1px 0;
 
-        &.active{
-            background-color: $style-1-accent;
+        &:after{
+            background-color: $secondary-dark;
+            content: '';
+            opacity: 0;
+            transform: scaleY(0);
+            transition:
+                transform .2s cubic-bezier(0.25, 0.1, 0.25, 1) 0ms,
+                opacity .4s cubic-bezier(0.25, 0.1, 0.25, 1) 0ms;
+            border-radius: 1.5rem;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: -1;
+        }
+
+        &:hover{
             color: $light;
+            text-decoration: none;
+
+            &:after{
+                opacity: 1;
+                transform: scaleY(1);
+            }
+
+            small{
+                transform: translateY(-8px);
+            }
+        }
+
+        &.active,
+        &:active,
+        &:focus-visible
+        {
+            color: $accent;
+            outline: none;
+
+            &:after{
+                background-color: $light;
+                opacity: 1;
+                transform: scaleY(1);
+            }
+
+            .nav__icon{
+                color: $accent; 
+            }
+        }
+
+        small{
+            font-size: .5rem;
+            font-weight: lighter;
+            display: inline-block;
+            transform: translateY(-3px);
+            transition:
+                transform .2s cubic-bezier(0.25, 0.1, 0.25, 1) 0ms;
         }
     }
 
     &__icon{
-        color: $primary-colour;
+        color: $light;
+        font-weight: lighter;
 
         .active &{
             color: white;

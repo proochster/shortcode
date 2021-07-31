@@ -7,16 +7,14 @@ html{
 }
 
 body{
-    background-color: $grey-light;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
+    background: linear-gradient($primary-light 0%, $primary 25%, $primary 75%, $primary-dark 100%);
+    background-attachment: fixed;
     margin: 0;
     height: 100%;
 }
 
 .wrapper{
-    padding: $base-unit;
+    padding: $base-unit 0;
     margin: 0 auto;
     position: relative;
 
@@ -29,16 +27,33 @@ body{
     }
 }
 
+.site{
+    padding: 0 1rem 1rem;
+    max-width: $xlarge;
+    margin: 0 auto;
+        
+    h1{
+        font-size: 1.4rem;
+    }
+    
+    @include screen-bigger-than( $small ){
+        padding: 1% 2% 2%;
+
+        h1{
+            font-size: 2rem;
+        }
+    } 
+}
+
 .content{
     flex-grow: 1;
     width: 100%;
     box-sizing: border-box;
 }
 
-.padding{
-    padding: $base-unit;
-    
-    &--double{
-        padding: $base-unitx2;        
-    }
+.intro{
+    max-width: 760px;
+    // @include screen-bigger-than( $medium ){
+    //     width: 50%;
+    // } 
 }

@@ -3,10 +3,10 @@
 \*------------------------------------*/
 
 body{
-    color: $secondary-colour;
-    font-family: Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 1.4;
+    color: $light;
+    font-family: $font-primary;
+    font-size: 16px;
+    line-height: 1.2;
 }
 
 h1,h2,h3,h4,h5{
@@ -15,17 +15,19 @@ h1,h2,h3,h4,h5{
 }
 
 a{
-    color: $style-1-accent;
+    color: $secondary-dark;
     text-decoration: none;
+    font-weight: bold;
 
     &:hover{
-        text-decoration: underline;
+        color: $secondary-light;
     }
 }
 
 .page-title{
-    // padding: 0 0 $base-unit;
     margin: 0;
+    font-weight: bold;
+    color: $light;
 }
 
 .font{

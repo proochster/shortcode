@@ -17,7 +17,7 @@
     {% when 'wordpress' %}{% highlight php %}{{ code-content }}{% endhighlight %}
     {% when 'wp-cli' %}{% highlight shell %}{{ code-content }}{% endhighlight %}
     {% when 'php' %}{% highlight php %}{{ code-content }}{% endhighlight %}
-{% endcase %}{% if code-parse == true %}<div class="sc__output">
+{% endcase %}{% if code-parse == true %}<div class="scode__output">
     <span class="color--accent">Output:</span><br>
         {{ code-content | markdownify }}
 </div>{% endif %}

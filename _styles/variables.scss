@@ -2,14 +2,23 @@
     #VARIABLES
 \*------------------------------------*/
 
-
 // Colours
+$primary-light: #23365b;
+$primary: #162138;
+$primary-dark: #111c33;
+$secondary-light: #fdff8b;
+$secondary: #D8DA71;
+$secondary-dark: #A8AA2E;
+$accent: #EB6300;
+$blue: rgb(93, 170, 201);
+
 $primary-colour: #EB6300;
 $secondary-colour: #111c3a;
 $secondary-highlight: #192850;
 $grey-light: #E5E5E5;
 $grey-dark: #D8D8D8;
 $light: #FFF;
+$light-transparent: #ffffff0f;
 $dark: #3C455B;
 // $link: #688BE3;
 
@@ -27,5 +36,9 @@ $half-unit: $base-unit/2;
 $small: 767px;
 $medium: 1024px;
 $large: 1200px;
+$xlarge: 1440px;
 
 $site-width: $large;
+
+// Fonts
+$font-primary: 'Montserrat', sans-serif;

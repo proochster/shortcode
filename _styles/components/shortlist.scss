@@ -4,6 +4,8 @@
 
 .sls{
 
+    margin: 0 -1%;
+
     @include screen-bigger-than($small){
         display: flex;
         flex-wrap: wrap;
@@ -12,20 +14,39 @@
 }
 
 .sl{
-    
-    flex-basis: 18%;
-    margin: 1%;
+    margin: 1% 1% 1rem 1%;
+    background: $light-transparent;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+
+    @include screen-bigger-than($small){
+        flex-basis: 48%;
+    }
+
+    @include screen-bigger-than($medium){
+        flex-basis: 31%;
+    }
+
+    @include screen-bigger-than($large){
+        flex-basis: 23%;
+    }
+
 
     &__title{
-        position: sticky;
-        top: 0;
-        margin-bottom: 0;
-        background-color: $light;
+        padding: $base-unit;
+        color: $light;
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 0;
+        border-bottom: 1px solid $primary;
     }
 
     &__list{
-        padding: $half-unit 0;
-        border-top: 1px solid $grey-light;
+        padding: $base-unit;
+        background: $light-transparent;
+        margin: 0;
+        flex-grow: 1;
     }
 
     &__item{
@@ -33,11 +54,37 @@
     }
     
     &__link{
-        color: $dark;
+        color: $secondary;
+        font-weight: lighter;
         display: inline-block;
-        // border: 1px solid;
-        // border-radius: 3px;
-        // padding: $half-unit $base-unit;
         margin: $half-unit $half-unit $half-unit 0;
+        
+        &:hover{
+            color: $secondary-light;
+
+            .sl__arrow{
+                transform: translateX(.2rem);
+            }
+        }
+    }
+
+    &__arrow{
+        color: $blue;
+        position: relative;
+        display: inline-block;
+        transition:
+            transform .2s cubic-bezier(0.25, 0.1, 0.25, 1) 0ms;
+    }
+
+    &__footer{
+        padding: $base-unit;
+        border-top: 1px solid $primary;
+        display: inline-block;
+        font-weight: 100;
+        color: $light;
+
+        &:hover{
+            color: $secondary;
+        }
     }
 }

@@ -5,27 +5,16 @@ description: A collection of useful snippets and code examples. Elements, attrib
 permalink: /
 ---
 {% capture collections %}{% for collection in site.collections %}{% unless collection.label == "posts" %}, {{ collection.label }}{% endunless %}{% endfor %}{% endcapture %}
-<article class="sc" data-display="true">
-    <div class="sc__section">
-        <div class="sc__description">
-            <h1 class="sc__title">A collection of useful snippets and code examples for {% for collection in site.collections %}{% unless collection.label == "posts" %}<a href="/{{ collection.link }}" title="{{ collection.label }} cheatsheet">{{ collection.label }}</a> {% endunless %}{% endfor %} and more.</h1>
-            <p class="sc__text">Would you like to add your favourite snippets? Visit our <a href="https://github.com/proochster/shortcode/blob/master/Readme.md" title="Shortcode Git repository" class="color--secondary"><strong>Git repository.</strong></a></p>
-        </div>
+
+    <div class="intro">
+        <h1 class="color--light">A collection of useful snippets and code examples for {% for collection in site.collections %}{% unless collection.label == "posts" %}<a href="/{{ collection.link }}" title="{{ collection.label }} cheatsheet">{{ collection.label }}</a>, {% endunless %}{% endfor %} and more.</h1>
+    
+        <p>Shortcode.dev repository at <a href="https://github.com/proochster/shortcode/blob/master/Readme.md" title="Shortcode.dev GitHub repository" class="color--accent"><i class="fab fa-github"></i> GitHub</a></p>
     </div>
-    <div class="sc__section">
-        <div class="sc__example">
-<code class="sc__code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;section&gt;</span>
-    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>When memory fails<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://shortcode.dev"</span> <span class="na">title=</span><span class="s">"Handy code snippets"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span&gt;</span>Shortcode.dev<span class="nt">&lt;/span&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;/section&gt;</span></code></pre></figure></code>
-        </div>
-    </div>
-</article>
+
 <div class="wrapper--wide bg--light">
     <div class="wrapper">
-        <h2>Latest code snippets:</h2>
+        <p>Latest code snippets:</p>
         <div class="sls">
             {% for collection in site.collections %}{% unless collection.label == "posts" %}
             <div class="sl">
@@ -34,10 +23,10 @@ permalink: /
                 </a>
                 <ul class="sl__list font--code">{% assign sorted = site[collection.label] | sort: 'date' | reverse %}{% for code in sorted limit:5  %}
                     <li class="sl__item">
-                        <a class="sl__link" href="{{ code.url }}#{{ collection.link }}" title="{{ collection.label | capitalize }} {{ code.title }} code example">{{ code.title }} <span class="color--accent">></span></a>
+                        <a class="sl__link" href="{{ code.url }}#{{ collection.link }}" title="{{ collection.label | capitalize }} {{ code.title }} code example">{{ code.title }} <span class="sl__arrow color--primary">></span></a>
                     </li>{% endfor %}
                 </ul>
-                <a href="{{ collection.link }}#{{ collection.link }}" title="All {{ collection.label | capitalize }} code snippets">All {{ collection.label | capitalize }} code snippets</a>
+                <a href="{{ collection.link }}#{{ collection.link }}" title="All {{ collection.label | capitalize }} code snippets" class="sl__footer">All {{ collection.label | capitalize }} code snippets</a>
             </div>
             {% endunless %}{% endfor %}
         </div>

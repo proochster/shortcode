@@ -1,20 +1,20 @@
 {% assign sortedcodes = site[page.group] | sort:"title" %}{% for code in sortedcodes %}
-<article class="sc sc--main" data-display="true" ref="shortcode">
-    <div class="sc__section">{% if code.tags.size > 0 %}
-        <span class="sc__tags">
-            {% for tag in code.tags %}<span class="sc__tag">#{{ tag }}</span>{% endfor %}
+<article class="scode scode--main" data-display="true" ref="shortcode">
+    <div class="scode__section">{% if code.tags.size > 0 %}
+        <span class="scode__tags">
+            {% for tag in code.tags %}<span class="scode__tag">#{{ tag }}</span>{% endfor %}
         </span>{% endif %}
-        <div class="sc__description">
-            <a id="{{ code.title | slugify }}" title="{{ code.title }}" href="{{ code.url }}" rel="tag" class="sc__anchor"><h2 class="sc__title">{{ code.title }}</h2></a>    
-            {% if code.description.size > 0 %}<p class="sc__text">{{ code.description }}</p>{% endif %}
+        <div class="scode__description">
+            <a id="{{ code.title | slugify }}" title="{{ code.title }}" href="{{ code.url }}" rel="tag" class="scode__anchor"><h2 class="scode__title">{{ code.title }}</h2></a>    
+            {% if code.description.size > 0 %}<p class="scode__text">{{ code.description }}</p>{% endif %}
         </div>
     </div>
-    <div class="sc__section">
-        <div class="sc__example">
-            <code class="sc__code">
+    <div class="scode__section">
+        <div class="scode__example">
+            <code class="scode__code">
                 {% include code-highlight.html type = page.group content = code.content parse = code.parse %}
             </code>
-            <span class="sc__copy"><i class="far fa-copy"></i> <span class="sc__copy-text">copy</span></span>
+            <span class="scode__copy"><i class="far fa-copy"></i> <span class="scode__copy-text">copy</span></span>
         </div>
     </div>
 </article>{% endfor %}
