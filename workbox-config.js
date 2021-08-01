@@ -1,7 +1,11 @@
 module.exports = {
-  "globDirectory": "_site/",
-  "globPatterns": [
-    "**/*.{css,js,json,md,png,svg}"
-  ],
-  "swDest": "_includes/js/service-worker.js"
+	globDirectory: '_site/',
+	globPatterns: [
+		'**/*.{html,png,xml,js,json,md,txt}'
+	],
+	ignoreURLParametersMatching: [
+		/^utm_/,
+		/^fbclid$/
+	],
+	swDest: 'assets/sw.js'
 };
