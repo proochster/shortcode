@@ -2,11 +2,11 @@
     <div class="scode__section">
         <div class="scode__description">
             <a id="{{ page.title | slugify }}" title="{{ page.title }}" href="{{ page.url }}" rel="tag" class="scode__anchor"><h2 class="scode__title">{{ page.title }}</h2></a>    
-            {% if page.description.size > 0 %}<p class="scode__text">{{ page.description }}</p>{% endif %}
-        </div>{% if page.tags.size > 0 %}
-        <span class="scode__tags">
-            {% for tag in page.tags %}<span class="scode__tag">#{{ tag }}</span>{% endfor %}
-        </span>{% endif %}
+            {% if page.description.size > 0 %}<p class="scode__text">{{ page.description }}</p>{% endif %}{% if page.tags.size > 0 %}
+            <span class="scode__tags">
+                {% for tag in page.tags %}<span class="scode__tag">#{{ tag }}</span>{% endfor %}
+            </span>{% endif %}
+        </div>
     </div>
     <div class="scode__section">
         <div class="scode__example">

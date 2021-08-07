@@ -69,27 +69,20 @@
     &__title{    
         font-size: 28px;
         display: inline-block;
-        margin: 0 0 1rem;
+        margin: 0 0 $half-unit;
         color: $secondary-light;
         // text-shadow: 0 1px $light;
     }
 
     &__tags{
-        width: 100%;
-        text-align: right;
-        padding: 0 $base-unit;
-        box-sizing: border-box;
-        position: absolute;
-        top: -2px;
+        display: block;
+        padding-top: $half-unit;
+        color: $secondary-dark;
     }
     
     &__tag{
-        background-color: $secondary;
         font-size: $base-unit;
-        padding: 1px $half-unit;
-        margin-left: $half-unit;
-        border-radius: 0 0 3px 3px;
-        color: $secondary-colour;
+        margin-right: $half-unit;
     }
     
     &__text{
