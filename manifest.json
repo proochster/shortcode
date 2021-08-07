@@ -4,7 +4,7 @@
     "theme_color": "#EB6300",
     "background_color": "#111c3a",
     "description": "Code cheatsheets",
-    "display": "standalone",
+    "display": "fullscreen",
     "start_url": "/",
     "icons": [
       {
