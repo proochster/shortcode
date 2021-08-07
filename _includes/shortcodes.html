@@ -1,12 +1,12 @@
 {% assign sortedcodes = site[page.group] | sort:"title" %}{% for code in sortedcodes %}
 <article class="scode scode--main" data-display="true" ref="shortcode">
-    <div class="scode__section">{% if code.tags.size > 0 %}
-        <span class="scode__tags">
-            {% for tag in code.tags %}<span class="scode__tag">#{{ tag }}</span>{% endfor %}
-        </span>{% endif %}
+    <div class="scode__section">
         <div class="scode__description">
             <a id="{{ code.title | slugify }}" title="{{ code.title }}" href="{{ code.url }}" rel="tag" class="scode__anchor"><h2 class="scode__title">{{ code.title }}</h2></a>    
-            {% if code.description.size > 0 %}<p class="scode__text">{{ code.description }}</p>{% endif %}
+            {% if code.description.size > 0 %}<p class="scode__text">{{ code.description }}</p>{% endif %}{% if code.tags.size > 0 %}
+            <span class="scode__tags">
+                {% for tag in code.tags %}<span class="scode__tag">#{{ tag }}</span>{% endfor %}
+            </span>{% endif %}
         </div>
     </div>
     <div class="scode__section">

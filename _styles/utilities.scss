@@ -58,21 +58,49 @@
 
 .btn{
     padding: $base-unit $base-unitx2;
-    background-color: $grey-light;
-    border-radius: 20px;
-    font-size: 16px;
-    color: #FFF;
+    color: $light;
+    position: relative;
+
+    &:after, &:before{
+        border-radius: $base-unitx2;
+        background-color: $primary;
+        opacity: 1;
+        transition:
+            opacity .4s cubic-bezier(0.25, 0.1, 0.25, 1) 0ms;
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    &:before{
+        background-color: $light;
+        opacity: 0;        
+    }
 
     &:hover{
         text-decoration: none;
+
+        &:after{
+            opacity: 0;
+        }
+
+        &:before{
+            opacity: 1;    
+        }
     }
     
-    &--primary{
-        background-color: $secondary-dark;
+    &--accent{
 
         &:hover{
-            background-color: $secondary;
-            color: $primary-dark;
+            color: $accent;
+        }
+        
+        &:after{
+            background-color: $accent;
         }
     }
 }
