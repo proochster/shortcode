@@ -138,3 +138,27 @@
         padding: $base-unitx2;        
     }
 }
+
+.w{
+    &-100{
+        max-width: 100%;
+    }
+}
+
+.hide{
+
+    &-mobile{
+        display: none;
+    }
+    @include screen-bigger-than( $small ){
+        &-mobile{
+            display: block;
+        }
+    } 
+
+    @include screen-bigger-than( $small ){
+        &-tablet{
+            display: none;
+        }
+    } 
+}

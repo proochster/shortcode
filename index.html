@@ -6,30 +6,31 @@ permalink: /
 ---
 {% capture collections %}{% for collection in site.collections %}{% unless collection.label == "posts" %}, {{ collection.label }}{% endunless %}{% endfor %}{% endcapture %}
 
-    <div class="intro">
-        <h1 class="color--light">A collection of useful snippets and code examples for {% for collection in site.collections %}{% unless collection.label == "posts" %}<a href="/{{ collection.link }}" title="{{ collection.label }} cheatsheet">{{ collection.label }}</a>, {% endunless %}{% endfor %} and more.</h1>
-    
-        <p>Shortcode.dev repository at <a href="https://github.com/proochster/shortcode/blob/master/Readme.md" title="Shortcode.dev GitHub repository" class="color--accent"><i class="fab fa-github"></i> GitHub</a></p>
-    </div>
+<div class="intro">
+    <h1 class="color--light">A collection of useful snippets and code examples for {% for collection in site.collections %}{% unless collection.label == "posts" %}<a href="/{{ collection.link }}" title="{{ collection.label }} cheatsheet">{{ collection.label }}</a>, {% endunless %}{% endfor %} and more.</h1>
 
-<div class="wrapper--wide bg--light">
-    <div class="wrapper">
-        <p>Latest code snippets:</p>
-        <div class="sls">
-            {% for collection in site.collections %}{% unless collection.label == "posts" %}
-            <div class="sl">
-                <a href="{{ collection.link }}#{{ collection.link }}" title="All {{ collection.label | capitalize }} code snippets">
-                    <h2 class="sl__title"><i class="{{collection.icon}} color--accent"></i> {{ collection.label | upcase }}</h2>
-                </a>
-                <ul class="sl__list font--code">{% assign sorted = site[collection.label] | sort: 'date' | reverse %}{% for code in sorted limit:5  %}
-                    <li class="sl__item">
-                        <a class="sl__link" href="{{ code.url }}#{{ collection.link }}" title="{{ collection.label | capitalize }} {{ code.title }} code example">{{ code.title }} <span class="sl__arrow color--primary">></span></a>
-                    </li>{% endfor %}
-                </ul>
-                <a href="{{ collection.link }}#{{ collection.link }}" title="All {{ collection.label | capitalize }} code snippets" class="sl__footer">All {{ collection.label | capitalize }} code snippets</a>
-            </div>
-            {% endunless %}{% endfor %}
+    <p>Shortcode.dev repository at <a href="https://github.com/proochster/shortcode/blob/master/Readme.md" title="Shortcode.dev GitHub repository" class="color--accent"><i class="fab fa-github"></i> GitHub</a></p>
+</div>
+
+<a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=60327&url_id=902" title="NordVPN special deal"><img src="/assets/affiliate/728x90.png" class="w-100" /></a>
+
+<div class="wrapper">
+    <p>Latest code snippets:</p>
+    <div class="sls">
+        {% for collection in site.collections %}{% unless collection.label == "posts" %}
+        <div class="sl">
+            <a href="{{ collection.link }}#{{ collection.link }}" title="All {{ collection.label | capitalize }} code snippets">
+                <h2 class="sl__title"><i class="{{collection.icon}} color--accent"></i> {{ collection.label | upcase }}</h2>
+            </a>
+            <ul class="sl__list font--code">{% assign sorted = site[collection.label] | sort: 'date' | reverse %}{% for code in sorted limit:5  %}
+                <li class="sl__item">
+                    <a class="sl__link" href="{{ code.url }}#{{ collection.link }}" title="{{ collection.label | capitalize }} {{ code.title }} code example">{{ code.title }} <span class="sl__arrow color--primary">></span></a>
+                </li>{% endfor %}
+            </ul>
+            <a href="{{ collection.link }}#{{ collection.link }}" title="All {{ collection.label | capitalize }} code snippets" class="sl__footer">All {{ collection.label | capitalize }} code snippets</a>
         </div>
+        {% endunless %}{% endfor %}
+            
     </div>
 </div>
     
