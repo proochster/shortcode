@@ -8,7 +8,8 @@
     "build": "bundle exec jekyll serve --increment",
     "production": "npm run sw && bundle exec jekyll serve --increment",
     "prod": "npm run production",
-    "sw": "workbox generateSW workbox-config.js"
+    "sw": "workbox generateSW workbox-config.js",
+    "all": "bundle exec jekyll serve"
   },
   "repository": {
     "type": "git",
