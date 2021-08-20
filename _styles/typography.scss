@@ -36,3 +36,8 @@ a{
         font-family: monospace;
     }
 }
+
+::selection{
+    background: $secondary;
+    color: $primary-dark;
+}
