@@ -1,0 +1,15 @@
+---
+title: match
+description: Match keyword with the values. This is a new feature in PHP8.
+tags: php php8
+date: 2021-08-23
+---
+$language_code = "en";
+
+$language = match ($language_code){
+    'en' => 'English',
+    'es' => 'Spanish',
+    'fr' => 'French'
+}
+
+echo $language; // returns 'English'
