@@ -6,6 +6,9 @@
             <span class="scode__tags">
                 {% for tag in page.tags %}<span class="scode__tag">#{{ tag }}</span>{% endfor %}
             </span>{% endif %}
+            {% if page.ref %}<div class="scode__ref">
+                <span>Reference:</span> <a href="{{ page.ref }}" target="_blank" title="{{ page.title }} reference">{{ page.ref }}</a> 
+            </div>{% endif %}
         </div>
     </div>
     <div class="scode__section">
