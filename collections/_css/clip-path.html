@@ -1,0 +1,18 @@
+---
+title: clip path
+description: Clip path lets you mask an element using set shapes like circle, ellipse, polygon or a custom path. 
+tags: css
+parse: true
+date: 2021-08-24
+ref: https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path
+---
+<style>
+    .clip-image{
+        display: inline-block;
+        clip-path: polygon(100% 0, 100% 45%, 45% 100%, 0 100%, 0 0);
+    }
+</style>
+
+<div class="clip-image">
+    <img width="200" height="200" src="/assets/icon-512x512.png" alt="Clipped image">
+</div>
