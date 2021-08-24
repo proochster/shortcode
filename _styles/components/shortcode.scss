@@ -39,6 +39,9 @@
         @include screen-bigger-than($small){
             max-width: $large / 2 - $base-unit;
             float: right;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
     }
 
@@ -91,6 +94,7 @@
     &__text{
         margin: 0;
         line-height: 1.3;
+        flex-grow: 1;
     }
     
     &__example{
@@ -129,5 +133,18 @@
         border-radius: 3px;
         padding: 3px 6px;
         cursor: pointer;
+    }
+
+    &__ref{
+
+        font-size: .8rem;
+        padding-top: 1rem;
+        
+        a{
+            color: $blue;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 100;
+            display: block;
+        };
     }
 }
