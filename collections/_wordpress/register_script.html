@@ -1,0 +1,14 @@
+---
+title: register script
+description: Lets you register a script in the functions.php file to be called from another part of your site. For example you can register a javascript file for the gallery component and only enqueue it in the page if the gallery component has been used. 
+tags: wordpress
+date: 2021-08-26
+---
+// Register script in functions.php file
+function register_gallery_script(){
+	wp_register_script('galleryjs', get_stylesheet_directory_uri() . '/path/to/gallery.js', array(), '1.0', true);
+}
+add_action( 'wp_enqueue_scripts', 'register_gallery_script' );
+
+// Call the script from the component
+wp_enqueue_script('galleryjs');    
