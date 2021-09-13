@@ -9,7 +9,7 @@
     @include screen-bigger-than($small){
         display: flex;
         flex-wrap: wrap;
-        justify-content: end;
+        // justify-content: end;
     }
 }
 
