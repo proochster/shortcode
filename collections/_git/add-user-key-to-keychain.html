@@ -1,0 +1,8 @@
+---
+title: add ssh key to keychain
+description: If you use multiple accounts on different hosts you may need to add your keys manually at the start of the session. The first line in the example starts the shh agent. The second adds a specific key to the keychain. Make sure to update path to point to your key.
+tags: git ssh
+date: 2021-09-21
+---
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa_example_key
