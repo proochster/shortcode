@@ -1,0 +1,11 @@
+---
+title: shell exec
+description: This function lets you run a shell command directly from a php file. Output of the command will be returned as a string so it can be displayed too.
+tags: php
+date: 2021-10-06
+---
+/* ls -al returns a list of all folders and files in the directory */
+$list_folders = shell_exec('ls -al');
+
+/* Display output */
+echo "<pre>$list_folders</pre>";
