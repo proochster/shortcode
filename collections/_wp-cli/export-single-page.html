@@ -1,0 +1,8 @@
+---
+title: export single page
+description: By combining the following flags you can export a single page from WordPress. First set the post type you want to export (page) then set the ID of the post, and finally limit the command to only fetch a single post. Skipping comments is optional.
+tags: wordpress cli
+date: 2021-10-15
+ref: https://developer.wordpress.org/cli/commands/export/
+---
+wp export --skip_comments --post_type=page --post__in=4995 --max_num_posts=1
