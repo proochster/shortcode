@@ -1,0 +1,25 @@
+---
+title: add meta data fields to REST API
+description: Adds post meta data fields to returned JSON data in the REST API. You can use it for default post types or custom ones.
+tags: wordpress php rest api
+date: 2021-11-01
+ref: https://developer.wordpress.org/reference/functions/register_rest_field/
+---
+
+/**
+* Register post meta data in REST
+* Use rest_api_init to register post's meta data
+*/
+add_action( 'rest_api_init', 'add_post_meta_to_rest' );
+
+function add_post_meta_to_rest() {
+
+    $post_type = 'post'; // You can use taxonomy or a custom post name.
+    $rest_name = 'post-meta' // All meta fields will be stored under this REST attribute.
+
+    register_rest_field( $post_type, $rest_name, array(
+        'get_callback' => function ( $object ) { return get_post_meta( $object['id'] ); },
+        'schema' => null,
+        )
+    );
+}
