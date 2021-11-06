@@ -5,18 +5,18 @@ tags: vue class
 date: 2019-08-22
 ---
 <div id="app">
-    <button v-bind:class="{ 'toggled' : toggleState }" v-on:click="toggle">Toggle</button>
+    <button v-bind:class="{ 'toggled' : is_active }" v-on:click="toggle_class()">Toggle</button>
 </div>
 
 <script>
     new Vue({
         el: '#app',
         data: {
-            toggleState: false
+            is_active: false
         },
         methods: {
-            toggle(){
-                this.toggleState = true;
+            toggle_class(){
+                return this.is_active ? this.is_active = false : this.is_active = true
             }
         }
     })
