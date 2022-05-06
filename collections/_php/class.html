@@ -1,0 +1,30 @@
+---
+title: class
+description: Simple class example.
+tags: php
+date: 2022-05-06
+---
+
+class Shape {
+
+    public $type;
+    protected $colour = 'transparent'; // Default value set
+
+    
+    // Construct method runs automatically when the Class is called
+    public function __construct( $type, $colour ){
+
+        $this->type = $type;
+        $this->colour = $colour;
+
+    }
+
+    public function makeSquare(){
+        
+        $this->type = 'Square';
+
+    }
+}
+
+$shape = new Shape( 'Circe', 'Red' );
+$shape->makeSquare();
