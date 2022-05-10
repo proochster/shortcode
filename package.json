@@ -30,7 +30,7 @@
     "kind-of": ">=6.0.3",
     "lodash": ">=4.17.21",
     "lodash.template": "4.5.0",
-    "minimist": ">=1.2.3",
+    "minimist": ">=1.2.6",
     "trim-newlines": ">=3.0.1",
     "workbox-cli": "^6.3.0",
     "yargs-parser": "^20.2.9"
