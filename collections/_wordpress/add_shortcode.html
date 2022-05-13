@@ -1,0 +1,24 @@
+---
+title: add shortcode
+description: Use add_shortcode function to register shortcode for later use. The first parameter is a name of your shortcode, the second is a callback function where you can add the content to return. 
+tags: wordpress php
+date: 2022-05-13
+ref: https://codex.wordpress.org/Shortcode_API
+---
+
+function wpshort_assemble_shortcode() { 
+  
+    $message = 'Hello from the shortcode!';       
+    return $message;
+
+}
+
+/*
+* Register shortcode
+*/
+add_shortcode('my_shortcode', 'wpshort_assemble_shortcode');
+
+/*
+* Use [my_shortcode] handle in a WYSIWYG editor to display it.
+* Alternatively, you can use do_shortcode() function directly in code.
+*/
