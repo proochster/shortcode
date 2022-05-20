@@ -54,6 +54,6 @@ body{
 .intro{
     max-width: 1024px;
     @include screen-bigger-than( $medium ){
-        max-width: calc(100% - 200px);
+        max-width: calc(100% - 340px);
     } 
 }

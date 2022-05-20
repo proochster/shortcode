@@ -4,9 +4,21 @@
 
 .header{
     // background-color: $light;
+    @include screen-bigger-than( $small ){
+        &__wrapper{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
 
-    &__wrapper{
-        display: flex;
-        justify-content: space-between;
+@include screen-smaller-than( $small ) {
+
+    .bmc-btn{
+        margin-top: 1rem;
+        height: 50px !important;
+        font-size: 16px !important;
+        padding: 0px 20px !important;
+    
     }
 }
