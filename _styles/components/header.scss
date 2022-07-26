@@ -12,13 +12,15 @@
     }
 }
 
+.bmc-btn{
+    height: 50px !important;
+    font-size: 12px !important;
+    padding: 0 20px !important;
+}
+
 @include screen-smaller-than( $small ) {
 
     .bmc-btn{
         margin-top: 1rem;
-        height: 45px !important;
-        font-size: 12px !important;
-        padding: 0 20px !important;
-    
     }
 }
