@@ -1,0 +1,24 @@
+---
+title: details
+description: Provides a native solution to toggle content. You can use 'open' attribute to capture state of the element.
+tags: html tag
+parse: true
+date: 2022-09-30
+---
+<style>
+    #details-element{
+        padding: 1rem;
+        border: 1px solid;
+        margin: 1rem;
+        border-radius: 0.4rem;
+        cursor: pointer;
+    }
+
+    #details-element[open] {
+        border-color: lightgreen !important;
+    }
+</style>
+<details id="details-element">
+    <summary>Show more details</summary>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi tempore rerum possimus. Ipsum temporibus consequuntur saepe aliquid quis deserunt quisquam a odit voluptatum eveniet?</p>
+</details>
