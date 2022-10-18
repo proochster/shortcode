@@ -1,0 +1,8 @@
+---
+title: prevent lazy loading
+description: Add the following code to AppService provider within the boot() method. This is to flag an issue when Laravel is trying to make unnecessary calls to the database. The passed attribute evaluates to a boolean and ensures the debug message doesn't display in the production environment.
+tags: laravel log debug
+date: 2022-10-18
+ref: https://laravel.com/docs/9.x/eloquent-relationships#preventing-lazy-loading
+---
+Model::preventLazyLoading( !$this->app->isProduction() );
