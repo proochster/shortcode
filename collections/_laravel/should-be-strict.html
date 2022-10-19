@@ -1,0 +1,16 @@
+---
+title: enable strict mode
+description: Add the following code to AppService provider within the boot() method. It will help with catching common errors in your production environment.
+tags: laravel log debug
+date: 2022-10-19
+ref: https://laravel.com/docs/9.x/eloquent#enabling-eloquent-strict-mode
+---
+// public function boot()
+// {
+    Model::shouldBeStrict( !$this->app->isProduction() )
+    
+    // shouldBeStrict runs the following methods in the background
+    // Model::preventLazyLoading( !$this->app->isProduction() );
+    // Model::preventSilentlyDiscardingAttributes( !$this->app->isProduction() );
+    // Model::preventAccessingMissingAttributes( !$this->app->isProduction() );
+// }
