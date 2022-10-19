@@ -4,4 +4,24 @@ description: Return all the data about a variable in a structured format.
 tags: php
 date: 2020-01-13
 ---
-var_dump($your_variable);
+var_dump(['Square', 123, true, [ 10, 20, 30 ] ]);
+
+/* Returns:
+array(4) {
+    [0]=>
+    string(6) "Square"
+    [1]=>
+    int(123)
+    [2]=>
+    bool(true)
+    [3]=>
+    array(3) {
+      [0]=>
+      int(10)
+      [1]=>
+      int(20)
+      [2]=>
+      int(30)
+    }
+  }
+*/
